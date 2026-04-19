@@ -99,18 +99,40 @@
     color: #fff;
     border: none;
     border-radius: 20px;
-    padding: 5px 9px;
-    font-size: 11px;
+    padding: 5px 8px;
+    font-size: 14px;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 0px;
     opacity: 0.75;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: opacity 0.15s, background 0.15s;
+    max-width: 28px;
+    overflow: hidden;
+    transition:
+        max-width 0.2s ease,
+        opacity 0.2s ease,
+        gap 0.2s ease,
+        background 0.15s;
     white-space: nowrap;
 }
 
 #llm-highlighter-faq-trigger-btn:hover {
-    opacity: 1;
     background: #1d4ed8;
+    opacity: 1;
+    max-width: 120px;
+    gap: 5px;
+}
+
+#llm-highlighter-faq-trigger-btn .faq-trigger-label {
+    font-size: 12px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.15s ease 0.05s;
+}
+
+#llm-highlighter-faq-trigger-btn:hover .faq-trigger-label {
+    opacity: 1;
 }
 
 /* Gear / prompt editor toggle button */

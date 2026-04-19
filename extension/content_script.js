@@ -40,7 +40,9 @@ const DEFAULTS = {
                 <span class="btn-icon">✨</span>
                 <span class="btn-label">Generate Reply</span>
             </button>
-            <button id="llm-highlighter-faq-trigger-btn" title="Add to FAQ">+ FAQ</button>
+            <button id="llm-highlighter-faq-trigger-btn" title="Add to FAQ">
+                <span>📋</span><span class="faq-trigger-label">Add to FAQ</span>
+            </button>
         `;
 
         floatingBtn.querySelector("#llm-highlighter-btn").addEventListener("click", (e) => {
@@ -50,8 +52,8 @@ const DEFAULTS = {
 
         floatingBtn.querySelector("#llm-highlighter-faq-trigger-btn").addEventListener("click", (e) => {
             e.stopPropagation();
-            const rect = lastRange ? lastRange.getBoundingClientRect() : { left: x, bottom: y };
-            showFaqPanel(rect.left, rect.bottom);
+            const selectedText = window.getSelection().toString().trim();
+            showFaqPanel(x, y, selectedText);
         });
 
         document.body.appendChild(floatingBtn);
@@ -100,7 +102,7 @@ const DEFAULTS = {
 
             responsePanel.querySelector(".response-faq-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
-                showFaqPanel(x, y, text);
+                showFaqPanel(x, y, lastQuestion);
             });
         }
 
@@ -109,13 +111,12 @@ const DEFAULTS = {
 
     // ── faq feedback panel ───────────────────────────────────────────────────
 
-    function showFaqPanel(x, y, aiReply) {
+    function showFaqPanel(x, y, question) {
         if (faqPanel) { removeFaqPanel(); return; }
 
         faqPanel = document.createElement("div");
         faqPanel.id = "llm-highlighter-faq-panel";
         faqPanel.style.left = `${Math.min(x, window.innerWidth - 440)}px`;
-        // position below the response panel
         faqPanel.style.top  = `${y + window.scrollY + 200}px`;
 
         faqPanel.innerHTML = `
@@ -124,7 +125,7 @@ const DEFAULTS = {
                 <button class="faq-close">×</button>
             </div>
             <label class="faq-label">Question (what was highlighted)</label>
-            <textarea class="faq-question" rows="2">${escapeHtml(lastQuestion)}</textarea>
+            <textarea class="faq-question" rows="2">${escapeHtml(question || "")}</textarea>
             <label class="faq-label">Correct / expected answer</label>
             <textarea class="faq-answer" rows="4" placeholder="Type the ideal answer here..."></textarea>
             <div class="faq-footer">
