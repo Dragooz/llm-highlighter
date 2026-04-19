@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM Highlighter</title>
+  <style>
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: system-ui, sans-serif;
+      font-size: 14px;
+      color: #111827;
+      margin: 0;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: #2563eb;
+    }
+    p {
+      margin: 0 0 10px;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      background: #f0fdf4;
+      border-radius: 6px;
+      color: #16a34a;
+      font-size: 13px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #16a34a;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h2>✨ LLM Highlighter</h2>
+  <div class="status">
+    <span class="dot"></span>
+    Active on this page
+  </div>
+  <br />
+  <p>Highlight any text on the page → click the floating button → get an AI-generated reply.</p>
+  <p><a href="#" id="options-link">Open Settings</a> to configure system prompt and backend URL.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

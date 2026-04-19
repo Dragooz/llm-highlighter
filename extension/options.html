@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM Highlighter — Settings</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-family: system-ui, sans-serif;
+      font-size: 15px;
+      color: #111827;
+    }
+    h1 {
+      font-size: 22px;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .hint {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+    input[type="text"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #111827;
+      margin-bottom: 24px;
+      transition: border-color 0.15s;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+    textarea {
+      height: 160px;
+      resize: vertical;
+    }
+    .row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 9px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button:hover { background: #1d4ed8; }
+    .saved-msg {
+      color: #16a34a;
+      font-size: 14px;
+      display: none;
+    }
+    .saved-msg.visible { display: inline; }
+    .model-row {
+      display: flex;
+      gap: 12px;
+    }
+    select {
+      flex: 1;
+      padding: 9px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #111827;
+      margin-bottom: 24px;
+      background: #fff;
+    }
+    select:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ LLM Highlighter Settings</h1>
+  <p class="subtitle">Configure how the extension communicates with your backend.</p>
+
+  <label for="backend-url">Backend URL</label>
+  <div class="hint">URL of your running proxy server (e.g. http://localhost:3000)</div>
+  <input type="url" id="backend-url" placeholder="http://localhost:3000" />
+
+  <label for="secret">Shared Secret (optional)</label>
+  <div class="hint">Sent as X-Secret header. Leave blank for local dev.</div>
+  <input type="text" id="secret" placeholder="my-secret-token" />
+
+  <label for="model">Model</label>
+  <div class="hint">OpenRouter model ID to use</div>
+  <select id="model">
+    <option value="anthropic/claude-sonnet-4-6">Claude Sonnet 4.6 (recommended)</option>
+    <option value="anthropic/claude-haiku-4-5">Claude Haiku 4.5 (fast/cheap)</option>
+    <option value="openai/gpt-4o">GPT-4o</option>
+    <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
+    <option value="google/gemini-2.0-flash-001">Gemini 2.0 Flash</option>
+  </select>
+
+  <label for="system-prompt">System Prompt</label>
+  <div class="hint">Defines the AI's behavior. The customer's highlighted text is sent as the user message.</div>
+  <textarea id="system-prompt"></textarea>
+
+  <div class="row">
+    <button id="save-btn">Save Settings</button>
+    <span class="saved-msg" id="saved-msg">✓ Saved!</span>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

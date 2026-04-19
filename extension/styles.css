@@ -1,0 +1,154 @@
+/* Collapsed: tiny icon only */
+#llm-highlighter-btn {
+    position: fixed;
+    z-index: 2147483647;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    opacity: 0.75;
+    max-width: 28px;
+    overflow: hidden;
+    transition:
+        max-width 0.2s ease,
+        opacity 0.2s ease,
+        gap 0.2s ease,
+        background 0.15s;
+    white-space: nowrap;
+}
+
+/* Expanded: show label on hover */
+#llm-highlighter-btn:hover {
+    background: #1d4ed8;
+    opacity: 1;
+    max-width: 160px;
+    gap: 5px;
+}
+
+#llm-highlighter-btn .btn-label {
+    font-size: 12px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.15s ease 0.05s;
+}
+
+#llm-highlighter-btn:hover .btn-label {
+    opacity: 1;
+}
+
+/* Loading state */
+#llm-highlighter-btn.loading {
+    background: #6b7280;
+    cursor: not-allowed;
+    max-width: 160px;
+    opacity: 1;
+    gap: 5px;
+}
+
+#llm-highlighter-btn.loading .btn-label {
+    opacity: 1;
+}
+
+#llm-highlighter-btn .spinner {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: none;
+}
+
+#llm-highlighter-btn.loading .spinner {
+    display: inline-block;
+}
+
+#llm-highlighter-btn.loading .btn-icon {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#llm-highlighter-response {
+    position: fixed;
+    z-index: 2147483647;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 420px;
+    min-width: 280px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    color: #111827;
+    line-height: 1.5;
+}
+
+#llm-highlighter-response .response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#llm-highlighter-response .response-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+}
+
+#llm-highlighter-response .response-close:hover {
+    color: #374151;
+}
+
+#llm-highlighter-response .response-text {
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+}
+
+#llm-highlighter-response .response-copy-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.15s;
+}
+
+#llm-highlighter-response .response-copy-btn:hover {
+    background: #1d4ed8;
+}
+
+#llm-highlighter-response .response-copy-btn.copied {
+    background: #16a34a;
+}
+
+#llm-highlighter-response .response-error {
+    color: #dc2626;
+}
