@@ -9,7 +9,7 @@
 
 /* Collapsed: tiny icon only */
 #llm-highlighter-btn {
-    position: fixed;
+    position: relative;
     z-index: 2147483647;
     background: #2563eb;
     color: #fff;
