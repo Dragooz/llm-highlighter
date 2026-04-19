@@ -1,0 +1,6 @@
+
+Q: Hi, I have another questions, previously I have also encountered a restriction that only allows 1 swipey account/app to be setup for 1 individual, even ifI have 2 companies using swipey, means effectively i can only be tied to one company. is this restriction still there? just wondering, not a blocker.
+A: This is our new multi-entity feature
+
+Q: that’s good news… will bring this up with my team accordingly to coordinate.
+A: Thanks!

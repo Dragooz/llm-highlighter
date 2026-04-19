@@ -40,11 +40,18 @@ const DEFAULTS = {
                 <span class="btn-icon">✨</span>
                 <span class="btn-label">Generate Reply</span>
             </button>
+            <button id="llm-highlighter-faq-trigger-btn" title="Add to FAQ">+ FAQ</button>
         `;
 
         floatingBtn.querySelector("#llm-highlighter-btn").addEventListener("click", (e) => {
             e.stopPropagation();
             handleGenerate();
+        });
+
+        floatingBtn.querySelector("#llm-highlighter-faq-trigger-btn").addEventListener("click", (e) => {
+            e.stopPropagation();
+            const rect = lastRange ? lastRange.getBoundingClientRect() : { left: x, bottom: y };
+            showFaqPanel(rect.left, rect.bottom);
         });
 
         document.body.appendChild(floatingBtn);

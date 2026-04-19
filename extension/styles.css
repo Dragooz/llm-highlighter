@@ -91,6 +91,28 @@
     }
 }
 
+/* FAQ trigger button in floating group */
+#llm-highlighter-faq-trigger-btn {
+    position: relative;
+    z-index: 2147483647;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 9px;
+    font-size: 11px;
+    cursor: pointer;
+    opacity: 0.75;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: opacity 0.15s, background 0.15s;
+    white-space: nowrap;
+}
+
+#llm-highlighter-faq-trigger-btn:hover {
+    opacity: 1;
+    background: #1d4ed8;
+}
+
 /* Gear / prompt editor toggle button */
 #llm-highlighter-prompt-btn {
     position: relative;
@@ -265,6 +287,7 @@
 }
 
 #llm-highlighter-response .response-copy-btn {
+    flex: 3;
     background: #2563eb;
     color: #fff;
     border: none;
@@ -272,7 +295,6 @@
     padding: 6px 14px;
     font-size: 13px;
     cursor: pointer;
-    width: 100%;
     transition: background 0.15s;
 }
 
@@ -290,7 +312,7 @@
 }
 
 #llm-highlighter-response .response-faq-btn {
-    flex: 1;
+    flex: 7;
     background: none;
     border: 1px solid #d1d5db;
     border-radius: 5px;
