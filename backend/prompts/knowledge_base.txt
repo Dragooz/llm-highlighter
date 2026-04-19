@@ -1,0 +1,957 @@
+# Getting Started
+
+> Step-by-step guides to set up Swipey in the right order.
+
+Source: https://help.swipey.co/en/collection/16-getting-started
+
+---
+
+## Admin Guide
+
+### 1. Introduction to Swipey
+Swipey is a business finance platform offering prepaid VISA cards, payouts/bill payment, and accounting integration for teams.
+
+### 2. Sign Up to Swipey
+Register your company at [app.swipey.co](https://app.swipey.co). Complete company verification during onboarding.
+
+### 3. Fund Your Master Account
+Deposit funds into your Swipey master account via:
+- **FPX (instant)** — recommended; fees waived on Growth & Plus plans
+- **Direct bank transfer** — approved at 4 pm Mon–Fri
+
+Master account has no maximum limit.
+
+### 4. Invite Your Team
+1. Log in to admin dashboard → Profile (bottom left) → **Employees** tab → **Invite Employee**
+2. Fill in name, email, phone, and assign a role (Employee / Admin / Bookkeeper)
+3. Card assignment is optional at this stage — can be done later
+4. Employee receives email invite → downloads Swipey app → completes eKYC
+
+> Each employee must have a unique email and phone number not previously used on Swipey.
+
+### 5. Assign Cards to Your Team
+Two card types available:
+
+| | Virtual Card | Physical Card |
+|---|---|---|
+| Availability | All plans | Growth & Plus only |
+| Delivery | Instant | 7–10 business days |
+| Use | Online only | Online + in-store |
+
+**Steps:**
+1. Admin dashboard → **Cards**
+2. Select employee → **Issue a New Card**
+3. Set card type, spending limit, card name, and optional merchant restrictions
+4. Submit
+
+> Start with virtual cards for faster setup.
+
+### 6. Top Up Cards
+From admin dashboard → Cards → select card → **Top Up**. Instant top-up available. If delayed, batches process at 10am / 1pm / 5pm / 7pm.
+
+### 7. Attach Receipts
+Employees attach receipts per transaction via mobile app → Transactions tab → select transaction → attach photo.
+
+### 8. Make Your First Transaction
+Use card details (virtual) or physical card at any Visa-accepted merchant.
+
+---
+
+## Employee Guide
+
+### 1. Get Started with Mobile App
+1. Receive email invite from admin
+2. Download Swipey app: [iOS](https://apps.apple.com/sa/app/swipey-fin-os-for-modern-biz/id1589412706) | [Android](https://play.google.com/store/apps/details?id=app.swipey.co)
+3. Enter email + mobile number (do NOT click "Register new account")
+4. Complete eKYC (photo ID + selfie; name must match MyKad/Passport exactly)
+
+### 2. Virtual vs Physical Cards
+- **Virtual**: Available in app immediately after setup. Use for online payments only.
+- **Physical**: Delivered by post in 7–10 business days. Use anywhere Visa accepted.
+- For first physical card in-store payment: always use **Chip and PIN** to activate PayWave.
+
+### 3. Making Payments with a Swipey Card
+- **Online**: Use card number, expiry, CVV from app (Cards tab → Show Card Details)
+- **In-store**: Insert physical card + PIN, or tap (PayWave) after PIN activation
+- **QR**: Pay merchants via QR from mobile app
+# Cards
+
+> Everything you need to issue, control and manage your team's cards.
+
+Source: https://help.swipey.co/en/collection/17-cards
+
+---
+
+## Where Can I Use a Swipey Card?
+
+Swipey cards are VISA prepaid cards accepted at 130M+ merchants worldwide.
+
+**Not accepted by** (prepaid card restriction, not Swipey-specific):
+- Google Ads (use one-time payment setup instead)
+- Xero, Microsoft Azure, Etsy, ClickUp, DigitalOcean, OpenAI
+- Apple Pay, Samsung Pay
+
+---
+
+## Virtual Cards vs Physical Cards
+
+| | Virtual Card | Physical Card |
+|---|---|---|
+| Colour | Light blue | Dark blue |
+| Plans | All (incl. Freemium) | Growth & Plus only |
+| Cards per user (Plus) | Up to 5 | Up to 2 |
+| Cards per user (Growth) | Up to 3 | Up to 1 |
+| Cards per user (Freemium) | 1 | None |
+| Online payments | ✅ | ✅ |
+| In-store / PayWave | ❌ | ✅ |
+| Instant availability | ✅ | ❌ (post delivery) |
+| Access via | Mobile app | Physical card + app |
+
+**To view virtual card details:** App → Cards tab → Show Card Details → verify identity → card number/expiry/CVV shown.
+
+**Physical card first use:** Always use Chip and PIN first to activate PayWave.
+
+---
+
+## Reset Physical Card PIN
+
+1. Open Swipey mobile app
+2. Cards tab → **Reset Card PIN**
+3. Authenticate with 6-digit PIN / Face ID / fingerprint
+4. Enter OTP
+5. Enter and confirm new PIN
+
+---
+
+## Freeze & Reactivate Cards
+
+Freezing blocks all new transactions instantly. Balance unaffected.
+
+**Via mobile app (employee or admin):**
+Cards tab → select card → **Freeze Card** / **Reactivate Card**
+
+**Via admin dashboard (admin only):**
+Cards → select card → **Freeze Card** / **Reactivate Card**
+
+> Frozen card must be reactivated before it can be terminated.
+> Freezing is temporary; terminating is permanent.
+
+---
+
+## Multi-Card
+
+Employees can hold multiple cards for different purposes (e.g., one for ads, one for travel). Number of cards per user depends on plan. Only admins can issue cards.
+
+---
+
+## Spend Customization (Plus Plan Only)
+
+Admin can enable/disable spend per card across 7 categories:
+1. Gambling & Massage Parlors
+2. Petrol & Car Wash
+3. E-Wallet Top Ups
+4. ATM Withdrawal
+5. Marketing & Advertising
+6. Transport & Delivery
+7. All Other Spend Categories
+
+**Scenarios:**
+- **Restrict specific categories**: Toggle off unwanted categories; all others allowed
+- **Allow specific categories only**: Toggle off "All Other Spend Categories" + customize the 6 listed
+- **Reset restrictions**: Toggle off Merchant Control entirely
+
+> Changes may take up to 5 working days to apply.
+
+---
+
+## Terminate Cards
+
+Permanent — cannot be undone. Go to: Cards → select card → Terminate.
+
+> Freeze card first to stop spending; terminate only when card is confirmed lost/stolen or employee offboarded.
+
+---
+
+## Assign Cards to Your Team
+
+See [Getting Started → Assign Cards](./01_getting-started.md#5-assign-cards-to-your-team).
+
+**Common questions:**
+- **How many cards can I issue?** Free: 1 virtual; Paid: unlimited virtual + physical per plan
+- **Multiple cards per employee?** Yes — separate cards per use case recommended
+- **Change spending limit?** Clawback excess funds to master account; adjust as needed
+- **Employee leaves?** Employee Settings → set inactive → all cards auto-frozen/deactivated
+- **Can employees create cards?** No — admin only
+# Funds
+
+> Learn how to top up, load and move money across your accounts.
+
+Source: https://help.swipey.co/en/collection/18-funds
+
+---
+
+## How Long Does It Take for Funds to Be Reflected?
+
+**Master account deposits:**
+- **FPX (instant)** — recommended for urgent or weekend deposits
+- **Direct bank transfer** — approved at 4 pm Mon–Fri only
+
+**Card top-ups** (if instant top-up is delayed):
+
+| Batch | Cut-off Time | Processing Time |
+|---|---|---|
+| 1 | 10 am | 1–2 hours |
+| 2 | 1 pm | 1–2 hours |
+| 3 | 5 pm | 1–2 hours |
+| 4 | 7 pm | 1–2 hours |
+
+---
+
+## Top-Up Instantly
+
+Admin dashboard → Cards → select card → Top Up → enter amount → confirm. Instant. If delayed, refer to batch schedule above.
+
+Ensure master account has sufficient funds before topping up cards.
+
+---
+
+## Move Funds from Card to Master Account (Clawback)
+
+1. Admin dashboard → Cards → select card
+2. Right panel → **Clawback to Master Account**
+3. Enter amount → **Retrieve Funds**
+4. Enter OTP to confirm
+
+Transfer is instant.
+
+---
+
+## Withdraw Master Account Funds
+
+Admin dashboard → Funds → Withdraw → enter bank details and amount → confirm. Subject to banking processing times.
+
+---
+
+## Auto Top-Up (Growth & Plus Plans Only)
+
+Automatically tops up a card when balance falls below a set threshold.
+
+**Setup:** Cards → select card → right panel → toggle ON Auto Top-Up → set threshold and top-up amount → Save.
+
+Master account must have sufficient balance for auto top-up to work. Cards with auto top-up enabled are marked on the Cards page.
+
+---
+
+## FPX Deposit
+
+Dashboard → Funds → Deposit → select FPX → choose bank → complete payment.
+
+**Fee:** RM 1.50 per transaction (waived on Growth & Plus plans).
+
+**Supported banks:** Major Malaysian banks via FPX network.
+
+---
+
+## Deposit Master Account via Cards
+
+For scenarios where you need to fund via card (e.g., credit card). Dashboard → Funds → Deposit → select card payment option.
+
+---
+
+## Export Master Account Statement
+
+Dashboard → Funds → Export → select date range → download CSV/PDF.
+
+---
+
+## List of Banks Available for FPX Transfers
+
+All major Malaysian banks supported via FPX. Check the full list in dashboard during FPX deposit flow.
+
+---
+
+## Balance Limits
+
+| | Limit |
+|---|---|
+| Master account | No maximum |
+| Card top-up per card | RM 10,000 |
+| Card spending per transaction | RM 10,000 |
+| Card spending daily | RM 50,000 |
+| Card spending monthly | RM 500,000 |
+# Team Management
+
+> Add your team, assign roles and manage who has access to what.
+
+Source: https://help.swipey.co/en/collection/19-team-managment
+
+---
+
+## User Roles
+
+Three roles available when inviting a team member:
+
+| Permission | Employee | Admin | Bookkeeper |
+|---|---|---|---|
+| Have a VISA card | ✅ | If assigned | If assigned |
+| View own transactions | ✅ | ✅ | ✅ |
+| View all transactions | ❌ | ✅ | ✅ |
+| Manage funds & top-ups | ❌ | ✅ | ❌ |
+| Manage employees | ❌ | ✅ | ❌ |
+| Web dashboard access | ❌ | ✅ | ✅ |
+| Approve bills (Payouts) | ❌ | ✅ | ❌ |
+| Mobile app access | ✅ | If assigned card | If assigned card |
+| Add notes & receipts | ✅ | ✅ | ✅ |
+| View all notes & receipts | ❌ | ✅ | ✅ |
+| Download statements | ❌ | ✅ | ✅ |
+
+> Choose the right role before inviting. To switch roles after invitation, contact Swipey via Live Chat or WhatsApp.
+
+---
+
+## Invite Your Team
+
+**Steps:**
+1. Admin dashboard → Profile (bottom left) → **Employees** tab → **Invite Employee**
+2. Fill in: name, email, phone number
+3. Select role (Employee / Admin / Bookkeeper)
+4. Optionally assign a card (can be done later)
+5. Click **Submit**
+
+Employee receives email invite with setup instructions.
+
+**Employee setup after invite:**
+1. Download Swipey app (iOS / Android)
+2. Enter email + mobile (do NOT tap "Register new account")
+3. Complete eKYC (photo ID + selfie; name must exactly match MyKad/Passport)
+
+> Each invite requires a unique email and phone not previously used on Swipey.
+
+**Common questions:**
+- **Employee can't find invite?** Check spam/junk folder
+- **Employee shows as "Pending"?** They haven't completed eKYC yet — share the mobile app setup guide
+- **Remove employee?** Employee Settings → select → set status to **Inactive** → access immediately revoked
+
+---
+
+## Get Started with Swipey Mobile App
+
+For employees completing initial setup after receiving invite:
+
+1. Download app: [iOS](https://apps.apple.com/sa/app/swipey-fin-os-for-modern-biz/id1589412706) | [Android](https://play.google.com/store/apps/details?id=app.swipey.co)
+2. Enter email address and mobile number
+3. Do **not** click "Register new account"
+4. Complete eKYC process
+5. Once approved, log in and access assigned virtual card
+
+---
+
+## Update User Role, Department and Status
+
+Admin dashboard → Employee Settings → select employee → Edit → change role / department / status → Save.
+
+Changes apply immediately.
+# Transactions
+
+> Track spending, add receipts and understand your transaction history.
+
+Source: https://help.swipey.co/en/collection/20-transactions
+
+---
+
+## Fees, Charges & Spending Limits
+
+| Type | Amount |
+|---|---|
+| Joining Fee | Waived |
+| Maintenance Fee (inactive cards) | Waived |
+| ATM Withdrawal (local) | RM 2.00 per transaction |
+| ATM Withdrawal (international) | RM 10.00 or 2% of amount, whichever higher |
+| ATM Withdrawal limit (per transaction) | RM 2,000 |
+| ATM Withdrawal limit (daily) | RM 5,000 |
+| ATM Withdrawal limit (monthly) | RM 10,000 |
+| Card Spending (per transaction) | RM 10,000 |
+| Card Spending (daily) | RM 50,000 |
+| Card Spending (monthly) | RM 500,000 |
+| Scan to Pay P2P / QR (per transaction) | RM 2,000 |
+| Scan to Pay P2P (daily/monthly) | RM 2,000 / RM 10,000 |
+| Scan to Pay B2B / QR (per transaction) | RM 10,000 |
+| Scan to Pay B2B (daily/monthly) | RM 50,000 / RM 500,000 |
+| ISA Fee (international merchants, charged in MYR) | 0% + network charges (currently 1%) |
+| Currency Conversion | Visa exchange rate |
+| Sales Draft Retrieval | RM 15.00 per copy |
+| Physical Card Replacement | RM 20.00 (Waived) |
+| Cross Border Fee via Bill Payment | RM 5.00 per bill |
+| FPX Deposit Fee | RM 1.50 per transaction (Waived on Growth & Plus) |
+
+> All fees subject to applicable taxes incl. SST.
+
+---
+
+## View Transactions
+
+**Mobile app (employees):** App → **Transactions** tab at top → view list of all transactions.
+
+**Admin dashboard:** Transactions section → filter by employee, card, date, merchant.
+
+Admins see all company transactions; employees see only their own.
+
+---
+
+## Export Transaction Statements
+
+Admin dashboard → Transactions → **Export** → select date range and format → download.
+
+Employees cannot download statements (admin/bookkeeper only).
+
+---
+
+## Make Your First Transaction
+
+1. Fund master account
+2. Top up card
+3. Use card details (virtual) or physical card at any Visa merchant
+
+Every transaction appears in admin dashboard in real-time.
+
+---
+
+## International Service Assessment (ISA) Fee
+
+ISA is a Visa-imposed fee on transactions at merchants **acquired outside Malaysia**, even if charged in MYR.
+
+| Card | Merchant location | ISA charge |
+|---|---|---|
+| Swipey Visa | Malaysia | None |
+| Swipey Visa | Singapore (or other international) | 1% |
+
+- Applies to physical and virtual cards, online and in-person
+- Separate from currency conversion fees
+- Applies to approved, settled, declined, and refunded transactions (processing costs still incurred)
+- Currently charged at 1% by Visa; subject to change
+# Payouts & Bill Payment
+
+> Pay your business bills and invoices quickly through Swipey.
+
+Source: https://help.swipey.co/en/collection/21-payouts-bill-payment
+
+---
+
+## Payouts Introduction
+
+Payouts helps businesses manage, review, schedule and pay vendor invoices and bills. Supports **local bank transfer, JomPay, and foreign disbursement**.
+
+Number of bills per plan varies — see [swipey.co/pricing](https://swipey.co/pricing/).
+
+---
+
+### 1. Bill Capture
+
+Forward PDF/Excel/Word invoices to **bills@swipey.co** → auto-captured and shown in Kanban view.
+
+**Rules:**
+- Only registered Swipey users can forward bills (non-registered emails ignored)
+- Max 10 invoices per email
+- Only invoices/bills — EPF, salary slips, payroll reports not processed
+- Processing: ~5 mins, up to 2 hours
+- Bills show "Processing" label while being extracted
+
+---
+
+### 2. Managing Bills — Kanban Stages
+
+| Status | Description |
+|---|---|
+| **Pending Review** | New bills land here. Review vendor, amount, currency, bank details. AI auto-extracts but user must verify accuracy. |
+| **To Approve** | Bill reviewed and ready for approval. Must set "Pay On" date before moving to Scheduled. |
+| **Scheduled** | Ready for payment. Master account deducted immediately to ring-fence funds. Can be moved out before pay date to release funds. |
+| **Paid** | Disbursed. Stays here 30 days; older paid bills in Funds tab. |
+| **Rejected** | Rejected by user or payment failed (wrong bank details). |
+
+**Review checklist per bill:**
+1. Vendor name
+2. Charged amount
+3. Currency
+4. Bank details
+
+---
+
+### 3. Vendor Management
+
+- First-time vendor: add details from inner bill page OR Settings → Vendor → Add New Vendor
+- Repeat vendor: bank details auto-populated from Vendor Master List
+- Vendor details saved to master list for future reuse
+
+**Supported foreign currencies:**
+AUD, USD, EUR, GBP, SGD, CNY, PHP, IDR, PKR, BDT + 100+ countries for disbursement.
+
+> Reach out for currencies not listed above.
+
+---
+
+### 4. Scheduling & Making Payment
+
+1. Open bill → set **Pay on Date** (today or future)
+2. Move to **Scheduled** (click "Approve" or select Scheduled from dropdown)
+3. Bill auto-paid on scheduled date
+
+**Payment cut-off times (GIRO network):**
+
+| Swipey Cut-off | Disbursed | Cleared by |
+|---|---|---|
+| 10:00 am | 12:30 pm | 12:30 pm same day |
+| 1:00 pm | 4:30 pm | 4:30 pm same day |
+| 5:00 pm | 7:00 pm | 7:00 pm same day |
+| After 5:00 pm | 10:00 am next day | 10:00 am next day |
+
+> No processing on weekends or Malaysian public holidays.
+> Cross-border payments: 1–3 working days.
+
+---
+
+## Create Bulk Payments via Payouts
+
+Upload multiple bills at once or use bulk scheduling from the Payouts Kanban. Useful for payroll-adjacent payments and recurring vendor invoices.
+
+---
+
+## Download Paid Bills Receipt
+
+Payouts → Paid column → select bill → **Download Receipt**.
+
+---
+
+## Manage and Send Receipts to Vendors
+
+After payment, Swipey can automatically send payment confirmation receipts to vendors. Configure in Payouts settings → enable auto-send → enter vendor email (saved in Vendor Master List).
+# Accounting Integration
+
+> Connect Swipey to QuickBooks or Xero for seamless bookkeeping.
+
+Source: https://help.swipey.co/en/collection/24-accounting-intergration
+
+---
+
+## QuickBooks Integration
+
+### Step 1: Set Up QuickBooks Cash Account
+
+Before linking, create a cash account in QuickBooks to represent Swipey funds:
+
+1. Log in to QuickBooks
+2. Chart of Accounts → **New** → Account Type: Cash and Cash Equivalents
+3. Name it (e.g., "Swipey Master Account")
+4. Repeat for Swipey Cards Account
+
+### Step 2: Link QuickBooks to Swipey
+
+1. Swipey dashboard → **Accounting** → **Connect to QuickBooks**
+2. Click **Connect**
+3. Authenticate with QuickBooks credentials
+4. Map **Swipey Master Account** → your QuickBooks ledger account
+5. Map **Swipey Cards Account** → your QuickBooks ledger account
+6. Confirm — all linked accounts show green "Linked" label
+
+> **Important:** Do not disconnect QuickBooks after linking — disconnecting may cause unsaved changes. Swipey is working on improving this.
+
+### Step 3: Sync Transactions to QuickBooks
+
+Swipey dashboard → Accounting → **Sync** → transactions pushed to mapped QuickBooks accounts.
+
+- **Expenses** = card transactions + bill payments
+- **Internal Transfers** = master account movements (deposit, top-up, clawback)
+
+---
+
+## Xero Integration
+
+### Step 1: Create Cash Accounts in Xero
+
+1. Log in to Xero → **Accounting** → **Chart of Accounts**
+2. **Add Bank Account** → **Add without Bank Feed**
+3. Name it (e.g., "Swipey Master Account")
+4. Repeat for Swipey Cards Account
+
+### Step 2: Connect Xero to Swipey
+
+1. Swipey dashboard → **Accounting Integration** → **Connect to Xero**
+2. Authenticate with Xero credentials
+
+### Step 3: Map Accounts
+
+After connecting:
+- Select **Swipey Master Account** → map to Xero cash account created in Step 1
+- Select **Swipey Cards Account** → map to Xero cards account
+
+### Step 4: Sync Transactions
+
+Accounting → click **Expense** or **Internal Transfers** to start syncing:
+
+| Sync Type | What It Covers |
+|---|---|
+| Expense | Card transactions & bill payments |
+| Internal Transfers | Deposit, top-up, clawback |
+
+---
+
+## Syncing Transactions to QuickBooks / Xero
+
+After accounts are linked and mapped:
+- Transactions sync automatically or on-demand
+- Receipts and notes attached in Swipey carry over
+- Match synced transactions in QuickBooks/Xero for reconciliation
+
+> Keep accounting software connected at all times for uninterrupted sync.
+# Mobile App
+
+> Manage your card and transactions on the go with the Swipey app.
+
+Source: https://help.swipey.co/en/collection/25-mobile-app
+
+---
+
+## Get Started with the Swipey Mobile App
+
+Download:
+- [iOS (App Store)](https://apps.apple.com/sa/app/swipey-fin-os-for-modern-biz/id1589412706)
+- [Android (Google Play)](https://play.google.com/store/apps/details?id=app.swipey.co)
+
+**Setup steps (for invited employees):**
+1. Open app → enter email and mobile number
+2. Do **not** tap "Register new account"
+3. Complete eKYC: upload photo ID + take selfie
+4. Name must match MyKad/Passport exactly
+5. Once approved, log in to access assigned card
+
+---
+
+## View Transactions
+
+App → **Transactions** tab (top of screen) → view full transaction history.
+
+Employees see only their own transactions. Admins see all (via web dashboard).
+
+---
+
+## Freeze & Reactivate Cards on Mobile
+
+App → **Cards** tab → select card → **Freeze Card**
+
+Card stops working immediately. Balance unaffected.
+
+To restore: **Reactivate Card**
+
+---
+
+## Reset Physical Card PIN
+
+1. App → **Cards** tab → **Reset Card PIN**
+2. Authenticate: 6-digit PIN / Face ID / fingerprint
+3. Enter OTP sent to registered phone
+4. Enter new PIN → Confirm
+
+---
+
+## Pay Merchants via QR
+
+App → **Scan** / QR icon → scan merchant QR code → enter amount → confirm payment.
+
+Supports P2P and B2B QR payments:
+
+| Type | Per Transaction | Daily | Monthly |
+|---|---|---|---|
+| P2P (personal) | RM 2,000 | RM 2,000 | RM 10,000 |
+| B2B (business) | RM 10,000 | RM 50,000 | RM 500,000 |
+
+---
+
+## Reset Mobile App Passcode
+
+If locked out of app:
+1. App login screen → **Forgot Passcode**
+2. Verify identity via OTP sent to registered phone
+3. Set new 6-digit passcode
+
+> If OTP not received, ensure phone number registered matches your Swipey account.
+
+---
+
+## Key Mobile App Features Summary
+
+| Feature | Who Can Use |
+|---|---|
+| View own card details | Employee, Admin |
+| View transactions | Employee (own), Admin (all via web) |
+| Freeze / unfreeze card | Employee (own), Admin (any) |
+| Reset card PIN | Employee (own card) |
+| Pay via QR | Employee, Admin |
+| Attach receipts | Employee, Admin |
+| Reset app passcode | Employee, Admin |
+# Legal & Policies
+
+> Terms, conditions, and policies that govern how Swipey operates and supports your business.
+
+Source: https://help.swipey.co/en/collection/27-legal-policies
+
+---
+
+## Feedback & Complaints Policy
+
+Swipey is committed to resolving issues fairly and promptly.
+
+### How to Lodge a Complaint
+
+| Channel | Details |
+|---|---|
+| WhatsApp | [+603 9213 1099](https://api.whatsapp.com/send?phone=60392131099) — fastest response |
+| Email | hi@swipey.co — include company name and issue description |
+| Help Center | help.swipey.co |
+
+### What to Include
+
+- Name and registered company name
+- Clear description of the issue (what, when, how)
+- Relevant transaction IDs, dates, screenshots
+- Desired outcome / resolution sought
+
+### Resolution Timeline
+
+| Stage | Timeframe | Action |
+|---|---|---|
+| Acknowledgement | Within 4 business hours | Complaint received, assigned to team |
+| Investigation | 7–14 business days | Case reviewed, info gathered |
+| Resolution | Up to 14 business days | Final response + remedial steps if applicable |
+
+> Cases involving third parties (card networks, banking partners) may take longer — outside Swipey's direct control.
+
+---
+
+## T&C: Bill and Invoice Pay-out Product Campaign ("Lowest FX Rate Guaranteed")
+
+**What it means:** Swipey guarantees the lowest effective FX rate — covering the FX rate itself plus all cross-border fees — compared to B2B/B2C remittance providers (excludes consumer-focused platforms like Wise).
+
+**To claim a lower rate:**
+1. Submit via [claim form](https://forms.clickup.com/3820803/f/3mk83-45996/8SS07IPN0P3YDPIK91)
+2. Provide proof: same country, same currency, same date
+3. If Swipey confirms a better rate existed — difference credited to company account
+
+Swipey reserves the right to update these T&Cs at any time.
+
+---
+
+## T&C: Cashback Campaign Powered by PayNet
+
+Cashback offered in partnership with PayNet on eligible transactions. Specific rates and eligible categories governed by PayNet program terms. Refer to Swipey dashboard for active campaign details.
+
+---
+
+## T&C: Cashback Program
+
+**Program:** 1% cashback on eligible digital marketing and SaaS subscription spend, capped at **RM 75 per company per month**.
+
+**Eligibility:**
+- All verified Swipey users
+- Participants must not have transacted via Swipey since 1 January 2025
+
+**Duration:** 1 March 2026 – 31 May 2026
+
+**Redemption:**
+- Cashback credited to Company Master Account within 20 days after month-end
+- No expiry on cashback
+- No restriction on use — spend at any merchant/vendor via Swipey
+- Cannot be combined with previously earned cashback; cannot be withdrawn as cash
+
+Swipey reserves the right to modify, cancel, or suspend the program at any time.
+
+---
+
+## T&C: Invoice and Bill Payment Cashback Campaign (New Users)
+
+Cashback campaign specifically for new users making their first bill/invoice payments via Swipey Payouts. Rates and eligibility defined at campaign launch. Check dashboard for active terms.
+
+---
+
+## T&C: Swipey Reactivation Rewards Campaign
+
+Rewards for previously inactive users who reactivate and resume transactions within the campaign period. Specific reward tiers and qualifying criteria available in the campaign article. Check dashboard for current status.
+# FAQ
+
+Source: https://help.swipey.co/en/collection/4-faq
+
+---
+
+## Is There a Minimum and Maximum Amount Allowed?
+
+**Minimum:** No minimum required on Swipey cards.
+
+**Maximum:**
+- Master account: No limit
+- Card top-up per card: RM 10,000
+
+---
+
+## Is There a Transaction Limit?
+
+**RM 10,000 per transaction** — set by Bank Negara Malaysia.
+
+---
+
+## International Service Assessment (ISA)
+
+ISA is a Visa-imposed fee on transactions at merchants **acquired outside Malaysia**, even if billed in MYR.
+
+**Current rate:** 1% (charged by Visa; subject to change)
+
+| Card | Merchant | ISA |
+|---|---|---|
+| Swipey Visa | Malaysia | None |
+| Swipey Visa | International (e.g. Singapore) | 1% |
+
+- Applies to virtual and physical cards, online and in-store
+- Separate from currency conversion fees
+- Applies to approved, declined, settled, and refunded transactions (processing costs incurred regardless)
+
+---
+
+## Suspicious Transactions
+
+### Prevention
+- Never share card details or CVV
+- Never share OTPs used to approve transactions
+- Never pass card to others to use
+
+### Common Causes of Unrecognized Charges (Not Fraud)
+- Petrol station pre-authorizations
+- Offline transactions
+- Unfamiliar business names (merchant trade names vs brand names)
+- Small verification charges
+- Auto-renewed subscription services
+
+### If You Suspect Fraud
+1. **Freeze card immediately** via Swipey mobile app
+2. Rule out the common causes above
+3. Contact Swipey Customer Success to terminate and replace card
+
+### How to Report
+Email **help@swipey.co** with:
+- Email linked to Swipey account
+- Last 4 digits of affected card
+- Transaction ID
+- Transaction details (date, time, merchant, amount)
+
+Swipey prepares a Visa dispute request form for your confirmation.
+
+### Dispute Process & Timelines
+- Investigation by Visa: **up to 180 days** from submission
+- Dispute **does not guarantee refund** — subject to Visa's final decision
+- **Minimum dispute amount:** USD 25 per transaction (or local currency equivalent)
+- Under Visa Dispute Condition 10.4: max **35 transactions** per submission for unauthorized/fraudulent category; **no limit** for other dispute categories (e.g. service not received, duplicate charge)
+# Feature Feed
+
+> Latest updates and product releases from Swipey.
+
+Source: https://help.swipey.co/en/collection/9-feature-feed
+
+---
+
+## 2026
+
+### February 2026 — We Fixed the Most Annoying Part of Finance 🚀
+
+Focus: Efficiency, AI receipts, faster payouts.
+
+**Enhanced Dashboard Filtering**
+Filter transactions by: missing receipts, large expenses, unusual activity, items needing reconciliation. Faster month-end close.
+
+**Alfie AI — Receipt Matching**
+- Upload a receipt → Alfie auto-matches to correct transaction
+- Available on mobile: snap photo on the go, Alfie matches in real-time
+- Closes books up to 10× faster
+
+**Fund Master Account via Credit Card**
+- Load Swipey Master balance using a credit card
+- Funds usable for payroll, supplier invoices, rent, and other payments that previously required cash
+- Unlocks high-volume business payments from unused credit lines
+
+**Faster Payouts**
+- Bill payments no longer tied to GIRO's fixed disbursement windows
+- Same-day processing for submissions before cut-off
+- No change to how bills are submitted — just faster delivery
+
+---
+
+## 2025
+
+### November 2025 — Total Transparency & High-Speed Bills 🌎
+
+Focus: Fee transparency, petrol transaction accuracy, historical data clarity, bug fixes.
+
+**ISA Fee Breakdown in Transaction Details**
+Full International Service Assessment fee breakdown now visible per transaction — no manual calculation needed for audit or reconciliation.
+
+**Petrol Station Transaction Corrections**
+Transactions where final amount differs from initial authorization (e.g. petrol stations) now auto-update to the final correct amount. Eliminates billing disputes.
+
+**Original Date Referencing for Late Imports**
+Late-imported transactions now display the original transaction date, not the import date. Prevents confusion in monthly reconciliations.
+
+**Bug Fixes:**
+- Duplicate document no longer created when manually attaching to a bill
+- Card request "Sync Data" mobile failures resolved
+- Fund transfer transaction statuses and amounts now correctly displayed
+
+---
+
+### September 2025 — Intelligent Receipt Management & Next-Gen Controls 💎
+
+Focus: Receipt intelligence, advanced spend controls.
+*(Detailed release notes at help.swipey.co)*
+
+---
+
+### August 2025 — Mission Control & Crystal Clear Insights 🌟
+
+Focus: Admin visibility, financial insights.
+*(Detailed release notes at help.swipey.co)*
+
+---
+
+### July 2025 — Human-Friendly Finance & Instant Visibility 📈
+
+Focus: UX improvements, real-time spend tracking.
+*(Detailed release notes at help.swipey.co)*
+
+---
+
+### June 2025 — Instant Funding & Fortified Security 💳
+
+Focus: Faster deposits, enhanced security layers.
+*(Detailed release notes at help.swipey.co)*
+
+---
+
+### May 2025 — Enterprise Scale Meets Lightning Speed ⚡
+
+Focus: High-volume payments, onboarding at scale.
+*(Detailed release notes at help.swipey.co)*
+
+---
+
+### April 2025 — Faster Onboarding & Bank-Grade Security ⚡
+
+Focus: Streamlined onboarding flow, security upgrades.
+*(Detailed release notes at help.swipey.co)*
+
+---
+
+### March 2025 — Audit-Ready Accuracy & The Mobile Leap 📱
+
+Focus: Audit trails, major mobile app improvements.
+*(Detailed release notes at help.swipey.co)*
+
+---
+
+### January 2025 — The New Standard of Precision & Power 🚀
+
+Focus: Precision controls, smart alerts, mobile mission control.
+*(Detailed release notes at help.swipey.co)*

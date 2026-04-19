@@ -1,3 +1,12 @@
+/* Button group wrapper */
+#llm-highlighter-btn-group {
+    position: fixed;
+    z-index: 2147483647;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 /* Collapsed: tiny icon only */
 #llm-highlighter-btn {
     position: fixed;
@@ -82,6 +91,132 @@
     }
 }
 
+/* Gear / prompt editor toggle button */
+#llm-highlighter-prompt-btn {
+    position: relative;
+    z-index: 2147483647;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.15s, background 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    background: #2563eb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#llm-highlighter-prompt-btn:hover {
+    opacity: 1;
+    background: #1d4ed8;
+}
+
+/* Inline prompt editor panel */
+#llm-highlighter-prompt-editor {
+    position: fixed;
+    z-index: 2147483647;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px;
+    width: 380px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    color: #111827;
+}
+
+#llm-highlighter-prompt-editor .pe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#llm-highlighter-prompt-editor .pe-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+}
+
+#llm-highlighter-prompt-editor .pe-close:hover { color: #374151; }
+
+#llm-highlighter-prompt-editor .pe-textarea {
+    width: 100%;
+    height: 130px;
+    resize: vertical;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 13px;
+    font-family: system-ui, sans-serif;
+    color: #111827;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#llm-highlighter-prompt-editor .pe-textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+#llm-highlighter-prompt-editor .pe-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#llm-highlighter-prompt-editor .pe-save {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+#llm-highlighter-prompt-editor .pe-save:hover { background: #1d4ed8; }
+
+#llm-highlighter-prompt-editor .pe-reset {
+    background: none;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #6b7280;
+    transition: border-color 0.15s;
+}
+
+#llm-highlighter-prompt-editor .pe-reset:hover {
+    border-color: #9ca3af;
+    color: #374151;
+}
+
+#llm-highlighter-prompt-editor .pe-saved-msg {
+    color: #16a34a;
+    font-size: 12px;
+}
+
 #llm-highlighter-response {
     position: fixed;
     z-index: 2147483647;
@@ -149,6 +284,118 @@
     background: #16a34a;
 }
 
+#llm-highlighter-response .response-actions {
+    display: flex;
+    gap: 8px;
+}
+
+#llm-highlighter-response .response-faq-btn {
+    flex: 1;
+    background: none;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #6b7280;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+#llm-highlighter-response .response-faq-btn:hover {
+    border-color: #9ca3af;
+    color: #374151;
+}
+
 #llm-highlighter-response .response-error {
     color: #dc2626;
+}
+
+/* FAQ feedback panel */
+#llm-highlighter-faq-panel {
+    position: fixed;
+    z-index: 2147483647;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px;
+    width: 380px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    color: #111827;
+}
+
+#llm-highlighter-faq-panel .faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#llm-highlighter-faq-panel .faq-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+}
+
+#llm-highlighter-faq-panel .faq-close:hover { color: #374151; }
+
+#llm-highlighter-faq-panel .faq-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+#llm-highlighter-faq-panel textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    padding: 7px 8px;
+    font-size: 13px;
+    font-family: system-ui, sans-serif;
+    color: #111827;
+    line-height: 1.5;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+#llm-highlighter-faq-panel textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+#llm-highlighter-faq-panel .faq-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#llm-highlighter-faq-panel .faq-submit {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+#llm-highlighter-faq-panel .faq-submit:hover { background: #1d4ed8; }
+#llm-highlighter-faq-panel .faq-submit:disabled { background: #9ca3af; cursor: not-allowed; }
+
+#llm-highlighter-faq-panel .faq-msg {
+    font-size: 12px;
 }
