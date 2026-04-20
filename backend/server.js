@@ -3,35 +3,65 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
+const { Redis } = require("@upstash/redis");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const SHARED_SECRET = process.env.SHARED_SECRET || "";
 
-const PROMPTS_DIR = path.join(__dirname, "prompts");
-const FAQ_PATH = path.join(PROMPTS_DIR, "faq.txt");
-
 if (!OPENROUTER_API_KEY) {
     console.error("ERROR: OPENROUTER_API_KEY not set in .env");
     process.exit(1);
 }
 
-// Ensure faq.txt exists
-if (!fs.existsSync(FAQ_PATH)) fs.writeFileSync(FAQ_PATH, "");
+if (
+    !process.env.UPSTASH_REDIS_REST_URL ||
+    !process.env.UPSTASH_REDIS_REST_TOKEN
+) {
+    console.error(
+        "ERROR: UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN must be set",
+    );
+    process.exit(1);
+}
 
-function buildSystemPrompt() {
-    const tone = fs
-        .readFileSync(path.join(PROMPTS_DIR, "tone.txt"), "utf8")
-        .trim();
-    const knowledgeBase = fs
-        .readFileSync(path.join(PROMPTS_DIR, "knowledge_base.txt"), "utf8")
-        .trim();
-    const faq = fs.readFileSync(FAQ_PATH, "utf8").trim();
+const redis = new Redis({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN,
+});
 
-    const faqSection = faq
-        ? `\n\n---\n\n# FAQ (curated Q&A from support team)\n\n${faq}`
-        : "";
+const PROMPTS_DIR = path.join(__dirname, "prompts");
+const TONE_KEY = "tone";
+const KB_KEY = "knowledge_base";
+const FAQ_KEY = "faq_entries";
+
+// Seed Redis from files if keys don't exist yet (one-time migration)
+async function seedIfMissing(key, filePath) {
+    const exists = await redis.exists(key);
+    if (!exists) {
+        const content = fs.readFileSync(filePath, "utf8").trim();
+        await redis.set(key, content);
+        console.log(`Seeded Redis key "${key}" from ${filePath}`);
+    }
+}
+
+async function init() {
+    await seedIfMissing(TONE_KEY, path.join(PROMPTS_DIR, "tone.txt"));
+    await seedIfMissing(KB_KEY, path.join(PROMPTS_DIR, "knowledge_base.txt"));
+    console.log("Redis ready.");
+}
+
+async function buildSystemPrompt() {
+    const [tone, knowledgeBase, faqEntries] = await Promise.all([
+        redis.get(TONE_KEY),
+        redis.get(KB_KEY),
+        redis.lrange(FAQ_KEY, 0, -1),
+    ]);
+
+    const faqSection =
+        faqEntries && faqEntries.length
+            ? `\n\n---\n\n# FAQ (curated Q&A from support team)\n\n${faqEntries.join("\n\n")}`
+            : "";
 
     return `${tone}\n\n---\n\n# Knowledge Base\n\n${knowledgeBase}${faqSection}`;
 }
@@ -57,7 +87,7 @@ app.post("/generate", checkSecret, async (req, res) => {
     }
 
     const selectedModel = model || "minimax/minimax-m2.7";
-    const systemPrompt = buildSystemPrompt(); // re-read on every request → faq changes take effect immediately
+    const systemPrompt = await buildSystemPrompt();
 
     try {
         const response = await fetch(
@@ -102,8 +132,7 @@ app.post("/generate", checkSecret, async (req, res) => {
     }
 });
 
-// Append a new Q&A entry to faq.txt
-app.post("/faq", checkSecret, (req, res) => {
+app.post("/faq", checkSecret, async (req, res) => {
     const { question, answer } = req.body;
 
     if (!question || !answer) {
@@ -112,14 +141,28 @@ app.post("/faq", checkSecret, (req, res) => {
             .json({ error: "question and answer are required" });
     }
 
-    const entry = `\nQ: ${question.trim()}\nA: ${answer.trim()}\n`;
-    fs.appendFileSync(FAQ_PATH, entry, "utf8");
+    const entry = `Q: ${question.trim()}\nA: ${answer.trim()}`;
+    await redis.rpush(FAQ_KEY, entry);
     console.log("FAQ entry added:", question.trim().slice(0, 80));
     res.json({ ok: true });
 });
 
+app.get("/faq", checkSecret, async (_req, res) => {
+    const entries = await redis.lrange(FAQ_KEY, 0, -1);
+    res.json({ entries: entries || [] });
+});
+
 app.get("/health", (_req, res) => res.json({ status: "ok" }));
 
-app.listen(PORT, () => {
-    console.log(`LLM Highlighter backend running on http://localhost:${PORT}`);
-});
+init()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(
+                `LLM Highlighter backend running on http://localhost:${PORT}`,
+            );
+        });
+    })
+    .catch((err) => {
+        console.error("Init failed:", err);
+        process.exit(1);
+    });
