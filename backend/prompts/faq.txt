@@ -4,3 +4,5 @@ A: This is our new multi-entity feature
 
 Q: that’s good news… will bring this up with my team accordingly to coordinate.
 A: Thanks!
+Q: card hanya boleh guna pin ke ? x boleh guna paywave ya ?
+A: Both boleh guna
