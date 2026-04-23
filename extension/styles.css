@@ -1,3 +1,10 @@
+/* ── Theme tokens ─────────────────────────────────────────────────────────── */
+:root {
+    --llm-accent:       rgb(39, 216, 178);
+    --llm-accent-dark:  rgb(28, 180, 148);
+    --llm-accent-dim:   rgba(39, 216, 178, 0.2);
+}
+
 /* Button group wrapper */
 #llm-highlighter-btn-group {
     position: fixed;
@@ -11,7 +18,7 @@
 #llm-highlighter-btn {
     position: relative;
     z-index: 2147483647;
-    background: #2563eb;
+    background: var(--llm-accent);
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -19,11 +26,11 @@
     font-size: 14px;
     font-family: system-ui, sans-serif;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(39, 216, 178, 0.35);
     display: flex;
     align-items: center;
     gap: 0px;
-    opacity: 0.75;
+    opacity: 0.85;
     max-width: 28px;
     overflow: hidden;
     transition:
@@ -36,7 +43,7 @@
 
 /* Expanded: show label on hover */
 #llm-highlighter-btn:hover {
-    background: #1d4ed8;
+    background: var(--llm-accent-dark);
     opacity: 1;
     max-width: 160px;
     gap: 5px;
@@ -95,18 +102,18 @@
 #llm-highlighter-faq-trigger-btn {
     position: relative;
     z-index: 2147483647;
-    background: #2563eb;
+    background: var(--llm-accent);
     color: #fff;
     border: none;
     border-radius: 20px;
     padding: 5px 8px;
     font-size: 14px;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(39, 216, 178, 0.35);
     display: flex;
     align-items: center;
     gap: 0px;
-    opacity: 0.75;
+    opacity: 0.85;
     max-width: 28px;
     overflow: hidden;
     transition:
@@ -118,7 +125,7 @@
 }
 
 #llm-highlighter-faq-trigger-btn:hover {
-    background: #1d4ed8;
+    background: var(--llm-accent-dark);
     opacity: 1;
     max-width: 120px;
     gap: 5px;
@@ -139,7 +146,7 @@
 #llm-highlighter-prompt-btn {
     position: relative;
     z-index: 2147483647;
-    background: rgba(255,255,255,0.15);
+    background: var(--llm-accent);
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -147,31 +154,32 @@
     height: 26px;
     font-size: 13px;
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.85;
     transition: opacity 0.15s, background 0.15s;
     display: flex;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(4px);
-    background: #2563eb;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(39, 216, 178, 0.35);
 }
 
 #llm-highlighter-prompt-btn:hover {
     opacity: 1;
-    background: #1d4ed8;
+    background: var(--llm-accent-dark);
 }
 
 /* Inline prompt editor panel */
 #llm-highlighter-prompt-editor {
     position: fixed;
     z-index: 2147483647;
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(39, 216, 178, 0.25);
+    border-radius: 12px;
     padding: 14px;
     width: 380px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     font-family: system-ui, sans-serif;
     font-size: 13px;
     color: #111827;
@@ -184,7 +192,7 @@
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 11px;
-    color: #6b7280;
+    color: var(--llm-accent-dark);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -218,7 +226,7 @@
 
 #llm-highlighter-prompt-editor .pe-textarea:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: var(--llm-accent);
 }
 
 #llm-highlighter-prompt-editor .pe-footer {
@@ -228,7 +236,7 @@
 }
 
 #llm-highlighter-prompt-editor .pe-save {
-    background: #2563eb;
+    background: var(--llm-accent);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -238,7 +246,7 @@
     transition: background 0.15s;
 }
 
-#llm-highlighter-prompt-editor .pe-save:hover { background: #1d4ed8; }
+#llm-highlighter-prompt-editor .pe-save:hover { background: var(--llm-accent-dark); }
 
 #llm-highlighter-prompt-editor .pe-reset {
     background: none;
@@ -257,20 +265,25 @@
 }
 
 #llm-highlighter-prompt-editor .pe-saved-msg {
-    color: #16a34a;
+    color: var(--llm-accent-dark);
     font-size: 12px;
 }
 
 #llm-highlighter-response {
     position: fixed;
     z-index: 2147483647;
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(39, 216, 178, 0.25);
+    border-radius: 12px;
     padding: 16px;
     max-width: 420px;
     min-width: 280px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     font-family: system-ui, sans-serif;
     font-size: 14px;
     color: #111827;
@@ -284,9 +297,10 @@
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 12px;
-    color: #6b7280;
+    color: var(--llm-accent-dark);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    flex-shrink: 0;
 }
 
 #llm-highlighter-response .response-close {
@@ -306,11 +320,13 @@
 #llm-highlighter-response .response-text {
     margin-bottom: 12px;
     white-space: pre-wrap;
+    overflow-y: auto;
+    flex: 1;
 }
 
 #llm-highlighter-response .response-copy-btn {
     flex: 3;
-    background: #2563eb;
+    background: var(--llm-accent);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -321,7 +337,7 @@
 }
 
 #llm-highlighter-response .response-copy-btn:hover {
-    background: #1d4ed8;
+    background: var(--llm-accent-dark);
 }
 
 #llm-highlighter-response .response-copy-btn.copied {
@@ -331,12 +347,13 @@
 #llm-highlighter-response .response-actions {
     display: flex;
     gap: 8px;
+    flex-shrink: 0;
 }
 
 #llm-highlighter-response .response-faq-btn {
     flex: 7;
     background: none;
-    border: 1px solid #d1d5db;
+    border: 1px solid rgba(39, 216, 178, 0.35);
     border-radius: 5px;
     padding: 6px 10px;
     font-size: 12px;
@@ -346,8 +363,8 @@
 }
 
 #llm-highlighter-response .response-faq-btn:hover {
-    border-color: #9ca3af;
-    color: #374151;
+    border-color: var(--llm-accent);
+    color: var(--llm-accent-dark);
 }
 
 #llm-highlighter-response .response-error {
@@ -358,12 +375,14 @@
 #llm-highlighter-faq-panel {
     position: fixed;
     z-index: 2147483647;
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(39, 216, 178, 0.25);
+    border-radius: 12px;
     padding: 14px;
     width: 380px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     font-family: system-ui, sans-serif;
     font-size: 13px;
     color: #111827;
@@ -376,7 +395,7 @@
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 11px;
-    color: #6b7280;
+    color: var(--llm-accent-dark);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -417,7 +436,7 @@
 
 #llm-highlighter-faq-panel textarea:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: var(--llm-accent);
 }
 
 #llm-highlighter-faq-panel .faq-footer {
@@ -427,7 +446,7 @@
 }
 
 #llm-highlighter-faq-panel .faq-submit {
-    background: #2563eb;
+    background: var(--llm-accent);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -437,9 +456,30 @@
     transition: background 0.15s;
 }
 
-#llm-highlighter-faq-panel .faq-submit:hover { background: #1d4ed8; }
+#llm-highlighter-faq-panel .faq-submit:hover { background: var(--llm-accent-dark); }
 #llm-highlighter-faq-panel .faq-submit:disabled { background: #9ca3af; cursor: not-allowed; }
 
 #llm-highlighter-faq-panel .faq-msg {
     font-size: 12px;
+}
+
+/* Response loading spinner */
+#llm-highlighter-response .response-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    color: #6b7280;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+#llm-highlighter-response .response-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--llm-accent-dim);
+    border-top-color: var(--llm-accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
 }

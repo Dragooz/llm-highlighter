@@ -35,7 +35,6 @@ const TONE_KEY = "tone";
 const KB_KEY = "knowledge_base";
 const FAQ_KEY = "faq_entries";
 
-// Seed Redis from files if keys don't exist yet (one-time migration)
 async function seedIfMissing(key, filePath) {
     const exists = await redis.exists(key);
     if (!exists) {
@@ -81,16 +80,14 @@ app.post("/generate", checkSecret, async (req, res) => {
     const { text, model } = req.body;
 
     if (!text || typeof text !== "string") {
-        return res
-            .status(400)
-            .json({ error: 'Missing or invalid "text" field' });
+        return res.status(400).json({ error: 'Missing or invalid "text" field' });
     }
 
-    const selectedModel = model || "minimax/minimax-m2.7";
+    const selectedModel = model || "deepseek/deepseek-v3.2";
     const systemPrompt = await buildSystemPrompt();
 
     try {
-        const response = await fetch(
+        const upstream = await fetch(
             "https://openrouter.ai/api/v1/chat/completions",
             {
                 method: "POST",
@@ -102,6 +99,7 @@ app.post("/generate", checkSecret, async (req, res) => {
                 },
                 body: JSON.stringify({
                     model: selectedModel,
+                    stream: true,
                     messages: [
                         { role: "system", content: systemPrompt },
                         { role: "user", content: text },
@@ -112,23 +110,55 @@ app.post("/generate", checkSecret, async (req, res) => {
             },
         );
 
-        if (!response.ok) {
-            const errText = await response.text();
-            console.error(`OpenRouter error ${response.status}:`, errText);
-            return res
-                .status(502)
-                .json({ error: `OpenRouter error: ${response.status}` });
+        if (!upstream.ok) {
+            const errText = await upstream.text();
+            console.error(`OpenRouter error ${upstream.status}:`, errText);
+            return res.status(502).json({ error: `OpenRouter error: ${upstream.status}` });
         }
 
-        const data = await response.json();
-        const reply = data.choices?.[0]?.message?.content;
-        if (!reply)
-            return res.status(502).json({ error: "Empty response from model" });
+        res.setHeader("Content-Type", "text/event-stream");
+        res.setHeader("Cache-Control", "no-cache");
+        res.setHeader("Connection", "keep-alive");
 
-        res.json({ response: reply.trim() });
+        const reader = upstream.body.getReader();
+        const decoder = new TextDecoder();
+        let buf = "";
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            buf += decoder.decode(value, { stream: true });
+            const lines = buf.split("\n");
+            buf = lines.pop(); // keep incomplete line
+
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (!trimmed || !trimmed.startsWith("data:")) continue;
+                const data = trimmed.slice(5).trim();
+                if (data === "[DONE]") {
+                    res.write("data: [DONE]\n\n");
+                    continue;
+                }
+                try {
+                    const parsed = JSON.parse(data);
+                    const delta = parsed.choices?.[0]?.delta?.content;
+                    if (delta) {
+                        res.write(`data: ${JSON.stringify({ delta })}\n\n`);
+                    }
+                } catch (_) { /* skip malformed */ }
+            }
+        }
+
+        res.end();
     } catch (err) {
         console.error("Fetch error:", err);
-        res.status(500).json({ error: err.message });
+        if (!res.headersSent) {
+            res.status(500).json({ error: err.message });
+        } else {
+            res.write(`data: ${JSON.stringify({ error: err.message })}\n\n`);
+            res.end();
+        }
     }
 });
 
@@ -136,9 +166,7 @@ app.post("/faq", checkSecret, async (req, res) => {
     const { question, answer } = req.body;
 
     if (!question || !answer) {
-        return res
-            .status(400)
-            .json({ error: "question and answer are required" });
+        return res.status(400).json({ error: "question and answer are required" });
     }
 
     const entry = `Q: ${question.trim()}\nA: ${answer.trim()}`;
@@ -157,9 +185,7 @@ app.get("/health", (_req, res) => res.json({ status: "ok" }));
 init()
     .then(() => {
         app.listen(PORT, () => {
-            console.log(
-                `LLM Highlighter backend running on http://localhost:${PORT}`,
-            );
+            console.log(`LLM Highlighter backend running on http://localhost:${PORT}`);
         });
     })
     .catch((err) => {

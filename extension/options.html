@@ -113,17 +113,14 @@
   <label for="model">Model</label>
   <div class="hint">OpenRouter model ID to use</div>
   <select id="model">
-    <option value="minimax/minimax-m2.7">MiniMax M2.7 (recommended)</option>
+    <option value="deepseek/deepseek-v3.2">DeepSeek V3.2 (recommended)</option>
+    <option value="minimax/minimax-m2.7">MiniMax M2.7</option>
     <option value="google/gemini-2.0-flash-001">Gemini 2.0 Flash</option>
     <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
     <option value="openai/gpt-4o">GPT-4o</option>
     <option value="anthropic/claude-haiku-4-5">Claude Haiku 4.5</option>
     <option value="anthropic/claude-sonnet-4-6">Claude Sonnet 4.6</option>
   </select>
-
-  <label for="system-prompt">System Prompt</label>
-  <div class="hint">Defines the AI's behavior. The customer's highlighted text is sent as the user message.</div>
-  <textarea id="system-prompt"></textarea>
 
   <div class="row">
     <button id="save-btn">Save Settings</button>

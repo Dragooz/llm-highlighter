@@ -1,28 +1,38 @@
 // ─── Dev defaults (overridden by Options page settings) ──────────────────────
 const DEFAULTS = {
-    backendUrl: "http://localhost:3000",
+    backendUrl: "https://llm-highlighter-production.up.railway.app",
     secret: "",
-    model: "minimax/minimax-m2.7",
+    model: "deepseek/deepseek-v3.2",
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
 (() => {
-    let floatingBtn  = null;
+    let floatingBtn = null;
     let responsePanel = null;
-    let faqPanel     = null;
-    let lastRange    = null;
-    let lastQuestion = "";  // the highlighted text from the last generation
+    let faqPanel = null;
+    let lastRange = null;
+    let lastQuestion = ""; // the highlighted text from the last generation
+    let lastStreamedText = ""; // accumulated stream text for copy/faq
 
     // ── cleanup helpers ──────────────────────────────────────────────────────
 
     function removeBtn() {
-        if (floatingBtn) { floatingBtn.remove(); floatingBtn = null; }
+        if (floatingBtn) {
+            floatingBtn.remove();
+            floatingBtn = null;
+        }
     }
     function removeResponse() {
-        if (responsePanel) { responsePanel.remove(); responsePanel = null; }
+        if (responsePanel) {
+            responsePanel.remove();
+            responsePanel = null;
+        }
     }
     function removeFaqPanel() {
-        if (faqPanel) { faqPanel.remove(); faqPanel = null; }
+        if (faqPanel) {
+            faqPanel.remove();
+            faqPanel = null;
+        }
     }
 
     // ── floating button ──────────────────────────────────────────────────────
@@ -32,7 +42,7 @@ const DEFAULTS = {
         floatingBtn = document.createElement("div");
         floatingBtn.id = "llm-highlighter-btn-group";
         floatingBtn.style.left = `${Math.min(x, window.innerWidth - 220)}px`;
-        floatingBtn.style.top  = `${y + window.scrollY - 70}px`;
+        floatingBtn.style.top = `${y - 40}px`;
 
         floatingBtn.innerHTML = `
             <button id="llm-highlighter-btn" title="Generate reply">
@@ -45,52 +55,78 @@ const DEFAULTS = {
             </button>
         `;
 
-        floatingBtn.querySelector("#llm-highlighter-btn").addEventListener("click", (e) => {
-            e.stopPropagation();
-            handleGenerate();
-        });
+        floatingBtn
+            .querySelector("#llm-highlighter-btn")
+            .addEventListener("click", (e) => {
+                e.stopPropagation();
+                handleGenerate();
+            });
 
-        floatingBtn.querySelector("#llm-highlighter-faq-trigger-btn").addEventListener("click", (e) => {
-            e.stopPropagation();
-            const selectedText = window.getSelection().toString().trim();
-            showFaqPanel(x, y, selectedText);
-        });
+        floatingBtn
+            .querySelector("#llm-highlighter-faq-trigger-btn")
+            .addEventListener("click", (e) => {
+                e.stopPropagation();
+                const selectedText = window.getSelection().toString().trim();
+                showFaqPanel(x, y, selectedText);
+            });
 
         document.body.appendChild(floatingBtn);
     }
 
     // ── response panel ───────────────────────────────────────────────────────
 
-    function showResponse(x, y, text, isError) {
+    function showResponse(x, y, text, isError, streaming = false) {
         removeResponse();
+        lastStreamedText = text;
         responsePanel = document.createElement("div");
         responsePanel.id = "llm-highlighter-response";
-        responsePanel.style.left = `${Math.min(x, window.innerWidth - 440)}px`;
-        responsePanel.style.top  = `${y + window.scrollY - 10}px`;
+
+        // position is fixed, so coords are viewport-relative — no scrollY needed
+        const panelW = 420;
+        const panelH = Math.min(window.innerHeight * 0.6, 400); // approx max-height
+        const margin = 8;
+        const left = Math.min(x, window.innerWidth - panelW - margin);
+        // try below selection; if it clips bottom, show above instead
+        let top = y + 10;
+        if (top + panelH > window.innerHeight - margin) {
+            top = Math.max(margin, y - panelH - 10);
+        }
+
+        responsePanel.style.left = `${Math.max(margin, left)}px`;
+        responsePanel.style.top = `${top}px`;
 
         responsePanel.innerHTML = `
             <div class="response-header">
                 <span>AI Reply</span>
                 <button class="response-close" title="Close">×</button>
             </div>
+            ${streaming ? `<div class="response-loading"><span class="response-spinner"></span><span>Thinking…</span></div>` : ""}
             <div class="response-text ${isError ? "response-error" : ""}">${escapeHtml(text)}</div>
-            ${!isError ? `
-                <div class="response-actions">
+            ${
+                !isError
+                    ? `
+                <div class="response-actions" style="display:${streaming ? "none" : "flex"}">
                     <button class="response-copy-btn">Copy</button>
                     <button class="response-faq-btn" title="Add to FAQ or flag as unhelpful">👎 Not helpful / Add to FAQ</button>
                 </div>
-            ` : ""}
+            `
+                    : ""
+            }
         `;
 
-        responsePanel.querySelector(".response-close").addEventListener("click", () => {
-            removeResponse();
-            removeFaqPanel();
-        });
+        responsePanel
+            .querySelector(".response-close")
+            .addEventListener("click", () => {
+                removeResponse();
+                removeFaqPanel();
+            });
 
         if (!isError) {
             const copyBtn = responsePanel.querySelector(".response-copy-btn");
             copyBtn.addEventListener("click", () => {
-                navigator.clipboard.writeText(text).then(() => {
+                const fullText =
+                    responsePanel.querySelector(".response-text").textContent;
+                navigator.clipboard.writeText(fullText).then(() => {
                     copyBtn.textContent = "Copied!";
                     copyBtn.classList.add("copied");
                     setTimeout(() => {
@@ -100,10 +136,12 @@ const DEFAULTS = {
                 });
             });
 
-            responsePanel.querySelector(".response-faq-btn").addEventListener("click", (e) => {
-                e.stopPropagation();
-                showFaqPanel(x, y, lastQuestion);
-            });
+            responsePanel
+                .querySelector(".response-faq-btn")
+                .addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    showFaqPanel(x, y, lastQuestion);
+                });
         }
 
         document.body.appendChild(responsePanel);
@@ -112,12 +150,17 @@ const DEFAULTS = {
     // ── faq feedback panel ───────────────────────────────────────────────────
 
     function showFaqPanel(x, y, question) {
-        if (faqPanel) { removeFaqPanel(); return; }
+        if (faqPanel) {
+            removeFaqPanel();
+            return;
+        }
 
         faqPanel = document.createElement("div");
         faqPanel.id = "llm-highlighter-faq-panel";
-        faqPanel.style.left = `${Math.min(x, window.innerWidth - 440)}px`;
-        faqPanel.style.top  = `${y + window.scrollY + 200}px`;
+        const faqLeft = Math.min(x, window.innerWidth - 440 - 8);
+        const faqTop = Math.min(y + 10, window.innerHeight - 320 - 8);
+        faqPanel.style.left = `${Math.max(8, faqLeft)}px`;
+        faqPanel.style.top = `${Math.max(8, faqTop)}px`;
 
         faqPanel.innerHTML = `
             <div class="faq-header">
@@ -139,37 +182,48 @@ const DEFAULTS = {
             removeFaqPanel();
         });
 
-        faqPanel.querySelector(".faq-submit").addEventListener("click", async (e) => {
-            e.stopPropagation();
-            const question = faqPanel.querySelector(".faq-question").value.trim();
-            const answer   = faqPanel.querySelector(".faq-answer").value.trim();
-            if (!question || !answer) return;
+        faqPanel
+            .querySelector(".faq-submit")
+            .addEventListener("click", async (e) => {
+                e.stopPropagation();
+                const question = faqPanel
+                    .querySelector(".faq-question")
+                    .value.trim();
+                const answer = faqPanel
+                    .querySelector(".faq-answer")
+                    .value.trim();
+                if (!question || !answer) return;
 
-            const settings = await getSettings();
-            const btn = faqPanel.querySelector(".faq-submit");
-            btn.disabled = true;
-            btn.textContent = "Saving...";
+                const settings = await getSettings();
+                const btn = faqPanel.querySelector(".faq-submit");
+                btn.disabled = true;
+                btn.textContent = "Saving...";
 
-            chrome.runtime.sendMessage(
-                {
-                    type: "ADD_FAQ",
-                    payload: { question, answer, backendUrl: settings.backendUrl, secret: settings.secret },
-                },
-                (response) => {
-                    const msg = faqPanel.querySelector(".faq-msg");
-                    if (chrome.runtime.lastError || response.error) {
-                        msg.textContent = "❌ Failed to save";
-                        msg.style.color = "#dc2626";
-                        btn.disabled = false;
-                        btn.textContent = "Save to FAQ";
-                    } else {
-                        msg.textContent = "✓ Saved to FAQ";
-                        msg.style.color = "#16a34a";
-                        setTimeout(removeFaqPanel, 1500);
-                    }
-                }
-            );
-        });
+                chrome.runtime.sendMessage(
+                    {
+                        type: "ADD_FAQ",
+                        payload: {
+                            question,
+                            answer,
+                            backendUrl: settings.backendUrl,
+                            secret: settings.secret,
+                        },
+                    },
+                    (response) => {
+                        const msg = faqPanel.querySelector(".faq-msg");
+                        if (chrome.runtime.lastError || response.error) {
+                            msg.textContent = "❌ Failed to save";
+                            msg.style.color = "#dc2626";
+                            btn.disabled = false;
+                            btn.textContent = "Save to FAQ";
+                        } else {
+                            msg.textContent = "✓ Saved to FAQ";
+                            msg.style.color = "#16a34a";
+                            setTimeout(removeFaqPanel, 1500);
+                        }
+                    },
+                );
+            });
 
         document.body.appendChild(faqPanel);
     }
@@ -193,36 +247,56 @@ const DEFAULTS = {
 
         const settings = await getSettings();
 
-        chrome.runtime.sendMessage(
-            {
-                type: "GENERATE",
-                payload: {
-                    selectedText,
-                    backendUrl: settings.backendUrl,
-                    secret: settings.secret,
-                    model: settings.model,
-                },
+        // Show empty streaming panel immediately
+        showResponse(rect.left, rect.bottom, "", false, true);
+
+        chrome.runtime.sendMessage({
+            type: "GENERATE",
+            payload: {
+                selectedText,
+                backendUrl: settings.backendUrl,
+                secret: settings.secret,
+                model: settings.model,
             },
-            (response) => {
-                removeBtn();
-                removeFaqPanel();
-                if (chrome.runtime.lastError) {
-                    showResponse(rect.left, rect.bottom, `Error: ${chrome.runtime.lastError.message}`, true);
-                    return;
-                }
-                if (response.error) {
-                    showResponse(rect.left, rect.bottom, `Error: ${response.error}`, true);
-                } else {
-                    showResponse(rect.left, rect.bottom, response.text, false);
-                }
-            }
-        );
+        });
+
+        removeBtn();
+        removeFaqPanel();
     }
+
+    // ── stream message listener ───────────────────────────────────────────────
+
+    chrome.runtime.onMessage.addListener((message) => {
+        if (message.type === "STREAM_CHUNK") {
+            if (!responsePanel) return;
+            // hide spinner on first chunk
+            const loader = responsePanel.querySelector(".response-loading");
+            if (loader) loader.remove();
+            const textEl = responsePanel.querySelector(".response-text");
+            if (textEl) {
+                textEl.textContent += message.delta;
+                // auto-scroll to bottom
+                textEl.scrollTop = textEl.scrollHeight;
+            }
+        } else if (message.type === "STREAM_DONE") {
+            if (!responsePanel) return;
+            // reveal actions bar
+            const actions = responsePanel.querySelector(".response-actions");
+            if (actions) actions.style.display = "flex";
+            // store full text for copy/faq
+            const textEl = responsePanel.querySelector(".response-text");
+            if (textEl) lastStreamedText = textEl.textContent;
+        } else if (message.type === "STREAM_ERROR") {
+            showResponse(100, 100, `Error: ${message.error}`, true, false);
+        }
+    });
 
     // ── helpers ───────────────────────────────────────────────────────────────
 
     function getSettings() {
-        return new Promise((resolve) => chrome.storage.sync.get(DEFAULTS, resolve));
+        return new Promise((resolve) =>
+            chrome.storage.sync.get(DEFAULTS, resolve),
+        );
     }
 
     function escapeHtml(str) {
@@ -240,32 +314,52 @@ const DEFAULTS = {
             const selection = window.getSelection();
             const text = selection.toString().trim();
 
-            if (!text || text.length < 2) { removeBtn(); return; }
+            if (!text || text.length < 2) {
+                removeBtn();
+                return;
+            }
 
             if (
-                (floatingBtn   && floatingBtn.contains(e.target))   ||
+                (floatingBtn && floatingBtn.contains(e.target)) ||
                 (responsePanel && responsePanel.contains(e.target)) ||
-                (faqPanel      && faqPanel.contains(e.target))
-            ) return;
+                (faqPanel && faqPanel.contains(e.target))
+            )
+                return;
 
             try {
                 lastRange = selection.getRangeAt(0);
                 const rect = lastRange.getBoundingClientRect();
                 createBtn(rect.left, rect.bottom);
-            } catch (_) { /* ignore */ }
+            } catch (_) {
+                /* ignore */
+            }
         }, 10);
     });
 
     document.addEventListener("mousedown", (e) => {
         if (floatingBtn && !floatingBtn.contains(e.target)) removeBtn();
-        if (responsePanel && !responsePanel.contains(e.target) && !(faqPanel && faqPanel.contains(e.target))) {
+        if (
+            responsePanel &&
+            !responsePanel.contains(e.target) &&
+            !(faqPanel && faqPanel.contains(e.target))
+        ) {
             removeResponse();
             removeFaqPanel();
         }
-        if (faqPanel && !faqPanel.contains(e.target) && !(responsePanel && responsePanel.contains(e.target))) {
+        if (
+            faqPanel &&
+            !faqPanel.contains(e.target) &&
+            !(responsePanel && responsePanel.contains(e.target))
+        ) {
             removeFaqPanel();
         }
     });
 
-    window.addEventListener("scroll", () => { removeBtn(); }, { passive: true });
+    window.addEventListener(
+        "scroll",
+        () => {
+            removeBtn();
+        },
+        { passive: true },
+    );
 })();
