@@ -11,6 +11,41 @@ const DEFAULTS = {
     let streaming = false;
     let widget = null;
 
+    // ── fun text pools ────────────────────────────────────────────────────────
+
+    const GREETINGS = [
+        "What chaos are we solving today?",
+        "Paste the customer drama, I got you.",
+        "Ready when you are. Hit me.",
+        "Another day, another query. Let's go!",
+        "Your friendly neighbourhood answer machine. Ask away!",
+        "Copy-paste the question, I'll dig up the goods.",
+        "What's the customer confused about this time?",
+    ];
+
+    const THINKING = [
+        "Digging through the vault...",
+        "Consulting the scrolls...",
+        "On it, boss...",
+        "Rummaging through the brain...",
+        "Let me cook...",
+        "Searching the archives...",
+        "Give me a sec, I'm speed-reading...",
+    ];
+
+    const COPY_REACTIONS = [
+        "Yoinked!",
+        "Snatched!",
+        "Ready to send!",
+        "Grabbed it!",
+        "In your clipboard!",
+        "Copy that! (pun intended)",
+    ];
+
+    function randomFrom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
     // ── settings helpers ──────────────────────────────────────────────────────
 
     function getSettings() {
@@ -103,7 +138,7 @@ const DEFAULTS = {
     function renderMessages() {
         const container = widget.querySelector("#swipey-messages");
         if (!messages.length) {
-            container.innerHTML = '<div class="swipey-empty">Ask a question about Swipey products or customer issues.</div>';
+            container.innerHTML = `<div class="swipey-empty">${randomFrom(GREETINGS)}</div>`;
             return;
         }
         container.innerHTML = messages.map((msg, i) => {
@@ -122,7 +157,7 @@ const DEFAULTS = {
             btn.addEventListener("click", () => {
                 const idx = parseInt(btn.dataset.idx);
                 navigator.clipboard.writeText(messages[idx].content).then(() => {
-                    btn.textContent = "Copied!";
+                    btn.textContent = randomFrom(COPY_REACTIONS);
                     btn.classList.add("copied");
                     setTimeout(() => {
                         btn.textContent = "Copy";
@@ -171,7 +206,7 @@ const DEFAULTS = {
         const container = widget.querySelector("#swipey-messages");
         const lastMsg = container.querySelector(".swipey-msg:last-child");
         if (lastMsg) {
-            lastMsg.querySelector(".swipey-msg-content").innerHTML = '<span class="swipey-thinking">Thinking...</span>';
+            lastMsg.querySelector(".swipey-msg-content").innerHTML = `<span class="swipey-thinking">${randomFrom(THINKING)}</span>`;
         }
 
         streaming = true;
