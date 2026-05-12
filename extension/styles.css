@@ -9,7 +9,7 @@
 #swipey-chat-widget {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     z-index: 2147483647;
     font-family: system-ui, -apple-system, sans-serif;
     font-size: 14px;
@@ -22,27 +22,29 @@
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: var(--llm-accent);
+    background: #fff;
     color: #fff;
-    border: none;
+    border: 2px solid var(--llm-accent);
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(39, 216, 178, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.15s, transform 0.15s;
+    transition: transform 0.15s, box-shadow 0.15s;
     position: absolute;
     bottom: 0;
     right: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #swipey-chat-toggle:hover {
-    background: var(--llm-accent-dark);
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(39, 216, 178, 0.5);
 }
 
 #swipey-chat-toggle.swipey-toggle-active {
-    background: var(--llm-accent-dark);
+    box-shadow: 0 6px 20px rgba(39, 216, 178, 0.5);
 }
 
 /* ── Chat panel ───────────────────────────────────────────────────────────── */

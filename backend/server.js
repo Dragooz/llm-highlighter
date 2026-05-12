@@ -45,17 +45,17 @@ async function seedIfMissing(key, filePath) {
     }
 }
 
-const RESEED = process.argv.includes("--reseed");
+async function seedAlways(key, filePath) {
+    const content = fs.readFileSync(filePath, "utf8").trim();
+    await redis.set(key, content);
+    console.log(`Synced Redis key "${key}" from ${filePath}`);
+}
 
 async function init() {
-    if (RESEED) {
-        const toneContent = fs.readFileSync(path.join(PROMPTS_DIR, "tone.txt"), "utf8").trim();
-        await redis.set(TONE_KEY, toneContent);
-        console.log("Reseeded tone from file.");
-    } else {
-        await seedIfMissing(TONE_KEY, path.join(PROMPTS_DIR, "tone.txt"));
-    }
-    await seedIfMissing(KB_KEY, path.join(PROMPTS_DIR, "knowledge_base.txt"));
+    // Tone always syncs from file on deploy — so pushing to main updates it
+    await seedAlways(TONE_KEY, path.join(PROMPTS_DIR, "tone.txt"));
+    // Knowledge base also always syncs
+    await seedAlways(KB_KEY, path.join(PROMPTS_DIR, "knowledge_base.txt"));
     console.log("Redis ready.");
 }
 

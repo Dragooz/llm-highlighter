@@ -34,9 +34,7 @@ const DEFAULTS = {
         widget.id = "swipey-chat-widget";
         widget.innerHTML = `
             <button id="swipey-chat-toggle" title="Swipey Chat">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
+                <img src="${chrome.runtime.getURL("swipey-logo.png")}" width="30" height="30" alt="Swipey" style="border-radius:50%;" />
             </button>
             <div id="swipey-chat-panel" class="swipey-hidden">
                 <div class="swipey-header">

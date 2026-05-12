@@ -19,6 +19,12 @@
         "default_popup": "popup.html",
         "default_title": "LLM Highlighter"
     },
+    "web_accessible_resources": [
+        {
+            "resources": ["swipey-logo.png"],
+            "matches": ["https://app.peppercloud.com/*"]
+        }
+    ],
     "options_ui": {
         "page": "options.html",
         "open_in_tab": true
