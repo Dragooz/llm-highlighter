@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "LLM Highlighter",
+    "name": "Swipey Chat",
     "version": "1.0.0",
-    "description": "Highlight text → get AI-generated customer service reply",
+    "description": "Floating AI chat for Pepper Cloud support agents",
     "permissions": ["activeTab", "storage", "scripting"],
     "host_permissions": ["<all_urls>"],
     "background": {
@@ -10,7 +10,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["<all_urls>"],
+            "matches": ["https://app.peppercloud.com/*"],
             "js": ["content_script.js"],
             "css": ["styles.css"]
         }

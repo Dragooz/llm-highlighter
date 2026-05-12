@@ -5,13 +5,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (secret) headers['X-Secret'] = secret;
 
   if (message.type === 'GENERATE') {
-    const { selectedText, model } = message.payload;
+    const { messages, model } = message.payload;
     const tabId = sender.tab?.id;
 
     fetch(`${base}/generate`, {
       method: 'POST',
       headers,
-      body: JSON.stringify({ text: selectedText, model }),
+      body: JSON.stringify({ messages, model }),
     })
       .then(async (res) => {
         if (!res.ok) {
@@ -55,7 +55,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         if (tabId) chrome.tabs.sendMessage(tabId, { type: 'STREAM_ERROR', error: err.message });
       });
 
-    sendResponse({ ok: true }); // acknowledge immediately
+    sendResponse({ ok: true });
     return true;
   }
 
@@ -74,6 +74,23 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       .then(() => sendResponse({ ok: true }))
       .catch((err) => sendResponse({ error: err.message }));
 
+    return true;
+  }
+
+  if (message.type === 'SAVE_CONVERSATION') {
+    const { userId, messages } = message.payload;
+
+    fetch(`${base}/conversations`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ userId, messages }),
+    })
+      .then((res) => {
+        if (!res.ok) console.error('Failed to save conversation:', res.status);
+      })
+      .catch((err) => console.error('Failed to save conversation:', err.message));
+
+    sendResponse({ ok: true });
     return true;
   }
 });

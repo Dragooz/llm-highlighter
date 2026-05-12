@@ -3,11 +3,13 @@ const DEFAULT_BACKEND_URL = "https://llm-highlighter-production.up.railway.app";
 function loadSettings() {
     chrome.storage.sync.get(
         {
+            userId: "",
             backendUrl: DEFAULT_BACKEND_URL,
             secret: "",
             model: "deepseek/deepseek-v3.2",
         },
         (settings) => {
+            document.getElementById("user-id").value = settings.userId;
             document.getElementById("backend-url").value = settings.backendUrl;
             document.getElementById("secret").value = settings.secret;
             document.getElementById("model").value = settings.model;
@@ -17,6 +19,7 @@ function loadSettings() {
 
 function saveSettings() {
     const settings = {
+        userId: document.getElementById("user-id").value.trim(),
         backendUrl:
             document.getElementById("backend-url").value.trim() ||
             DEFAULT_BACKEND_URL,

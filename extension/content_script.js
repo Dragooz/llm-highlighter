@@ -1,297 +1,17 @@
-// ─── Dev defaults (overridden by Options page settings) ──────────────────────
+// ─── Swipey Chat Widget ─────────────────────────────────────────────────────
 const DEFAULTS = {
     backendUrl: "https://llm-highlighter-production.up.railway.app",
     secret: "",
     model: "deepseek/deepseek-v3.2",
 };
-// ─────────────────────────────────────────────────────────────────────────────
 
 (() => {
-    let floatingBtn = null;
-    let responsePanel = null;
-    let faqPanel = null;
-    let lastRange = null;
-    let lastQuestion = ""; // the highlighted text from the last generation
-    let lastStreamedText = ""; // accumulated stream text for copy/faq
+    let chatOpen = false;
+    let messages = []; // {role: "user"|"assistant", content: string}
+    let streaming = false;
+    let widget = null;
 
-    // ── cleanup helpers ──────────────────────────────────────────────────────
-
-    function removeBtn() {
-        if (floatingBtn) {
-            floatingBtn.remove();
-            floatingBtn = null;
-        }
-    }
-    function removeResponse() {
-        if (responsePanel) {
-            responsePanel.remove();
-            responsePanel = null;
-        }
-    }
-    function removeFaqPanel() {
-        if (faqPanel) {
-            faqPanel.remove();
-            faqPanel = null;
-        }
-    }
-
-    // ── floating button ──────────────────────────────────────────────────────
-
-    function createBtn(x, y) {
-        removeBtn();
-        floatingBtn = document.createElement("div");
-        floatingBtn.id = "llm-highlighter-btn-group";
-        floatingBtn.style.left = `${Math.min(x, window.innerWidth - 220)}px`;
-        floatingBtn.style.top = `${y - 40}px`;
-
-        floatingBtn.innerHTML = `
-            <button id="llm-highlighter-btn" title="Generate reply">
-                <span class="spinner"></span>
-                <span class="btn-icon">✨</span>
-                <span class="btn-label">Generate Reply</span>
-            </button>
-            <button id="llm-highlighter-faq-trigger-btn" title="Add to FAQ">
-                <span>📋</span><span class="faq-trigger-label">Add to FAQ</span>
-            </button>
-        `;
-
-        floatingBtn
-            .querySelector("#llm-highlighter-btn")
-            .addEventListener("click", (e) => {
-                e.stopPropagation();
-                handleGenerate();
-            });
-
-        floatingBtn
-            .querySelector("#llm-highlighter-faq-trigger-btn")
-            .addEventListener("click", (e) => {
-                e.stopPropagation();
-                const selectedText = window.getSelection().toString().trim();
-                showFaqPanel(x, y, selectedText);
-            });
-
-        document.body.appendChild(floatingBtn);
-    }
-
-    // ── response panel ───────────────────────────────────────────────────────
-
-    function showResponse(x, y, text, isError, streaming = false) {
-        removeResponse();
-        lastStreamedText = text;
-        responsePanel = document.createElement("div");
-        responsePanel.id = "llm-highlighter-response";
-
-        // position is fixed, so coords are viewport-relative — no scrollY needed
-        const panelW = 420;
-        const panelH = Math.min(window.innerHeight * 0.6, 400); // approx max-height
-        const margin = 8;
-        const left = Math.min(x, window.innerWidth - panelW - margin);
-        // try below selection; if it clips bottom, show above instead
-        let top = y + 10;
-        if (top + panelH > window.innerHeight - margin) {
-            top = Math.max(margin, y - panelH - 10);
-        }
-
-        responsePanel.style.left = `${Math.max(margin, left)}px`;
-        responsePanel.style.top = `${top}px`;
-
-        responsePanel.innerHTML = `
-            <div class="response-header">
-                <span>AI Reply</span>
-                <button class="response-close" title="Close">×</button>
-            </div>
-            ${streaming ? `<div class="response-loading"><span class="response-spinner"></span><span>Thinking…</span></div>` : ""}
-            <div class="response-text ${isError ? "response-error" : ""}">${escapeHtml(text)}</div>
-            ${
-                !isError
-                    ? `
-                <div class="response-actions" style="display:${streaming ? "none" : "flex"}">
-                    <button class="response-copy-btn">Copy</button>
-                    <button class="response-faq-btn" title="Add to FAQ or flag as unhelpful">👎 Not helpful / Add to FAQ</button>
-                </div>
-            `
-                    : ""
-            }
-        `;
-
-        responsePanel
-            .querySelector(".response-close")
-            .addEventListener("click", () => {
-                removeResponse();
-                removeFaqPanel();
-            });
-
-        if (!isError) {
-            const copyBtn = responsePanel.querySelector(".response-copy-btn");
-            copyBtn.addEventListener("click", () => {
-                const fullText =
-                    responsePanel.querySelector(".response-text").textContent;
-                navigator.clipboard.writeText(fullText).then(() => {
-                    copyBtn.textContent = "Copied!";
-                    copyBtn.classList.add("copied");
-                    setTimeout(() => {
-                        copyBtn.textContent = "Copy";
-                        copyBtn.classList.remove("copied");
-                    }, 2000);
-                });
-            });
-
-            responsePanel
-                .querySelector(".response-faq-btn")
-                .addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    showFaqPanel(x, y, lastQuestion);
-                });
-        }
-
-        document.body.appendChild(responsePanel);
-    }
-
-    // ── faq feedback panel ───────────────────────────────────────────────────
-
-    function showFaqPanel(x, y, question) {
-        if (faqPanel) {
-            removeFaqPanel();
-            return;
-        }
-
-        faqPanel = document.createElement("div");
-        faqPanel.id = "llm-highlighter-faq-panel";
-        const faqLeft = Math.min(x, window.innerWidth - 440 - 8);
-        const faqTop = Math.min(y + 10, window.innerHeight - 320 - 8);
-        faqPanel.style.left = `${Math.max(8, faqLeft)}px`;
-        faqPanel.style.top = `${Math.max(8, faqTop)}px`;
-
-        faqPanel.innerHTML = `
-            <div class="faq-header">
-                <span>Add to FAQ</span>
-                <button class="faq-close">×</button>
-            </div>
-            <label class="faq-label">Question (what was highlighted)</label>
-            <textarea class="faq-question" rows="2">${escapeHtml(question || "")}</textarea>
-            <label class="faq-label">Correct / expected answer</label>
-            <textarea class="faq-answer" rows="4" placeholder="Type the ideal answer here..."></textarea>
-            <div class="faq-footer">
-                <button class="faq-submit">Save to FAQ</button>
-                <span class="faq-msg"></span>
-            </div>
-        `;
-
-        faqPanel.querySelector(".faq-close").addEventListener("click", (e) => {
-            e.stopPropagation();
-            removeFaqPanel();
-        });
-
-        faqPanel
-            .querySelector(".faq-submit")
-            .addEventListener("click", async (e) => {
-                e.stopPropagation();
-                const question = faqPanel
-                    .querySelector(".faq-question")
-                    .value.trim();
-                const answer = faqPanel
-                    .querySelector(".faq-answer")
-                    .value.trim();
-                if (!question || !answer) return;
-
-                const settings = await getSettings();
-                const btn = faqPanel.querySelector(".faq-submit");
-                btn.disabled = true;
-                btn.textContent = "Saving...";
-
-                chrome.runtime.sendMessage(
-                    {
-                        type: "ADD_FAQ",
-                        payload: {
-                            question,
-                            answer,
-                            backendUrl: settings.backendUrl,
-                            secret: settings.secret,
-                        },
-                    },
-                    (response) => {
-                        const msg = faqPanel.querySelector(".faq-msg");
-                        if (chrome.runtime.lastError || response.error) {
-                            msg.textContent = "❌ Failed to save";
-                            msg.style.color = "#dc2626";
-                            btn.disabled = false;
-                            btn.textContent = "Save to FAQ";
-                        } else {
-                            msg.textContent = "✓ Saved to FAQ";
-                            msg.style.color = "#16a34a";
-                            setTimeout(removeFaqPanel, 1500);
-                        }
-                    },
-                );
-            });
-
-        document.body.appendChild(faqPanel);
-    }
-
-    // ── generate ─────────────────────────────────────────────────────────────
-
-    async function handleGenerate() {
-        const selection = window.getSelection();
-        const selectedText = selection.toString().trim();
-        if (!selectedText) return;
-
-        lastQuestion = selectedText;
-
-        const rect = lastRange
-            ? lastRange.getBoundingClientRect()
-            : { left: 100, bottom: 100 };
-
-        const generateBtn = floatingBtn.querySelector("#llm-highlighter-btn");
-        generateBtn.classList.add("loading");
-        generateBtn.querySelector(".btn-label").textContent = "Generating...";
-
-        const settings = await getSettings();
-
-        // Show empty streaming panel immediately
-        showResponse(rect.left, rect.bottom, "", false, true);
-
-        chrome.runtime.sendMessage({
-            type: "GENERATE",
-            payload: {
-                selectedText,
-                backendUrl: settings.backendUrl,
-                secret: settings.secret,
-                model: settings.model,
-            },
-        });
-
-        removeBtn();
-        removeFaqPanel();
-    }
-
-    // ── stream message listener ───────────────────────────────────────────────
-
-    chrome.runtime.onMessage.addListener((message) => {
-        if (message.type === "STREAM_CHUNK") {
-            if (!responsePanel) return;
-            // hide spinner on first chunk
-            const loader = responsePanel.querySelector(".response-loading");
-            if (loader) loader.remove();
-            const textEl = responsePanel.querySelector(".response-text");
-            if (textEl) {
-                textEl.textContent += message.delta;
-                // auto-scroll to bottom
-                textEl.scrollTop = textEl.scrollHeight;
-            }
-        } else if (message.type === "STREAM_DONE") {
-            if (!responsePanel) return;
-            // reveal actions bar
-            const actions = responsePanel.querySelector(".response-actions");
-            if (actions) actions.style.display = "flex";
-            // store full text for copy/faq
-            const textEl = responsePanel.querySelector(".response-text");
-            if (textEl) lastStreamedText = textEl.textContent;
-        } else if (message.type === "STREAM_ERROR") {
-            showResponse(100, 100, `Error: ${message.error}`, true, false);
-        }
-    });
-
-    // ── helpers ───────────────────────────────────────────────────────────────
+    // ── settings helpers ──────────────────────────────────────────────────────
 
     function getSettings() {
         return new Promise((resolve) =>
@@ -307,59 +27,210 @@ const DEFAULTS = {
             .replace(/"/g, "&quot;");
     }
 
-    // ── event listeners ───────────────────────────────────────────────────────
+    // ── build widget ──────────────────────────────────────────────────────────
 
-    document.addEventListener("mouseup", (e) => {
-        setTimeout(() => {
-            const selection = window.getSelection();
-            const text = selection.toString().trim();
+    function createWidget() {
+        widget = document.createElement("div");
+        widget.id = "swipey-chat-widget";
+        widget.innerHTML = `
+            <button id="swipey-chat-toggle" title="Swipey Chat">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+            </button>
+            <div id="swipey-chat-panel" class="swipey-hidden">
+                <div class="swipey-header">
+                    <span class="swipey-title">Swipey Chat</span>
+                    <div class="swipey-header-actions">
+                        <button class="swipey-clear-btn" title="Clear conversation">Clear</button>
+                        <button class="swipey-close-btn" title="Close">&times;</button>
+                    </div>
+                </div>
+                <div id="swipey-messages"></div>
+                <div class="swipey-input-row">
+                    <textarea id="swipey-input" placeholder="Ask something..." rows="1"></textarea>
+                    <button id="swipey-send" title="Send">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(widget);
 
-            if (!text || text.length < 2) {
-                removeBtn();
-                return;
+        // restore open state
+        chrome.storage.local.get({ chatOpen: false }, (data) => {
+            if (data.chatOpen) toggleChat(true);
+        });
+
+        // event listeners
+        widget.querySelector("#swipey-chat-toggle").addEventListener("click", () => toggleChat());
+        widget.querySelector(".swipey-close-btn").addEventListener("click", () => toggleChat(false));
+        widget.querySelector(".swipey-clear-btn").addEventListener("click", clearConversation);
+        widget.querySelector("#swipey-send").addEventListener("click", sendMessage);
+
+        const input = widget.querySelector("#swipey-input");
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
             }
+        });
+        // auto-resize textarea
+        input.addEventListener("input", () => {
+            input.style.height = "auto";
+            input.style.height = Math.min(input.scrollHeight, 100) + "px";
+        });
+    }
 
-            if (
-                (floatingBtn && floatingBtn.contains(e.target)) ||
-                (responsePanel && responsePanel.contains(e.target)) ||
-                (faqPanel && faqPanel.contains(e.target))
-            )
-                return;
+    function toggleChat(forceState) {
+        const panel = widget.querySelector("#swipey-chat-panel");
+        const toggle = widget.querySelector("#swipey-chat-toggle");
+        chatOpen = forceState !== undefined ? forceState : !chatOpen;
+        panel.classList.toggle("swipey-hidden", !chatOpen);
+        toggle.classList.toggle("swipey-toggle-active", chatOpen);
+        chrome.storage.local.set({ chatOpen });
+        if (chatOpen) {
+            widget.querySelector("#swipey-input").focus();
+            scrollToBottom();
+        }
+    }
 
-            try {
-                lastRange = selection.getRangeAt(0);
-                const rect = lastRange.getBoundingClientRect();
-                createBtn(rect.left, rect.bottom);
-            } catch (_) {
-                /* ignore */
+    function clearConversation() {
+        messages = [];
+        renderMessages();
+    }
+
+    // ── messages ──────────────────────────────────────────────────────────────
+
+    function renderMessages() {
+        const container = widget.querySelector("#swipey-messages");
+        if (!messages.length) {
+            container.innerHTML = '<div class="swipey-empty">Ask a question about Swipey products or customer issues.</div>';
+            return;
+        }
+        container.innerHTML = messages.map((msg, i) => {
+            const cls = msg.role === "user" ? "swipey-msg-user" : "swipey-msg-ai";
+            const copyBtn = msg.role === "assistant"
+                ? `<button class="swipey-copy-btn" data-idx="${i}" title="Copy">Copy</button>`
+                : "";
+            return `<div class="swipey-msg ${cls}">
+                <div class="swipey-msg-content">${escapeHtml(msg.content)}</div>
+                ${copyBtn}
+            </div>`;
+        }).join("");
+
+        // copy handlers
+        container.querySelectorAll(".swipey-copy-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const idx = parseInt(btn.dataset.idx);
+                navigator.clipboard.writeText(messages[idx].content).then(() => {
+                    btn.textContent = "Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.textContent = "Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                });
+            });
+        });
+
+        scrollToBottom();
+    }
+
+    function scrollToBottom() {
+        const container = widget.querySelector("#swipey-messages");
+        if (container) container.scrollTop = container.scrollHeight;
+    }
+
+    function appendStreamDelta(delta) {
+        if (!messages.length || messages[messages.length - 1].role !== "assistant") return;
+        messages[messages.length - 1].content += delta;
+
+        // update last message bubble directly for perf
+        const container = widget.querySelector("#swipey-messages");
+        const lastMsg = container.querySelector(".swipey-msg:last-child .swipey-msg-content");
+        if (lastMsg) {
+            lastMsg.textContent = messages[messages.length - 1].content;
+            scrollToBottom();
+        }
+    }
+
+    // ── send ──────────────────────────────────────────────────────────────────
+
+    async function sendMessage() {
+        if (streaming) return;
+        const input = widget.querySelector("#swipey-input");
+        const text = input.value.trim();
+        if (!text) return;
+
+        messages.push({ role: "user", content: text });
+        messages.push({ role: "assistant", content: "" });
+        input.value = "";
+        input.style.height = "auto";
+        renderMessages();
+
+        // show spinner on last msg
+        const container = widget.querySelector("#swipey-messages");
+        const lastMsg = container.querySelector(".swipey-msg:last-child");
+        if (lastMsg) {
+            lastMsg.querySelector(".swipey-msg-content").innerHTML = '<span class="swipey-thinking">Thinking...</span>';
+        }
+
+        streaming = true;
+        const settings = await getSettings();
+
+        chrome.runtime.sendMessage({
+            type: "GENERATE",
+            payload: {
+                messages: messages.slice(0, -1), // all except empty assistant placeholder
+                backendUrl: settings.backendUrl,
+                secret: settings.secret,
+                model: settings.model,
+            },
+        });
+    }
+
+    // ── stream listener ──────────────────────────────────────────────────────
+
+    chrome.runtime.onMessage.addListener((message) => {
+        if (message.type === "STREAM_CHUNK") {
+            // clear "Thinking..." on first chunk
+            if (messages.length && messages[messages.length - 1].content === "") {
+                const container = widget.querySelector("#swipey-messages");
+                const lastContent = container.querySelector(".swipey-msg:last-child .swipey-msg-content");
+                if (lastContent) lastContent.textContent = "";
             }
-        }, 10);
+            appendStreamDelta(message.delta);
+        } else if (message.type === "STREAM_DONE") {
+            streaming = false;
+            renderMessages(); // re-render to add copy button
+        } else if (message.type === "STREAM_ERROR") {
+            streaming = false;
+            if (messages.length && messages[messages.length - 1].role === "assistant") {
+                messages[messages.length - 1].content = `Error: ${message.error}`;
+            }
+            renderMessages();
+        }
     });
 
-    document.addEventListener("mousedown", (e) => {
-        if (floatingBtn && !floatingBtn.contains(e.target)) removeBtn();
-        if (
-            responsePanel &&
-            !responsePanel.contains(e.target) &&
-            !(faqPanel && faqPanel.contains(e.target))
-        ) {
-            removeResponse();
-            removeFaqPanel();
-        }
-        if (
-            faqPanel &&
-            !faqPanel.contains(e.target) &&
-            !(responsePanel && responsePanel.contains(e.target))
-        ) {
-            removeFaqPanel();
+    // ── save conversation on page unload ──────────────────────────────────────
+
+    window.addEventListener("beforeunload", () => {
+        if (messages.length > 0) {
+            chrome.storage.sync.get({ userId: "" }, (data) => {
+                if (!data.userId) return;
+                chrome.runtime.sendMessage({
+                    type: "SAVE_CONVERSATION",
+                    payload: {
+                        userId: data.userId,
+                        messages,
+                    },
+                });
+            });
         }
     });
 
-    window.addEventListener(
-        "scroll",
-        () => {
-            removeBtn();
-        },
-        { passive: true },
-    );
+    // ── init ──────────────────────────────────────────────────────────────────
+
+    createWidget();
 })();

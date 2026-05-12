@@ -34,6 +34,7 @@ const PROMPTS_DIR = path.join(__dirname, "prompts");
 const TONE_KEY = "tone";
 const KB_KEY = "knowledge_base";
 const FAQ_KEY = "faq_entries";
+const DIGEST_KEY = "knowledge_digest";
 
 async function seedIfMissing(key, filePath) {
     const exists = await redis.exists(key);
@@ -44,17 +45,26 @@ async function seedIfMissing(key, filePath) {
     }
 }
 
+const RESEED = process.argv.includes("--reseed");
+
 async function init() {
-    await seedIfMissing(TONE_KEY, path.join(PROMPTS_DIR, "tone.txt"));
+    if (RESEED) {
+        const toneContent = fs.readFileSync(path.join(PROMPTS_DIR, "tone.txt"), "utf8").trim();
+        await redis.set(TONE_KEY, toneContent);
+        console.log("Reseeded tone from file.");
+    } else {
+        await seedIfMissing(TONE_KEY, path.join(PROMPTS_DIR, "tone.txt"));
+    }
     await seedIfMissing(KB_KEY, path.join(PROMPTS_DIR, "knowledge_base.txt"));
     console.log("Redis ready.");
 }
 
 async function buildSystemPrompt() {
-    const [tone, knowledgeBase, faqEntries] = await Promise.all([
+    const [tone, knowledgeBase, faqEntries, digestLog] = await Promise.all([
         redis.get(TONE_KEY),
         redis.get(KB_KEY),
         redis.lrange(FAQ_KEY, 0, -1),
+        redis.get(DIGEST_KEY),
     ]);
 
     const faqSection =
@@ -62,7 +72,12 @@ async function buildSystemPrompt() {
             ? `\n\n---\n\n# FAQ (curated Q&A from support team)\n\n${faqEntries.join("\n\n")}`
             : "";
 
-    return `${tone}\n\n---\n\n# Knowledge Base\n\n${knowledgeBase}${faqSection}`;
+    const digestSection =
+        digestLog
+            ? `\n\n---\n\n# Accumulated Knowledge (from conversation digests)\n\n${digestLog}`
+            : "";
+
+    return `${tone}\n\n---\n\n# Knowledge Base\n\n${knowledgeBase}${faqSection}${digestSection}`;
 }
 
 app.use(cors({ origin: "*" }));
@@ -77,10 +92,16 @@ function checkSecret(req, res, next) {
 }
 
 app.post("/generate", checkSecret, async (req, res) => {
-    const { text, model } = req.body;
+    const { text, messages: userMessages, model } = req.body;
 
-    if (!text || typeof text !== "string") {
-        return res.status(400).json({ error: 'Missing or invalid "text" field' });
+    // Support both old {text} and new {messages} format
+    let chatMessages;
+    if (userMessages && Array.isArray(userMessages)) {
+        chatMessages = userMessages.filter(m => m.role && m.content);
+    } else if (text && typeof text === "string") {
+        chatMessages = [{ role: "user", content: text }];
+    } else {
+        return res.status(400).json({ error: 'Missing "messages" array or "text" field' });
     }
 
     const selectedModel = model || "deepseek/deepseek-v3.2";
@@ -102,7 +123,7 @@ app.post("/generate", checkSecret, async (req, res) => {
                     stream: true,
                     messages: [
                         { role: "system", content: systemPrompt },
-                        { role: "user", content: text },
+                        ...chatMessages,
                     ],
                     max_tokens: 512,
                     temperature: 0.7,
@@ -178,6 +199,126 @@ app.post("/faq", checkSecret, async (req, res) => {
 app.get("/faq", checkSecret, async (_req, res) => {
     const entries = await redis.lrange(FAQ_KEY, 0, -1);
     res.json({ entries: entries || [] });
+});
+
+// ── Conversation logging ─────────────────────────────────────────────────────
+
+app.post("/conversations", checkSecret, async (req, res) => {
+    const { userId, messages } = req.body;
+
+    if (!userId || !messages || !Array.isArray(messages) || !messages.length) {
+        return res.status(400).json({ error: "userId and non-empty messages array required" });
+    }
+
+    const date = new Date().toISOString().slice(0, 10);
+    const key = `conv:${userId}:${date}`;
+    await redis.rpush(key, JSON.stringify({ timestamp: Date.now(), messages }));
+    console.log(`Conversation saved: ${key} (${messages.length} messages)`);
+    res.json({ ok: true });
+});
+
+app.get("/conversations/:date", checkSecret, async (req, res) => {
+    const { date } = req.params;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+        return res.status(400).json({ error: "date must be YYYY-MM-DD" });
+    }
+
+    // Scan for all conv:*:{date} keys
+    const pattern = `conv:*:${date}`;
+    let cursor = 0;
+    const allKeys = [];
+    do {
+        const [nextCursor, keys] = await redis.scan(cursor, { match: pattern, count: 100 });
+        cursor = Number(nextCursor);
+        allKeys.push(...keys);
+    } while (cursor !== 0);
+
+    const results = {};
+    for (const key of allKeys) {
+        const entries = await redis.lrange(key, 0, -1);
+        results[key] = entries.map((e) => typeof e === "string" ? JSON.parse(e) : e);
+    }
+
+    res.json({ date, conversations: results });
+});
+
+// ── Daily digest ─────────────────────────────────────────────────────────────
+
+const DIGEST_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, "digest_prompt.txt"), "utf8").trim();
+
+app.post("/digest", checkSecret, async (req, res) => {
+    const date = req.body.date || new Date(Date.now() - 86400000).toISOString().slice(0, 10); // default: yesterday
+
+    // Collect all conversations for the date
+    const pattern = `conv:*:${date}`;
+    let cursor = 0;
+    const allKeys = [];
+    do {
+        const [nextCursor, keys] = await redis.scan(cursor, { match: pattern, count: 100 });
+        cursor = Number(nextCursor);
+        allKeys.push(...keys);
+    } while (cursor !== 0);
+
+    if (!allKeys.length) {
+        return res.json({ date, digest: "No conversations found for this date." });
+    }
+
+    const allConversations = [];
+    for (const key of allKeys) {
+        const entries = await redis.lrange(key, 0, -1);
+        for (const entry of entries) {
+            const parsed = typeof entry === "string" ? JSON.parse(entry) : entry;
+            allConversations.push({ key, ...parsed });
+        }
+    }
+
+    // Format conversations for LLM
+    const conversationText = allConversations.map((conv, i) => {
+        const msgs = conv.messages.map(m => `${m.role}: ${m.content}`).join("\n");
+        return `--- Conversation ${i + 1} (${conv.key}) ---\n${msgs}`;
+    }).join("\n\n");
+
+    try {
+        const llmRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+                "Content-Type": "application/json",
+                "HTTP-Referer": "https://llm-highlighter.local",
+                "X-Title": "LLM Highlighter Digest",
+            },
+            body: JSON.stringify({
+                model: "deepseek/deepseek-v3.2",
+                messages: [
+                    { role: "system", content: DIGEST_PROMPT },
+                    { role: "user", content: `Date: ${date}\n\n${conversationText}` },
+                ],
+                max_tokens: 1024,
+                temperature: 0.3,
+            }),
+        });
+
+        if (!llmRes.ok) {
+            const errText = await llmRes.text();
+            return res.status(502).json({ error: `OpenRouter error: ${llmRes.status}`, details: errText });
+        }
+
+        const llmData = await llmRes.json();
+        const digest = llmData.choices?.[0]?.message?.content || "No digest generated.";
+
+        // Append to knowledge_digest (append-only log)
+        const existingDigest = (await redis.get(DIGEST_KEY)) || "";
+        const newDigest = existingDigest
+            ? `${existingDigest}\n\n--- ${date} ---\n${digest}`
+            : `--- ${date} ---\n${digest}`;
+        await redis.set(DIGEST_KEY, newDigest);
+
+        console.log(`Digest generated for ${date} (${allConversations.length} conversations)`);
+        res.json({ date, conversationCount: allConversations.length, digest });
+    } catch (err) {
+        console.error("Digest error:", err);
+        res.status(500).json({ error: err.message });
+    }
 });
 
 app.get("/health", (_req, res) => res.json({ status: "ok" }));

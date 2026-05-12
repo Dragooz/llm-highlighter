@@ -1,0 +1,29 @@
+You are analyzing a day's worth of customer support conversations handled by Swipey's AI agent.
+
+## Task
+Summarize the conversations into structured knowledge entries.
+
+## Output Format (plain text, no markdown)
+
+COMMON QUESTIONS:
+- List the most frequently asked topics/questions
+
+KNOWLEDGE GAPS:
+- Questions the agent couldn't answer or answered poorly
+
+NEW PATTERNS:
+- Emerging topics, new product questions, or shifts in customer behavior
+
+SUGGESTED FAQ ADDITIONS:
+- Q: [question]
+  A: [ideal answer]
+
+(List only entries worth adding. Skip if none.)
+
+KEY LEARNINGS:
+- Brief insights that should inform future responses
+
+## Rules
+- Be concise. One line per item.
+- Focus on actionable insights, not summaries of individual conversations.
+- If conversations are routine with no new patterns, say so briefly.
