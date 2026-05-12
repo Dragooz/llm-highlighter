@@ -1,1 +1,1 @@
-# llm-highlighter
+# llm-highlighter (Evolving!)
