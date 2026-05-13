@@ -52,25 +52,24 @@ async function seedAlways(key, filePath) {
 }
 
 async function init() {
-    // Tone always syncs from file on deploy — so pushing to main updates it
+    // All three always sync from file on deploy — so pushing to main updates them
     await seedAlways(TONE_KEY, path.join(PROMPTS_DIR, "tone.txt"));
-    // Knowledge base also always syncs
     await seedAlways(KB_KEY, path.join(PROMPTS_DIR, "knowledge_base.txt"));
+    await seedAlways(FAQ_KEY, path.join(PROMPTS_DIR, "faq.txt"));
     console.log("Redis ready.");
 }
 
 async function buildSystemPrompt() {
-    const [tone, knowledgeBase, faqEntries, digestLog] = await Promise.all([
+    const [tone, knowledgeBase, faqContent, digestLog] = await Promise.all([
         redis.get(TONE_KEY),
         redis.get(KB_KEY),
-        redis.lrange(FAQ_KEY, 0, -1),
+        redis.get(FAQ_KEY),
         redis.get(DIGEST_KEY),
     ]);
 
-    const faqSection =
-        faqEntries && faqEntries.length
-            ? `\n\n---\n\n# FAQ (curated Q&A from support team)\n\n${faqEntries.join("\n\n")}`
-            : "";
+    const faqSection = faqContent
+        ? `\n\n---\n\n# FAQ (curated Q&A from support team)\n\n${faqContent}`
+        : "";
 
     const digestSection =
         digestLog
@@ -190,15 +189,16 @@ app.post("/faq", checkSecret, async (req, res) => {
         return res.status(400).json({ error: "question and answer are required" });
     }
 
-    const entry = `Q: ${question.trim()}\nA: ${answer.trim()}`;
-    await redis.rpush(FAQ_KEY, entry);
+    const entry = `\n\n---\nQ: ${question.trim()}\nA: ${answer.trim()}`;
+    const existing = (await redis.get(FAQ_KEY)) || "";
+    await redis.set(FAQ_KEY, existing + entry);
     console.log("FAQ entry added:", question.trim().slice(0, 80));
     res.json({ ok: true });
 });
 
 app.get("/faq", checkSecret, async (_req, res) => {
-    const entries = await redis.lrange(FAQ_KEY, 0, -1);
-    res.json({ entries: entries || [] });
+    const content = (await redis.get(FAQ_KEY)) || "";
+    res.json({ content });
 });
 
 // ── Conversation logging ─────────────────────────────────────────────────────
