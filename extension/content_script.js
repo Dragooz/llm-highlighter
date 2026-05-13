@@ -10,6 +10,10 @@ const DEFAULTS = {
     let messages = []; // {role: "user"|"assistant", content: string}
     let streaming = false;
     let widget = null;
+    let conversations = []; // stored conversation list
+    let activeConvId = null;
+    let convListOpen = false;
+    const MAX_CONVERSATIONS = 10;
 
     // ── fun text pools ────────────────────────────────────────────────────────
 
@@ -62,6 +66,94 @@ const DEFAULTS = {
             .replace(/"/g, "&quot;");
     }
 
+    // ── conversation storage ────────────────────────────────────────────────
+
+    function loadConversations() {
+        return new Promise((resolve) => {
+            chrome.storage.local.get({ conversations: [], activeConvId: null }, (data) => {
+                conversations = data.conversations;
+                activeConvId = data.activeConvId;
+                resolve();
+            });
+        });
+    }
+
+    function persistConversations() {
+        chrome.storage.local.set({ conversations, activeConvId });
+    }
+
+    function saveCurrentConversation() {
+        if (!messages.length) return;
+        if (!activeConvId) {
+            activeConvId = "conv_" + Date.now();
+        }
+        const firstUserMsg = messages.find((m) => m.role === "user");
+        const title = firstUserMsg
+            ? firstUserMsg.content.slice(0, 40)
+            : "New conversation";
+        const idx = conversations.findIndex((c) => c.id === activeConvId);
+        const conv = { id: activeConvId, title, messages: [...messages], updatedAt: Date.now() };
+        if (idx >= 0) {
+            conversations[idx] = conv;
+        } else {
+            conversations.push(conv);
+        }
+        // FIFO: drop oldest beyond max
+        if (conversations.length > MAX_CONVERSATIONS) {
+            conversations.sort((a, b) => b.updatedAt - a.updatedAt);
+            conversations = conversations.slice(0, MAX_CONVERSATIONS);
+        }
+        persistConversations();
+    }
+
+    function startNewConversation() {
+        saveCurrentConversation();
+        messages = [];
+        activeConvId = null;
+        persistConversations();
+        renderMessages();
+        if (convListOpen) toggleConvList(false);
+    }
+
+    function loadConversation(id) {
+        saveCurrentConversation();
+        const conv = conversations.find((c) => c.id === id);
+        if (conv) {
+            messages = [...conv.messages];
+            activeConvId = conv.id;
+            persistConversations();
+            renderMessages();
+        }
+        if (convListOpen) toggleConvList(false);
+    }
+
+    function deleteConversation(id) {
+        conversations = conversations.filter((c) => c.id !== id);
+        if (activeConvId === id) {
+            // load most recent or clear
+            if (conversations.length) {
+                conversations.sort((a, b) => b.updatedAt - a.updatedAt);
+                const latest = conversations[0];
+                messages = [...latest.messages];
+                activeConvId = latest.id;
+            } else {
+                messages = [];
+                activeConvId = null;
+            }
+            renderMessages();
+        }
+        persistConversations();
+        renderConvList();
+    }
+
+    function relativeTime(ts) {
+        const diff = Math.floor((Date.now() - ts) / 1000);
+        if (diff < 60) return "just now";
+        if (diff < 3600) return Math.floor(diff / 60) + "m ago";
+        if (diff < 86400) return Math.floor(diff / 3600) + "h ago";
+        return Math.floor(diff / 86400) + "d ago";
+    }
+
     // ── build widget ──────────────────────────────────────────────────────────
 
     function createWidget() {
@@ -75,10 +167,16 @@ const DEFAULTS = {
                 <div class="swipey-header">
                     <span class="swipey-title">Swipey Chat</span>
                     <div class="swipey-header-actions">
-                        <button class="swipey-clear-btn" title="Clear conversation">Clear</button>
+                        <button class="swipey-history-btn" title="Conversation history">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                        </button>
+                        <button class="swipey-newchat-btn" title="New conversation">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
                         <button class="swipey-close-btn" title="Close">&times;</button>
                     </div>
                 </div>
+                <div id="swipey-conv-list" class="swipey-hidden"></div>
                 <div id="swipey-messages"></div>
                 <div class="swipey-input-row">
                     <textarea id="swipey-input" placeholder="Ask something..." rows="1"></textarea>
@@ -98,7 +196,8 @@ const DEFAULTS = {
         // event listeners
         widget.querySelector("#swipey-chat-toggle").addEventListener("click", () => toggleChat());
         widget.querySelector(".swipey-close-btn").addEventListener("click", () => toggleChat(false));
-        widget.querySelector(".swipey-clear-btn").addEventListener("click", clearConversation);
+        widget.querySelector(".swipey-newchat-btn").addEventListener("click", startNewConversation);
+        widget.querySelector(".swipey-history-btn").addEventListener("click", () => toggleConvList());
         widget.querySelector("#swipey-send").addEventListener("click", sendMessage);
 
         const input = widget.querySelector("#swipey-input");
@@ -128,9 +227,47 @@ const DEFAULTS = {
         }
     }
 
-    function clearConversation() {
-        messages = [];
-        renderMessages();
+    // ── conversation list panel ────────────────────────────────────────────
+
+    function toggleConvList(forceState) {
+        const list = widget.querySelector("#swipey-conv-list");
+        const msgs = widget.querySelector("#swipey-messages");
+        convListOpen = forceState !== undefined ? forceState : !convListOpen;
+        list.classList.toggle("swipey-hidden", !convListOpen);
+        msgs.classList.toggle("swipey-hidden", convListOpen);
+        if (convListOpen) renderConvList();
+    }
+
+    function renderConvList() {
+        const list = widget.querySelector("#swipey-conv-list");
+        const sorted = [...conversations].sort((a, b) => b.updatedAt - a.updatedAt);
+        if (!sorted.length) {
+            list.innerHTML = `<div class="swipey-empty">No conversations yet</div>`;
+            return;
+        }
+        list.innerHTML = sorted.map((conv) => {
+            const active = conv.id === activeConvId ? " swipey-conv-active" : "";
+            return `<div class="swipey-conv-item${active}" data-id="${conv.id}">
+                <div class="swipey-conv-info">
+                    <span class="swipey-conv-title">${escapeHtml(conv.title)}</span>
+                    <span class="swipey-conv-time">${relativeTime(conv.updatedAt)}</span>
+                </div>
+                <button class="swipey-conv-delete" data-id="${conv.id}" title="Delete">&times;</button>
+            </div>`;
+        }).join("");
+
+        list.querySelectorAll(".swipey-conv-item").forEach((item) => {
+            item.addEventListener("click", (e) => {
+                if (e.target.closest(".swipey-conv-delete")) return;
+                loadConversation(item.dataset.id);
+            });
+        });
+        list.querySelectorAll(".swipey-conv-delete").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                deleteConversation(btn.dataset.id);
+            });
+        });
     }
 
     // ── messages ──────────────────────────────────────────────────────────────
@@ -237,7 +374,8 @@ const DEFAULTS = {
         } else if (message.type === "STREAM_DONE") {
             streaming = false;
             renderMessages(); // re-render to add copy button
-            saveConversation(); // auto-save after each completed response
+            saveCurrentConversation(); // auto-save to local history
+            saveConversation(); // auto-save to backend
         } else if (message.type === "STREAM_ERROR") {
             streaming = false;
             if (messages.length && messages[messages.length - 1].role === "assistant") {
@@ -268,4 +406,13 @@ const DEFAULTS = {
     // ── init ──────────────────────────────────────────────────────────────────
 
     createWidget();
+    loadConversations().then(() => {
+        if (activeConvId) {
+            const conv = conversations.find((c) => c.id === activeConvId);
+            if (conv) {
+                messages = [...conv.messages];
+                renderMessages();
+            }
+        }
+    });
 })();
