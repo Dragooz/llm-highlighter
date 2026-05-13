@@ -237,6 +237,7 @@ const DEFAULTS = {
         } else if (message.type === "STREAM_DONE") {
             streaming = false;
             renderMessages(); // re-render to add copy button
+            saveConversation(); // auto-save after each completed response
         } else if (message.type === "STREAM_ERROR") {
             streaming = false;
             if (messages.length && messages[messages.length - 1].role === "assistant") {
@@ -246,22 +247,23 @@ const DEFAULTS = {
         }
     });
 
-    // ── save conversation on page unload ──────────────────────────────────────
+    // ── save conversation ───────────────────────────────────────────────────────
 
-    window.addEventListener("beforeunload", () => {
-        if (messages.length > 0) {
-            chrome.storage.sync.get({ userId: "" }, (data) => {
-                if (!data.userId) return;
-                chrome.runtime.sendMessage({
-                    type: "SAVE_CONVERSATION",
-                    payload: {
-                        userId: data.userId,
-                        messages,
-                    },
-                });
+    function saveConversation() {
+        if (messages.length < 2) return; // need at least 1 exchange
+        chrome.storage.sync.get({ userId: "" }, (data) => {
+            if (!data.userId) return;
+            chrome.runtime.sendMessage({
+                type: "SAVE_CONVERSATION",
+                payload: {
+                    userId: data.userId,
+                    messages,
+                },
             });
-        }
-    });
+        });
+    }
+
+    window.addEventListener("beforeunload", saveConversation);
 
     // ── init ──────────────────────────────────────────────────────────────────
 

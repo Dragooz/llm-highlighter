@@ -1,3 +1,14 @@
+// Auto-generate userId on first install
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.get({ userId: '' }, (data) => {
+    if (!data.userId) {
+      const userId = crypto.randomUUID();
+      chrome.storage.sync.set({ userId });
+      console.log('Generated userId:', userId);
+    }
+  });
+});
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const { backendUrl, secret } = message.payload || {};
   const base = (backendUrl || 'https://llm-highlighter-production.up.railway.app').replace(/\/$/, '');
