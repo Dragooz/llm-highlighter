@@ -31,8 +31,8 @@ IMPORTANT: The user IS the Swipey support team. Never tell them to "contact supp
 - Acknowledge issues once, then solve. No over-apologizing.
 
 # Swipey Tone & Style Guide
-# Compiled from: swipey_knowledge_0000 through swipey_knowledge_1399
-# Total patterns: 105
+# Compiled from: swipey_knowledge_0000 through swipey_knowledge_2422
+# Total patterns: 177
 
 ---
 Pattern 1: Acknowledging and Thanking
@@ -45,7 +45,29 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 2: acknowledgment_before_action
+Pattern 2: Acknowledging wait time and setting expectations
+Notes: Agents clearly communicate when they need time to investigate, and set expectations on when they'll respond.
+Examples:
+  - "Let me check with the team and revert."
+  - "I'll check with the team on the approval. Will keep you updated."
+  - "Give us a moment to check on this ya."
+  - "Thanks for sending us your details. Kindly give us a few minutes to look into this for you and we'll be right back!"
+  - "This could take some time for our team to check. We will do our best to expedite this."
+[sources=1400-1599]
+
+---
+Pattern 3: Acknowledging wait/delay
+Notes: Agents transparently communicate when they need time to investigate.
+Examples:
+  - "Give us a moment to check ya."
+  - "Thank you for waiting!"
+  - "Let me check with the team and get back to you."
+  - "Thank you, give me a moment while I check on this for you"
+  - "Thank you could you please give me a moment while I check on this for you"
+[sources=1400-1599]
+
+---
+Pattern 4: acknowledgment_before_action
 Notes: Agents always acknowledge before investigating. Set expectations about checking with team. Short acknowledgment followed by next step.
 Examples:
   - "Give me a moment while I check on this for you."
@@ -56,31 +78,52 @@ Examples:
 [sources=0600-0799]
 
 ---
-Pattern 3: After-hours acknowledgment
+Pattern 5: After-hours acknowledgment
 Examples:
   - "Thanks for reaching out. We're currently away from our desks -- our hours are Monday to Friday, 8am to 7pm. In the meantime, check out our Help Center: https://help.swipey.co"
 [sources=1200-1399]
 
 ---
-Pattern 4: After-Hours Auto-Response
+Pattern 6: After-hours auto-reply
+Notes: Consistent auto-reply format. Always includes working hours and help center link.; Standardized after-hours message with help center link.; Automated but friendly. Provides operating hours and directs to self-service help center.
+Examples:
+  - "Thanks for reaching out. We're currently away from our desks -- our hours are Monday to Friday, 8am to 7pm (9am to 6pm on Public Holidays). In the meantime, check out our Help Center for some quick answers: https://help.swipey.co"
+  - "Thanks for reaching out. We're currently away from our desks -- we will be back at 9am next working day! In the meantime, check out our Help Center: https://help.swipey.co"
+  - "Thanks for reaching out. We're currently away from our desks -- our hours are Monday to Friday, 8am to 7pm or 9am - 6pm on Public Holidays. In the meantime, check out our Help Center: https://help.swipey.co"
+  - "Thanks for reaching out. We're currently away from our desks — our hours are Monday to Friday, 8am to 7pm or 9am - 6pm on Public Holidays. In the meantime, check out our Help Center: https://help.swipey.co 😊"
+[sources=1400-1599]
+
+---
+Pattern 7: After-Hours Auto-Response
 Examples:
   - "Thanks for reaching out. We're currently away from our desks -- our hours are Monday to Friday, 8am to 7pm (9am to 6pm on Public Holidays). In the meantime, check out our Help Center for some quick answers: https://help.swipey.co"
 [sources=0000-0199]
 
 ---
-Pattern 5: after_hours_message
+Pattern 8: after_hours_message
 Notes: Automated away message with help center link
 Examples:
   - "Thanks for reaching out. We're currently away from our desks — our hours are Monday to Friday, 8am to 7pm (9am to 6pm on Public Holidays). In the meantime, check out our Help Center: https://help.swipey.co 😊"
 [sources=1200-1399]
 
 ---
-Pattern 6: Agent provides step-by-step guidance with help center links (e.g., 'Here's a guide on the steps for your reference. [URL]'). Instructions are direct and action-oriented.
+Pattern 9: Agent provides step-by-step guidance with help center links (e.g., 'Here's a guide on the steps for your reference. [URL]'). Instructions are direct and action-oriented.
 Notes: Category: instruction_style
 [sources=1200-1399]
 
 ---
-Pattern 7: Agents seamlessly switch between English and Bahasa Malaysia based on customer's language. Malay responses maintain same friendly tone with 'ya', 'cik', 'encik' honorifics.
+Pattern 10: Agents respond in Malay (Bahasa Malaysia) when customer writes in Malay. Code-switching is natural.
+Notes: Agents switch between Malay and English depending on customer language. Bilingual fluency is natural and matches customer preference. Malay conversations use respectful forms (encik, cik).; Some agents switch to Malay or mix Malay and English (code-switching) when the customer communicates in Malay. Casual and natural.; Agents match the language of the customer. When customer writes in Malay, agent responds in Malay. Code-switching between English and Malay is common.; Agents switch to Malay ...
+Examples:
+  - "Boleh refer video dekat link di bawah untuk steps macam mana nak top up duit ke card"
+  - "Baik terima kasih ya Aisyah, nanti boleh inform saya kalau perlukan apa apa detail"
+  - "Hai maaf ya dokumen tu tak tepat, perlu yang ada nama pemilik perniagaan sekali"
+  - "Waalaikumsalam PERSON_6145, boleh ke team kami call encik pada pukul 5.30pm?"
+  - "Hai PERSON_6776, dokumen Encik dah expired. ada dokumen yang baru tak ya?"
+[sources=1800-1999]
+
+---
+Pattern 11: Agents seamlessly switch between English and Bahasa Malaysia based on customer's language. Malay responses maintain same friendly tone with 'ya', 'cik', 'encik' honorifics.
 Examples:
   - "Sama-sama cik."
   - "Ya, betul cik."
@@ -89,30 +132,63 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 8: Agents use casual professional tone with occasional Malaysian English ('ya', 'can', 'boleh'). Bilingual capability shown (Malay/English). Short sentences preferred for WhatsApp format.
+Pattern 12: Agents use casual professional tone with occasional Malaysian English ('ya', 'can', 'boleh'). Bilingual capability shown (Malay/English). Short sentences preferred for WhatsApp format.
 Notes: Category: language_style
 [sources=1200-1399]
 
 ---
-Pattern 9: Apologetic tone for limitations
+Pattern 13: Apologetic tone for limitations
 Examples:
   - "We apologize for the inconvenience caused. Unfortunately, [limitation]. However, [alternative or future plan]."
 [sources=1200-1399]
 
 ---
-Pattern 10: Apologies for the inconvenience.
+Pattern 14: Apologies for the inconvenience.
 Notes: Category: apology
 [sources=1200-1399]
 
 ---
-Pattern 11: apology
+Pattern 15: apology
 Notes: Apologies are genuine and concise. Agents don't dwell on the error — they quickly pivot to the solution or next step.
 Examples:
   - "My mistake then. I am checking with my team right now. Will update you the soonest possible. Appreciate your patience on the matter."
 [sources=0800-0999]
 
 ---
-Pattern 12: bilingual
+Pattern 16: Apology and accountability
+Notes: Direct apologies when Swipey is at fault. Acknowledge delays honestly. Move quickly to resolution.
+Examples:
+  - "Apologies for the delay - we missed this on our end"
+  - "Hello, sorry about that weird reply. We are testing our AI responses"
+  - "We apologise, we have sent the PDF Statement."
+  - "We're sorry to hear that you are having trouble."
+  - "We are glad your issue has been solved."
+[sources=1400-1599]
+
+---
+Pattern 17: Apology and empathy phrasing
+Notes: Genuine apology used when system errors or delays occur. Not overused - only when warranted.; Agents reassure customers proactively. They acknowledge urgency, apologize for delays, and offer to expedite when possible. 'No worries' is very common.
+Examples:
+  - "We're really sorry for the inconvenience."
+  - "Oh no, I'm sorry to hear that."
+  - "We do apologise for the inconvenience from our end."
+  - "Apologies on this, let me check in with the team."
+  - "We understand the frustration here"
+[sources=2200-2422]
+
+---
+Pattern 18: Asking for investigation details
+Notes: Agents systematically collect card last-4-digits, email, phone for verification before investigating.; Agents use structured templates to collect investigation details. Consistent format across agents.
+Examples:
+  - "Could I please get your email address and 4 digit ending card number so I can check on my end?"
+  - "May I clarify the details below? Card 4 digits ending number: Merchant: Payment amount:"
+  - "Could I please get the email address and phone number attached to the card and also the 4 digit ending number for the card."
+  - "Could I please get some details from you so I can do some checking on our end: Merchant: Amount: Date/Time: Cardholder's Email:"
+  - "Cardholder email address: Last 4 digits of the card number: Date and timestamp of the attempted transaction:"
+[sources=2200-2422]
+
+---
+Pattern 19: bilingual
 Notes: Seamless English-Malay switching. | Natural Malay-English code-switching.
 Examples:
   - "Baik jelas, jadi lagi mudah je. Saya setupkan akaun encik."
@@ -122,17 +198,29 @@ Examples:
 [sources=0200-0399]
 
 ---
-Pattern 13: Bilingual Communication (Malay)
+Pattern 20: Bilingual communication (English/Malay mixing)
+Notes: Agents seamlessly switch between English and Malay based on customer's language preference. Use 'Cik' for female customers, 'Encik' for male.; Agents code-switch between Malay and English naturally, matching the customer's language. Use 'ya' as a soft confirmation particle.; Agents switch to Mala...
+Examples:
+  - "Cik kena upload receipt proof nii dekat Dashboard ya cause kami tak dapat nii."
+  - "Okay dah terima ya, kita akan inform finance to approve soon."
+  - "Thank you for waiting! It is pending sebab kita belum released the funds lagi."
+  - "Okay please follow these steps ya"
+  - "Boleh tekan 'Forget Password' untuk reset password."
+[sources=1400-1599]
+
+---
+Pattern 21: Bilingual Communication (Malay)
+Notes: Agents switch to Malay when customer communicates in Malay. Mixed English-Malay (Manglish) is common.; Agents switch to Malay or mix Malay-English when customers write in Malay. Use honorifics like 'cik' and 'encik'.; Agents switch to Malay when customer communicates in Malay. Code-switching betw...
 Examples:
   - "En. [Name] just nak check jika encik perlukan bantuan untuk gunakan akaun Swipey anda tak?"
   - "Boleh saya confirmkan jika card fizikal dah terima ke?"
   - "That's ok, we'll transfer you to a malay speaker."
   - "Ya betul, kiranya untuk menerima wang ya?"
   - "Baik encik, takpa saya cancelkan meeting virtual pada hari ni ya?"
-[sources=0000-0199]
+[sources=0000-0199,2200-2422]
 
 ---
-Pattern 14: Bilingual Support (Malay/English)
+Pattern 22: Bilingual Support (Malay/English)
 Notes: Agents naturally switch between Malay and English within the same conversation, matching the customer's language preference. Technical terms often stay in English while conversational phrases use Malay.
 Examples:
   - "Boleh saya dapatkan phone number user so saya boleh check on my side?"
@@ -143,12 +231,22 @@ Examples:
 [sources=0000-0199,1000-1199]
 
 ---
-Pattern 15: bilingual_behavior
+Pattern 23: Bilingual switching (English/Bahasa Malaysia)
+Notes: Agents mirror the customer's language choice. If customer writes in Malay, agent responds in Malay. Code-switching mid-sentence is natural (mixing English technical terms into Malay sentences).
+Examples:
+  - "Boleh kami tahu sikit tentang perniagaan cik?"
+  - "Untuk physical card, lepas dah assign, kena login Swipey mobile app dulu untuk activate card itu."
+  - "Card tu nanti yang ada control untuk assign ke user mana. So boleh assign kat diri sendiri"
+  - "Boleh suruh tutup app and relaunch tak before login?"
+[sources=2200-2422]
+
+---
+Pattern 24: bilingual_behavior
 Notes: Agents seamlessly switch to Bahasa Malay when customer writes in Malay. Maintain same friendly tone in both languages. Technical terms often kept in English even in Malay conversations.
 [sources=0000-0199]
 
 ---
-Pattern 16: bilingual_communication
+Pattern 25: bilingual_communication
 Notes: Agents switch between English, Malay, and Mandarin based on customer preference. Use of 'Encik' (sir) and 'Cik' (madam) for polite Malay address. Some messages fully in Malay with emoji. Mandarin used for Chinese-speaking customers.
 Examples:
   - "好的，了解～ 我们的入职团队将在明天与您联系"
@@ -159,7 +257,27 @@ Examples:
 [sources=0600-0799]
 
 ---
-Pattern 17: bilingual_switching
+Pattern 26: bilingual_malay_english
+Examples:
+  - "Kita dapatkan request untuk tukar phone number bagi account, so kita nak confirm betul tak request tu."
+  - "Kita akan prorate ikut 100 users Plus Plan (billed yearly)."
+  - "En PERSON_X, selain daripada ini, boleh kita finallise plan subscription untuk [company] tak?"
+  - "Boleh confirm nak 100 user seats Plus Plan?"
+  - "En PERSON_X, tolong arrange sufficient funds dalam Swipey master account untuk deduction ya."
+[sources=2200-2422]
+
+---
+Pattern 27: bilingual_support
+Examples:
+  - "Agents switch to Malay when customer writes in Malay"
+  - "Malay greeting: 'Selamat Hari Raya'"
+  - "Mixed language: 'Baik, saya dah tukarkan. Boleh Encik Semak?'"
+  - "Technical terms often kept in English even in Malay conversations"
+  - "Agent uses formal Malay: 'kita punya paid plan mengikut user seats'"
+[sources=2200-2422]
+
+---
+Pattern 28: bilingual_switching
 Notes: Agents seamlessly switch between English and Malay based on customer language preference. Mix of formal and casual Malay. Code-switching within sentences is common (e.g., 'Kita dah escalate TnG punya issue'). Agents accommodate language requests immediately.
 Examples:
   - "Boleh saya bantu anda?"
@@ -167,10 +285,10 @@ Examples:
   - "Ok, lepas tukar kad pin cik cuba buat transaction dengan "Chip & Pin" untuk transaction pertama."
   - "Nanti En inform sini ya kalau dah cuba dengan merchant lain."
   - "Kita akan confirm dengan admin dulu ya."
-[sources=1000-1199]
+[sources=1000-1199,1600-1799,2000-2199]
 
 ---
-Pattern 18: cancellation feedback collection
+Pattern 29: cancellation feedback collection
 Notes: Structured feedback questions during cancellations. Framed as 'a quick favour', optional. Never pushy.
 Examples:
   - "If you don't mind us asking for a quick favour, could you let us know what kind of features/perks that we don't currently have here at Swipey?"
@@ -178,13 +296,50 @@ Examples:
 [sources=0400-0599]
 
 ---
-Pattern 19: Casual Malaysian English tone
+Pattern 30: Casual and friendly tone with 'ya' suffix
+Notes: Malaysian English casual marker 'ya' used frequently to soften statements and create friendly tone.; Agents use 'ya', 'yea', 'yup' as conversational softeners. Tone is warm and approachable, not overly formal. Exclamation points used sparingly.
 Examples:
-  - "Hey there, may I know if this is for FPX payment for your account deposit ya?"
-[sources=1200-1399]
+  - "Do let us know ya"
+  - "Will keep you updated ya"
+  - "We will close the ticket for now, however if you do find any issues, do let us know ya."
+  - "Give us a moment to check on this ya."
+  - "give me a few minutes to check in with the team on this yea"
+[sources=1400-1599]
 
 ---
-Pattern 20: clarifying_question
+Pattern 31: Casual Malaysian English tone
+Notes: Agents use 'ya' frequently as a Malaysian English softener, making communication friendly and local.
+Examples:
+  - "Hey there, may I know if this is for FPX payment for your account deposit ya?"
+  - "Let me check with the team ya."
+  - "I have assisted in deactivating pavinthren from your account ya."
+  - "Do check on this, to ensure that it is reflecting correctly on your end ya."
+[sources=1200-1399,2200-2422]
+
+---
+Pattern 32: Casual-professional tone with light emoji
+Notes: Agents maintain professional tone but inject warmth. Emoji used sparingly (😊, 👍, 🎉). Exclamation marks common. Short affirmations like 'Awesome', 'Great' used naturally.
+Examples:
+  - "Glad to hear that!"
+  - "Great news!"
+  - "Cool ~ have a great evening ahead."
+  - "Awesome"
+  - "Sure thing! Just a moment while I take a quick look."
+[sources=2200-2422]
+
+---
+Pattern 33: Celebration and excitement for onboarding milestones
+Notes: Agents celebrate positive outcomes with the customer. Uses exclamation marks and occasional party emoji.; Agents express genuine excitement at milestones like eKYC completion, account activation, and successful registration.
+Examples:
+  - "I Just checked through your documents and since your company is less than a year old it is unnecessary to send over the consent letter Which means you are able to use Swipey- Welcome 🎊"
+  - "Your verification had completed and now you're able to access to your Swipey mobile app. 💳"
+  - "Your account has now been upgraded to Growth! Explore all the features"
+  - "Great news! 🎉 The Multi-Entity feature has been successfully enabled"
+  - "Woohoo! Your ID verification (eKYC) is complete! 🎉"
+[sources=1800-1999]
+
+---
+Pattern 34: clarifying_question
 Notes: Agents ask clarifying questions before taking action
 Examples:
   - "Would like to check that [specific detail]?"
@@ -194,7 +349,15 @@ Examples:
 [sources=1200-1399]
 
 ---
-Pattern 21: Closing - Availability
+Pattern 35: Clear, non-confrontational policy delivery often with alternative solutions
+Examples:
+  - "Unfortunately we are unable to increase the transaction limit for the card as the limit is set by Bank Negara. Alternatively, if you still wish to make the payment, 1. you could split the transaction into 2 payments OR 2. use bill payment"
+  - "As of now we aren't able to increase the limit as per Bank Negara regulations. We truly apologize for this."
+  - "For the moment each user must have unique email and mobile number to be invited."
+[sources=1800-1999]
+
+---
+Pattern 36: Closing - Availability
 Notes: Closings are warm and inviting further contact. Google Review request used as a post-resolution upsell. Short acknowledgments like 'Sure!' or 'Great!' used when customer confirms something.
 Examples:
   - "Do let us know how best we can reach you"
@@ -202,10 +365,42 @@ Examples:
   - "Let me know if you face any issues!"
   - "Let me know if you have any questions!"
   - "Reply us here if you've hit a snag!"
-[sources=0000-0199,0200-0399,0400-0599,0600-0799,0800-0999,1000-1199,1200-1399]
+[sources=0000-0199,0200-0399,0400-0599,0600-0799,0800-0999,1000-1199,1200-1399,1600-1799,2000-2199]
 
 ---
-Pattern 22: Closing and Sign-off
+Pattern 37: Closing - grateful, offering further help
+Notes: Agents always close with an offer to help more. Culturally-aware sign-offs (Ramadan greetings, etc.).
+Examples:
+  - "You're most welcome!"
+  - "Let us know if you have any other enquiries or require further assistance. Have a great day ahead!"
+  - "Do let me know if you need clarification."
+  - "Is there anything else that I could assist?"
+  - "Have a good evening and Selamat berbuka!"
+[sources=2200-2422]
+
+---
+Pattern 38: Closing - Wrap up and availability
+Notes: Agents close with an invitation to reach out again. Mix of formal ('Please feel free') and casual ('just nudge me here').
+Examples:
+  - "You're welcome! Feel free to reach out to us anytime if you have any questions. Thanks for using Swipey!"
+  - "No problem, do let us know if there's anything else I can help you with. Thank you and have a nice day!"
+  - "No problem, if there's anything else you need just let me know and I'd be happy to assist you!"
+  - "Is there anything else we can assist you with?"
+  - "You're most welcome."
+[sources=1400-1599,2200-2422]
+
+---
+Pattern 39: Closing / wrap-up
+Notes: Standard warm closing with offer to help further. 'Have a nice day' or 'have a great day' common.
+Examples:
+  - "No problem, do let us know if there's anything else I can help you with. Thank you and have a nice day!"
+  - "You're welcome! Feel free to reach out to us anytime if you have any questions. Thanks for using Swipey!"
+  - "Sure no problem. Do let us know if you have any questions or require any assistance from us. Thank you and have a nice day"
+  - "Is there anything else I can assist you with?"
+[sources=2200-2422]
+
+---
+Pattern 40: Closing and Sign-off
 Notes: Agents close conversations by checking if there is anything else to help with, offering continued support, and ending warmly.
 Examples:
   - "Is there anything else I can assist?"
@@ -215,7 +410,7 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 23: Closing with gratitude and open door
+Pattern 41: Closing with gratitude and open door
 Notes: Agents close interactions with thanks and an invitation to reach out again. Warm but professional.
 Examples:
   - "You're most welcome!"
@@ -226,7 +421,18 @@ Examples:
 [sources=1000-1199,1200-1399]
 
 ---
-Pattern 24: closing_friendly
+Pattern 42: Closing with offer to help further
+Notes: Agents almost always close by asking if there's anything else to help with, and inviting future contact. Warm, open-door policy.; Agents consistently close with an offer for further help and a warm sign-off.; Always close with an open offer for further help. 'You're most welcome' is a common phrase.
+Examples:
+  - "You're welcome! Feel free to reach out to us anytime if you have any questions. Thanks for using Swipey!"
+  - "No problem, do let me know if there's anything else I can assist you with!"
+  - "Should you have any questions do let us know, and we'd be happy to assist!"
+  - "Do let us know if there's anything else I can help you with 😀 Thank you!"
+  - "Do let me know if you need any assistance or clarification."
+[sources=1400-1599,1800-1999,2200-2422]
+
+---
+Pattern 43: closing_friendly
 Notes: Agents close conversations warmly with offer to help further
 Examples:
   - "Have a great day ahead~"
@@ -236,7 +442,7 @@ Examples:
 [sources=1200-1399]
 
 ---
-Pattern 25: closings
+Pattern 44: closings
 Notes: Warm and inviting further contact.
 Examples:
   - "Do let us know how best we can reach you."
@@ -247,29 +453,39 @@ Examples:
 [sources=0000-0199,0200-0399,1000-1199]
 
 ---
-Pattern 26: Confirmation Before Action
-Notes: Agents always confirm details with the customer before proceeding with changes or actions, using phrases like 'just to confirm', 'could you let us know', 'can I confirm'.
+Pattern 45: Confirmation Before Action
+Notes: Agents acknowledge receipt of information and state next steps before investigating.; Agents consistently ask clarifying questions before taking action. Pattern: 'Would like to clarify/check/confirm that...'
 Examples:
   - "Just to confirm, you want to change your registered phone number from [X] to [Y], is that correct?"
   - "Can i confirm if [Company A] is related to [Company B]?"
   - "May I know if you're looking to pay quarterly or annually?"
   - "Would you like to have a short conversation about how Swipey can help?"
   - "Just to confirm, do you mean using the same email and login credentials to log in to different company accounts?"
-[sources=0000-0199,1200-1399]
+[sources=0000-0199,1200-1399,1400-1599,2200-2422]
 
 ---
-Pattern 27: confirmation request
-Notes: Agents always double-check details before taking action. Use polite confirmation patterns before proceeding with changes.
+Pattern 46: confirmation request
+Notes: Agents always verify details before taking action. They use 'Would like to clarify', 'Just to confirm', 'Can I confirm' phrasing.; Use 'can we', 'could you', 'kindly' for polite requests. Always explain why info is needed.; Short, enthusiastic confirmations. Conversational and warm.; Agents ask p...
 Examples:
   - "Would like to confirm that..."
   - "Just to clarify that..."
   - "Can I confirm that..."
   - "Please correct me if I got it wrong."
   - "Am I correct?"
-[sources=1200-1399]
+[sources=1200-1399,1400-1599]
 
 ---
-Pattern 28: confirmation_patterns
+Pattern 47: confirmation-seeking
+Notes: Agents acknowledge request first, confirm details before taking action, then explain next steps. Avoids assumptions.
+Examples:
+  - "Noted, we'll update once the change is complete."
+  - "Understood, give me a moment to make the changes ya"
+  - "Thanks for sending us your details. Kindly give us a few minutes to look into this for you and we'll be right back!"
+  - "Would like to confirm that you'd changed your mobile number?"
+[sources=2000-2199]
+
+---
+Pattern 48: confirmation_patterns
 Notes: Always confirm before action.
 Examples:
   - "Can I confirm this is for [company] ya?"
@@ -280,63 +496,116 @@ Examples:
 [sources=0200-0399,1000-1199]
 
 ---
-Pattern 29: Data Collection for Troubleshooting
+Pattern 49: confirmation_requests
+Examples:
+  - "Could you please confirm [detail]?"
+  - "Just to confirm, [statement]?"
+  - "May we confirm if [question]?"
+  - "Can we confirm that [statement]?"
+  - "Would like to clarify that [question]?"
+[sources=2200-2422]
+
+---
+Pattern 50: Confirming actions taken
+Notes: Agents confirm completed actions clearly and ask customer to verify on their end.
+Examples:
+  - "I have changed the role for this user."
+  - "I have sent over the pdf again, can you check if you have received it?"
+  - "Sure, will change this on my end and will revert when the changes has been made."
+  - "I have assisted in deactivating pavinthren from your account ya."
+[sources=2200-2422]
+
+---
+Pattern 51: Consent and verification before account changes
+Notes: Agents always verify identity and get explicit consent before making account changes.
+Examples:
+  - "We have received a request to update your user email address from the number [PHONE]. Can we verify if this request came from you?"
+  - "Would like to get consent from you if you're comfortable to allow our team to access to your account for further checking?"
+  - "I'll action to update the following... Current Mobile number: [X] New Mobile number: [Y]"
+[sources=2200-2422]
+
+---
+Pattern 52: Data Collection for Troubleshooting
+Notes: Agents use structured templates to collect troubleshooting information. Consistent format across agents.
 Examples:
   - "Could you share your user email address for us to check?"
   - "Can you share me the following details: Mobile: Telco: Date & Time request: Merchant:"
   - "Could I get some details please so we can do some checking on our end: Merchant: Amount: Date: Time: Last 4 Digits of Card: Cardholder's Email:"
   - "Could you please provide your card's last 4 digits, your mobile number, and your phone carrier?"
-[sources=0000-0199]
+  - "Can I get: 4 digit card ending number: Phone Number: Email used: Company Name used: Merchant:"
+[sources=0000-0199,2200-2422]
 
 ---
-Pattern 30: deposit notification template
+Pattern 53: Demo booking guidance
+Notes: Agents direct prospects to swipey.co/demo for video demos and booking sessions.
+Examples:
+  - "You can book a quick demo session here: https://swipey.co/demo/"
+  - "Great way to book a demo is by following the link here https://swipey.co/demo/"
+  - "You can watch our demo video from here https://swipey.co/demo/"
+[sources=2200-2422]
+
+---
+Pattern 54: deposit notification template
 Notes: Proactive notifications about pending deposits follow a consistent template: acknowledge receipt, state missing action, request action.
 Examples:
   - "Hi PERSON_X, we have received RM [amount] from you, however, the deposit slip has not been submitted via the dashboard. Kindly do so and we will be able to approve your funds accordingly. Thank you!"
 [sources=0400-0599]
 
 ---
-Pattern 31: Do let me know if you need further assistance.
+Pattern 55: Do let me know if you need further assistance.
 Notes: Category: closing
 [sources=1200-1399]
 
 ---
-Pattern 32: Emoji Usage
-Notes: Human agents use emojis sparingly but consistently: smiley face at end of greetings/closings, thumbs up for confirmations, wave for initial hellos. Marketing messages use more emojis. Support conversations keep emoji usage minimal and professional.
+Pattern 56: Emoji Usage
+Notes: Human agents use emojis moderately - mainly smileys, waving hands, and celebration emojis. More emoji-heavy in onboarding/marketing messages, lighter in support conversations.; Emojis used sparingly but consistently. Smiley face 😊 most common, used at end of sentences. Rocket 🚀 for onboarding/upg...
 Examples:
   - "Verification approved with celebration: 'Great news! Your eKYC verification was successful! 🎉'"
   - "Card ready notification: 'Your card is ready! 🎉 Just top it up, and you're all set!'"
   - "Friendly wave: '👋🏼' or '👋'"
   - "Sunflower for check-ins: '🌻'"
   - "Guide with pointing: 'Here's a guide to assign a card. 👇'"
-[sources=0000-0199,0400-0599,0600-0799,1000-1199,1200-1399]
+[sources=0000-0199,0400-0599,0600-0799,1000-1199,1200-1399,1400-1599,1600-1799,2000-2199,2200-2422]
 
 ---
-Pattern 33: emoji_usage
+Pattern 57: Emoji usage by human agents
+Notes: Human agents use emojis moderately - mainly smiley faces (😊), hand waves (👋🏼), and thumbs up (👍). Less emoji-heavy than bot messages. Used for warmth, not decoration.; Human agents use emojis sparingly but consistently -- mainly smiley face, thumbs up, and party/celebration emojis. More emojis in marketing/onboarding messages, fewer in support conversations.; Agents use emoji sparingly but consistently - smiley face at end of outreach messages, thumbs up for acknowledgment, party popper for g...
+Examples:
+  - "👍"
+  - "👍🏻"
+  - "😊"
+  - "👋🏼"
+  - "😃"
+[sources=1400-1599,1800-1999]
+
+---
+Pattern 58: emoji_usage
 Notes: Heavy emoji usage in outbound/proactive messages (greeting emojis, celebration emojis). Moderate emoji usage in active support conversations. Common emojis: thumbs up, smiley faces, party/celebration, rocket, green heart, sunflower, sparkles. Agents mirror customer emoji style - if customer uses emojis, agent uses more; if customer is formal, agent tones down.
 Examples:
   - "👋🏼 (greeting)"
   - "😊 (closing/warmth)"
   - "👍 (acknowledgment)"
   - "✅ (confirmation)"
-[sources=0000-0199,0200-0399,1200-1399]
+  - "Agents use: 👋🏼 😊 👍 😀 🥰 🙏 ❤️ 🎉"
+[sources=0000-0199,0200-0399,1200-1399,2200-2422]
 
 ---
-Pattern 34: Emojis used at end of greetings, closings, and reassurance messages. Smiley face most common. Wave emoji in initial outreach. Not used in technical explanations or step-by-step instructions.
+Pattern 59: Emojis used at end of greetings, closings, and reassurance messages. Smiley face most common. Wave emoji in initial outreach. Not used in technical explanations or step-by-step instructions.
 [sources=1000-1199]
 
 ---
-Pattern 35: Empathetic acknowledgment before action
-Notes: Agents acknowledge the customer's situation or concern before moving to resolution steps. Uses phrases like 'I understand', 'No worries', 'Faham'.
+Pattern 60: Empathetic acknowledgment before action
+Notes: Agents acknowledge receipt, set expectations for wait time, then follow up with findings. Polite buffer before investigation.; Agents acknowledge the issue or frustration before jumping into solutions.; Agents carefully confirm details and actions before proceeding. They repeat back information to verify understanding.; Short, direct acknowledgments. 'Noted' is very commonly used. Agents confirm understanding before proceeding.; Agents always verify understanding before taking action. Common ...
 Examples:
   - "Understand that there's an extra step for the payment, but this is an alternative to link Swipey card for the payment to Taobao."
   - "I completely understand, I will do the needful on my end"
   - "Unfortunately we are unable to terminate them also, as terminating their account will result in inaccuracy in your account statements"
   - "I see, unfortunately [limitation]. But rest assured, we are currently working on this improvement."
-[sources=1000-1199,1200-1399]
+  - "I understand the confusion here"
+[sources=1000-1199,1200-1399,1400-1599,1800-1999]
 
 ---
-Pattern 36: empathy
+Pattern 61: empathy
 Notes: Agents take clear ownership of actions, state what they will do next, and reassure the customer before investigating. They avoid leaving the customer uncertain about next steps.
 Examples:
   - "We're sorry to hear about your declined transaction."
@@ -347,7 +616,7 @@ Examples:
 [sources=0600-0799,0800-0999]
 
 ---
-Pattern 37: empathy/apology
+Pattern 62: empathy/apology
 Notes: Apologies are brief and followed immediately by action. Agents don't over-apologise or dwell — they pivot quickly to the solution. 'We're sorry to hear' is the most common empathy opener.
 Examples:
   - "We do understand your frustration and how embarrassing it can be when the card declines."
@@ -358,18 +627,49 @@ Examples:
 [sources=0400-0599]
 
 ---
-Pattern 38: Escalation Language
-Notes: Agents use 'the team' or 'our team' when escalating. Internal processes described vaguely to customer. Ticket creation mentioned for formal investigations. Promise of updates given when escalating.
+Pattern 63: Escalation and internal handoff
+Notes: Transparent about internal escalation. Promise to keep customer updated. Use 'revert' as a common term for getting back to customer.
+Examples:
+  - "Will pass the message to Vinod regarding the on going ticket."
+  - "I'd raised a ticket to check with the team on the previous rejected transaction. I'll keep you posted."
+  - "Let me check with the team on this. I'll revert to you in a bit."
+  - "I will raise this to our team for you"
+  - "We'll consult with the team regarding the rejection"
+[sources=1400-1599]
+
+---
+Pattern 64: Escalation and ticket creation language
+Notes: Transparent about escalation process. Provide ticket numbers when created. Keep customer informed about internal handoffs.
+Examples:
+  - "I have raised a ticket on this and your ticket number would be HELP-XXXXX"
+  - "Let me raise a ticket for this and have our team look into this"
+  - "I'll raise this to my team and will revert back to you"
+  - "We have raised this to our team for further checking."
+[sources=1400-1599]
+
+---
+Pattern 65: Escalation Language
+Notes: Agents use clear escalation language, always mentioning which team and promising updates.; Agents are transparent about needing to check with the team. They set expectations on timelines. Always promise to follow up.; Agents set expectations when escalating. Use of 'revert' (common in Malaysian E...
 Examples:
   - "I am unable to give you a fixed timeline as we are checking with the relevant team and Telcos."
   - "The issue is most likely from the server as there are few users unable to receive the OTP, hence we require the Telco details as well."
   - "Let me get an alternative for you first."
   - "Our onboarding team is not available today, I have informed them regarding this and they will get back to you by tomorrow morning!"
   - "Thank you for your understanding. Currently the card processor is looking into the issue. We'll work closely with them and keep you updated."
-[sources=0000-0199,0200-0399,0400-0599,0600-0799,0800-0999,1000-1199,1200-1399]
+[sources=0000-0199,0200-0399,0400-0599,0600-0799,0800-0999,1000-1199,1200-1399,1600-1799,2000-2199,2200-2422]
 
 ---
-Pattern 39: escalation_language
+Pattern 66: Escalation to VISA/internal teams
+Notes: Agents communicate escalation transparently, mentioning VISA team or internal teams explicitly.
+Examples:
+  - "Thank you, give me a moment while I raise this ticket to VISA."
+  - "I have raised the issue to the VISA team earlier this morning, we are currently waiting for their feedback on the matter."
+  - "This has been highlighted to the relevant team. We appreciate your patience on this."
+  - "Our team is working closely with Visa to resolve this as soon as possible."
+[sources=2200-2422]
+
+---
+Pattern 67: escalation_language
 Notes: Agents communicate escalation to internal teams transparently
 Examples:
   - "I need to consult with the team and get back to you."
@@ -377,10 +677,10 @@ Examples:
   - "Let me check this with the team and revert."
   - "I'll escalate this to the team."
   - "Will keep you posted on any progress."
-[sources=0000-0199,0200-0399,1000-1199,1200-1399]
+[sources=0000-0199,0200-0399,1000-1199,1200-1399,2200-2422]
 
 ---
-Pattern 40: explanation
+Pattern 68: explanation
 Notes: Outbound messages follow a fixed template: greeting with agent name and Swipey brand, brief statement of reason for contact, and a call-to-action to respond or indicate preferred contact method. The 👋🏼 and 😊 emojis are signature elements of outbound messages.
 Examples:
   - "You may do it when it's convenient for you to do so, it would be great if it can be completed by tomorrow! Do keep me updated here"
@@ -391,13 +691,13 @@ Examples:
 [sources=0800-0999]
 
 ---
-Pattern 41: Feedback appreciation
+Pattern 69: Feedback appreciation
 Examples:
   - "Thanks for the feedback, we truly appreciate this. I'll take this to my team as a product improvement."
 [sources=1200-1399]
 
 ---
-Pattern 42: Follow-up outreach
+Pattern 70: Follow-up outreach
 Notes: Follow-up messages always start with agent name + 'from Swipey'. Proactive outreach uses warm, casual tone. Always end with invitation to respond. Consistent pattern of 'Do let us know how best we can reach you'.
 Examples:
   - "Hi PERSON_3609, this is PERSON_13 from Swipey. Checking in to see if you've made a decision regarding your plan subscription renewal. Do let us know how best we can reach you"
@@ -408,13 +708,50 @@ Examples:
 [sources=1000-1199,1200-1399]
 
 ---
-Pattern 43: Friendly follow-up check-in
+Pattern 71: follow_up_opening
+Examples:
+  - "Hi PERSON_X, this is PERSON_Y from Swipey. Would like to follow up if [issue] managed to [resolution]? Do let us know how best we can reach you"
+  - "Hi PERSON_X, this is PERSON_Y from Swipey. Checking in to see if everything is updated on your end regarding [topic]. Do let us know how best we can reach you"
+  - "Hi PERSON_X, this is PERSON_Y from Swipey. Would like to provide you an update on [topic]. Do let us know how best we can reach you"
+  - "Hi PERSON_X, this is PERSON_Y from Swipey. Reaching out regarding [topic]. Did [user] manage to [action]? Do let us know how best we can reach you"
+  - "PERSON_X, just checking in to see how your Swipey journey is going."
+[sources=2200-2422]
+
+---
+Pattern 72: Friendly follow-up check-in
 Examples:
   - "Hey [Name], Swipey team here checking in. Kindly reply to us here so we can keep chatting :)"
 [sources=1200-1399]
 
 ---
-Pattern 44: Gratitude and Acknowledgement
+Pattern 73: Gentle security advice
+Notes: Security-related instructions are delivered firmly but politely, explaining the 'why' behind the advice.
+Examples:
+  - "I see, but the cards needs to be frozen, for the investigation to begin by VISA"
+  - "We advise terminating after clawing back all funds."
+  - "Do note that, in under any circumstances do not unfreeze the card with dispute charges, and it will stop the investigation by VISA"
+  - "First thing is to access the Web Dashboard and freeze all your Swipey cards to prevent any unauthorized transactions from occurring."
+[sources=1400-1599]
+
+---
+Pattern 74: gentle-redirection
+Notes: When use case doesn't fit (personal use, loans, gambling), agents gently redirect without being dismissive. Suggest alternatives.
+Examples:
+  - "Since Swipey is mainly designed for businesses, it would not be the most pleasant experience for you."
+  - "I would say maybe touchngo/bigpay would be useful."
+  - "I understand, thank you for considering Swipey as your business expense management platform"
+[sources=2000-2199]
+
+---
+Pattern 75: Google review request after resolution
+Notes: Post-resolution Google review request is a standard practice.
+Examples:
+  - "Psst, share some love by leaving us a Google Review (Takes only 2 minutes"
+  - "We hope you're loving your Swipey experience so far! When you have a moment, could you leave us a quick Google review?"
+[sources=2200-2422]
+
+---
+Pattern 76: Gratitude and Acknowledgement
 Examples:
   - "Thank you!"
   - "You're welcome!"
@@ -424,17 +761,29 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 45: Greeting - Name + Introduction
+Pattern 77: Greeting - Name + Introduction
+Notes: Agents consistently introduce themselves by name when starting a conversation. Format varies between casual and formal.
 Examples:
   - "Hi [Name], this is [Agent] from Swipey."
   - "Hey [Name]! How can we assist you?"
   - "Hi good morning [Name]!"
   - "Thanks for reaching out to Swipey."
   - "Hi [Name], [Agent] here from Swipey."
-[sources=0000-0199,1200-1399]
+[sources=0000-0199,1200-1399,1400-1599]
 
 ---
-Pattern 46: greeting_outbound
+Pattern 78: Greeting - warm, personalized, often bilingual
+Notes: Agents consistently open with the customer's name, identify themselves by name and company. Often include warm wish about their day. Bilingual (English + Bahasa Malaysia) switching is natural and follows customer's language.
+Examples:
+  - "Hi PERSON_8537! How can we assist you?"
+  - "Hi PERSON_8540, this is PERSON_7 from Swipey!"
+  - "Thanks for reaching out to Swipey."
+  - "We hope you're having an amazing day!"
+  - "We hope you're having a fantastic morning!"
+[sources=2200-2422]
+
+---
+Pattern 79: greeting_outbound
 Notes: Agents greet with name and team intro, often with emoji
 Examples:
   - "Hey [name], this is [agent] from Swipey! 👋🏼"
@@ -443,7 +792,7 @@ Examples:
 [sources=1200-1399]
 
 ---
-Pattern 47: greetings
+Pattern 80: greetings
 Notes: Agents introduce themselves by name and company.
 Examples:
   - "Hi [Name]!"
@@ -454,7 +803,15 @@ Examples:
 [sources=0000-0199,0200-0399,1000-1199]
 
 ---
-Pattern 48: help_center_linking
+Pattern 81: handoff_between_agents
+Examples:
+  - "Hi PERSON_X, this is PERSON_Y. Hopping in as PERSON_Z had knock off."
+  - "Hey PERSON_X, PERSON_Y here. I'll be taking over for PERSON_Z moving forward in regards to your account on Swipey."
+  - "Hi PERSON_X, PERSON_Y will be assisting you with your inquiry."
+[sources=2200-2422]
+
+---
+Pattern 82: help_center_linking
 Notes: Agents share help center articles for self-service reference
 Examples:
   - "Here's a guide for your reference. https://help.swipey.co/en/article/[id]"
@@ -462,7 +819,7 @@ Examples:
 [sources=1200-1399]
 
 ---
-Pattern 49: Helpful Resource Sharing
+Pattern 83: Helpful Resource Sharing
 Examples:
   - "You may refer to this link on how to assign cards: https://help.swipey.co/en/article/87-how-do-i-assign-new-cards-to-new-employees"
   - "Here's our help center for your reference https://help.swipey.co/en/"
@@ -471,42 +828,75 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 50: Hey [NAME], Swipey team here checking in. Kindly reply to us here so we can keep chatting :)
+Pattern 84: Hey [NAME], Swipey team here checking in. Kindly reply to us here so we can keep chatting :)
 Notes: Category: follow_up
 [sources=1200-1399]
 
 ---
-Pattern 51: Hey [NAME], Swipey team here reaching out. We see you've hit a snag and is having some trouble with [ISSUE]. Reply us here and we will sort it out for you
+Pattern 85: Hey [NAME], Swipey team here reaching out. We see you've hit a snag and is having some trouble with [ISSUE]. Reply us here and we will sort it out for you
 Notes: Category: greeting
 [sources=1200-1399]
 
 ---
-Pattern 52: Hey there! Great news: your user verification has been approved! Just log back into your Swipey mobile app to access your card. If you have any questions, feel free to reach out -- we're here to help!
+Pattern 86: Hey there! Great news: your user verification has been approved! Just log back into your Swipey mobile app to access your card. If you have any questions, feel free to reach out -- we're here to help!
 Notes: Category: verification_outreach
 [sources=1200-1399]
 
 ---
-Pattern 53: Hi [NAME], this is [AGENT] from Swipey. [PURPOSE]. Do let us know how best we can reach you
+Pattern 87: Hi [NAME], this is [AGENT] from Swipey. [PURPOSE]. Do let us know how best we can reach you
 Notes: Category: greeting
 [sources=1200-1399]
 
 ---
-Pattern 54: Hi there, thank you for reaching out to Swipey! I am [NAME] and will be assisting you with your inquiry.
+Pattern 88: Hi there, thank you for reaching out to Swipey! I am [NAME] and will be assisting you with your inquiry.
 Notes: Category: greeting
 [sources=1200-1399]
 
 ---
-Pattern 55: Human agents use emojis sparingly: primarily in greetings and outreach messages. Common emojis: thumbs up, waving hand, smiley face. Less emoji in technical troubleshooting.
+Pattern 89: Human agents use emojis sparingly: primarily in greetings and outreach messages. Common emojis: thumbs up, waving hand, smiley face. Less emoji in technical troubleshooting.
 Notes: Category: emoji_usage
 [sources=1200-1399]
 
 ---
-Pattern 56: If there's anything else you need, do let us know and we'd be happy to assist you!
+Pattern 90: If there's anything else you need, do let us know and we'd be happy to assist you!
 Notes: Category: closing
 [sources=1200-1399]
 
 ---
-Pattern 57: information_gathering
+Pattern 91: Informal and approachable with frequent use of 'ya'
+Notes: Agents use Malaysian English markers like 'ya' at end of sentences. Tone is casual and friendly but still professional.
+Examples:
+  - "Hi PERSON_6437, for Malaysian please use IC to proceed with your verification ya."
+  - "Let me know if you need more explanation."
+  - "Don't forget to invite your team to. 👥"
+  - "Sure, no problem!"
+  - "Thank you~"
+[sources=1800-1999]
+
+---
+Pattern 92: Information gathering - polite, structured
+Notes: When requesting info, agents use structured templates with clear fields. Always polite ('Could you', 'May I'). For onboarding, they use numbered business discovery questions.
+Examples:
+  - "Could you please provide the following details so I can do some further checking: Cardholder's Email: Last 4 Digits of Card: Transaction Date: Transaction Time: Amount:"
+  - "Could you provide us with your full address?"
+  - "May I have your staff's email address and phone number please?"
+  - "Could you please share a screenshot"
+  - "Also, would you mind sharing a bit more about your business? For example: 1. What does your business primarily do? 2. How big is your team?"
+[sources=2200-2422]
+
+---
+Pattern 93: Information gathering templates
+Notes: Agents use structured templates to collect troubleshooting info. Clear format with labeled fields.; Agents use structured information request templates with clear field labels. Polite 'Could I please get' phrasing.
+Examples:
+  - "Could I please get these information: Phone Number: Telco provider: 4 digit card ending number:"
+  - "Can we get the details below: Email: OLD Phone Number: NEW Phone Number:"
+  - "Could I please get the email address and the 4 digit card ending number for this, so I can check on this on my end?"
+  - "Could I please get these information: Cardholder's email address: Phone Number: 4 digit card ending number: Merchant you're trying to pay to: Mobile service provider: Last time and date of OTP request:"
+  - "Could you please provide me with: 1. Old phone number: 2. New phone number:"
+[sources=1400-1599]
+
+---
+Pattern 94: information_gathering
 Notes: Agents ask structured diagnostic questions. Multiple data points requested at once in list format. Clarifying questions used before troubleshooting. Polite prefixes: 'Could I', 'Can I check', 'May I know'.
 Examples:
   - "Could I have some details so I can do some checking please: Merchant Name, Amount, Date & Time, Cardholder Email."
@@ -517,7 +907,16 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 58: Initial outreach greeting
+Pattern 95: information_request_format
+Examples:
+  - "Could you please share your company name, phone number, and user email so we can check for you?"
+  - "Please share the following: User email, Card last 4 digits, Transaction date & time, Amount, Error message."
+  - "Would like to clarify that which card you're having issue? Please share us the last 4 digit and amount."
+  - "Can you share your working file to us so I can get our team to look into?"
+[sources=2200-2422]
+
+---
+Pattern 96: Initial outreach greeting
 Notes: Human agents use a warm, structured greeting when first reaching out to a customer. Includes agent name, company, reason for contact, and invitation to respond.
 Examples:
   - "Hi PERSON_3608, this is PERSON_13 from Swipey. Heard from Elaikha that you need assistance on the accounting feature. Do let us know how best we can reach you"
@@ -526,7 +925,7 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 59: Instruction Style
+Pattern 97: Instruction Style
 Notes: Step-by-step instructions with numbered lists or clear navigation paths using > arrows. Bold formatting (*word*) for UI elements and important terms. Links to help center articles provided when available. Bilingual instructions given naturally.
 Examples:
   - "To get started: 1. Assign yourself a Swipey card & complete your ID verification (eKYC). 2. Invite your team members. 3. Deposit funds into your account. 4. Top up your Swipey card and you're all set to go!"
@@ -534,24 +933,46 @@ Examples:
   - "Steps on how to issue card - https://help.swipey.co/en/article/48-invite-an-employee"
   - "Here's a guide for your reference: https://help.swipey.co/en/article/1-how-to-fund-my-master-account"
   - "Could you try to delete the app completely and reinstall. Check if the issue still persist?"
-[sources=0000-0199,0200-0399,0400-0599,0600-0799,1000-1199,1200-1399]
+[sources=0000-0199,0200-0399,0400-0599,0600-0799,1000-1199,1200-1399,1600-1799,2000-2199]
 
 ---
-Pattern 60: instruction_style
+Pattern 98: instruction_style
 Notes: Agents use numbered step-by-step lists for multi-step processes. Frequently link to help center articles (help.swipey.co). Use bold/asterisk formatting for emphasis on key terms. Instructions are broken into short messages rather than one long message. Bilingual support in Malay when customer writes in Malay.
 Examples:
   - "1. Head over to app.swipey.co/login 2. Click Forgot Password, to reset and get your first time password"
   - "User will just have to login to the mobile app. Then the card will be visible."
   - "To resolve this quickly, we recommend that the admin terminate the current card **5177 and issue a new physical card."
-[sources=0000-0199,1200-1399]
+  - "Here's a guide for your reference. [link]"
+  - "You may follow these steps to [action]: [link]"
+[sources=0000-0199,1200-1399,2200-2422]
 
 ---
-Pattern 61: language_switching
+Pattern 99: Instructional style - Step by step with links
+Notes: Agents frequently share help center links as guides. Instructions are broken into numbered steps for complex processes.
+Examples:
+  - "Here's a guide on how you can do this: https://help.swipey.co/en/article/..."
+  - "You may refer here; https://help.swipey.co/en/article/..."
+  - "Kindly follow these steps..."
+  - "Could you try deleting and reinstalling the app and try login again?"
+[sources=1400-1599]
+
+---
+Pattern 100: Investigation in-progress language
+Notes: Agents use 'revert back to you' frequently. Promise follow-up clearly.
+Examples:
+  - "Let me check on this and get back to you with more updates."
+  - "Give me a moment while I check on this for you."
+  - "Let me raise a ticket to get the team assist on checking. Will keep you posted."
+  - "Thank you for the information, allow me to check on this and i'll revert back to you with an update."
+[sources=2200-2422]
+
+---
+Pattern 101: language_switching
 Notes: Agents comfortably switch between English and Malay based on customer preference. Technical terms kept in English.
 [sources=0200-0399]
 
 ---
-Pattern 62: Malay language support
+Pattern 102: Malay language support
 Notes: When customer writes in Malay, agents switch fully to Malay. Same warm tone as English. 'Sama-sama' replaces 'you're welcome'. Cultural greetings (Raya) embedded naturally.
 Examples:
   - "Untuk link web dashboard, boleh type swipey.co di browser nanti dan dashboard akan keluar"
@@ -562,7 +983,7 @@ Examples:
 [sources=0400-0599]
 
 ---
-Pattern 63: malay_tone
+Pattern 103: malay_tone
 Notes: Malay conversations use 'cik' (polite address), 'pihak kami' (our side), polite but direct tone. Technical terms kept in English within Malay sentences. Same supportive and patient style as English conversations.
 Examples:
   - "Cik ada reset network atau on/off handphone? Pihak kami nak tahu untuk tujuan penyiasatan."
@@ -573,7 +994,7 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 64: Malaysian informal softener 'ya'
+Pattern 104: Malaysian informal softener 'ya'
 Notes: Many agents use 'ya' at end of sentences as a warm, casual Malaysian softener. Signals friendliness and confirms understanding.
 Examples:
   - "Will check for you ya!"
@@ -583,7 +1004,7 @@ Examples:
 [sources=0400-0599]
 
 ---
-Pattern 65: malaysian_english_markers
+Pattern 105: malaysian_english_markers
 Notes: Use of Malaysian English particles and phrasing
 Examples:
   - "May I know if this is done via bill payment or card spend ya?"
@@ -592,35 +1013,75 @@ Examples:
 [sources=1200-1399]
 
 ---
-Pattern 66: offering a call
-Notes: Agents frequently offer phone calls to explain complex topics or resolve issues faster. They ask for availability first.
+Pattern 106: Moderate emoji use — wave for greetings, smiley for friendliness, never excessive in support responses. More emoji in marketing blasts.
+Notes: Agents consistently introduce themselves by name and company. Some use emoji hand wave. Format: greeting + customer name + agent intro.; Agents always introduce themselves by name and company. First-person, warm but professional.; Agents always introduce themselves by first name. Tone is casual but professional.; Agents always introduce themselves by name and role/team. Uses 'Hi there' or 'Hey' casually.; Standard check-in template used across agents. Always ends with an offer to help.
+Examples:
+  - "Just checking in to make sure everything's going well on your Swipey adventure. Any bumps in the digital road? Let us know, and we will enlighten your way! 🌟"
+  - "Hi there, thank you for reaching out to Swipey! I am Vinod and will be assisting you with your inquiry."
+  - "Hey PERSON_6827, Swipey team here checking in 👋🏼 Kindly reply to us here so we can keep chatting :)"
+  - "Checking in if you need any help on your Swipey Journey. Do let us know how best we can reach you 😊"
+  - "Hi there, thank you for contacting Swipey! I am Vinod and will be assisting you with your inquiry."
+[sources=1800-1999]
+
+---
+Pattern 107: Numbered step-by-step instructions, sometimes with arrows/bullets
+Examples:
+  - "1. you could split the transaction into 2 payments OR 2. use bill payment, and make the transfer to the vendor/merchant"
+  - "Please check: 1) Is your registered mobile number correct? 2) Which service provider are you on?"
+  - "You would need to terminate this card on your end, and assign Manjit a new card with same name."
+[sources=1800-1999]
+
+---
+Pattern 108: offering a call
+Notes: For complex issues, agents offer phone calls rather than trying to solve everything over chat. Shows flexibility and personal touch.; Agents proactively offer calls for complex setups or when text explanation is insufficient. They ask for preferred timing.; Agents frequently offer phone calls to clarify complex issues. Always ask for permission or convenient time first.
 Examples:
   - "Can I give you a quick call?"
   - "Can we drop you a call?"
   - "Would it be possible if I dropped you a call to further explain things with better clarity?"
   - "I'll give you a quick ring."
   - "I'd be able to drop you a call to clarify, are you available for a call at the moment?"
-[sources=0400-0599,1000-1199]
+[sources=0400-0599,1000-1199,1800-1999]
 
 ---
-Pattern 67: onboarding qualifying questions
+Pattern 109: Offering call as alternative
+Notes: Agents proactively offer phone calls for complex issues or sales conversations.
+Examples:
+  - "Would it be okay if I dropped you a call at 11.30am?"
+  - "Sure, would you like me to drop you a call so I can address your questions"
+  - "Free for a quick call? just 5 minutes to help you better understand too"
+  - "Is now a good time for me to drop you a call"
+[sources=2200-2422]
+
+---
+Pattern 110: Offering phone call support
+Notes: Agents frequently offer to call customers for complex issues or onboarding explanations.
+Examples:
+  - "Mungkin, lebih baik kalau saya call puan. Boleh ke saya call puan sekejap untuk terangkan dengan lebih lanjut?"
+  - "Would you like me to drop you a call?"
+  - "Sure, Can I drop you a call on how you can use Swipey"
+  - "I'd be happy to drop you a call, to explain on our plans and pricing if you'd like."
+[sources=1400-1599]
+
+---
+Pattern 111: onboarding qualifying questions
 Notes: During onboarding, agents ask structured business questions to recommend the right plan. Frame questions as helpful, not mandatory.
 Examples:
   - "Would you mind sharing a bit more about your business? For example: 1. What does your business primarily do? 2. How big is your team? 3. Roughly how many people would need access to company spending? 4. How are you currently managing expenses or petty cash?"
 [sources=0400-0599]
 
 ---
-Pattern 68: Onboarding Welcome
+Pattern 112: Onboarding Welcome
+Notes: Standardized onboarding message with numbered steps and heavy emoji usage. Very upbeat and encouraging tone.
 Examples:
   - "We're thrilled to have you onboard!"
   - "Your Swipey account is all set up!"
   - "Welcome to Swipey! You're just 2 steps away from getting started."
   - "Your account is set up! You should have received an email to reset your password."
   - "Let's get your Swipey account up and running!"
-[sources=0000-0199]
+[sources=0000-0199,1400-1599]
 
 ---
-Pattern 69: onboarding_enthusiasm
+Pattern 113: onboarding_enthusiasm
 Notes: Onboarding team significantly more enthusiastic than support team. Heavy emoji use. Frame processes as quick/easy ('under a minute', 'just 2 steps away'). Create excitement around getting started.
 Examples:
   - "We're thrilled to have you onboard! 🎉"
@@ -631,7 +1092,16 @@ Examples:
 [sources=0600-0799]
 
 ---
-Pattern 70: Opening Greeting
+Pattern 114: onboarding_tone
+Examples:
+  - "Your account is set up! You should have received an email to reset your password, and then you'll be able to log in. Just a heads up, 1 virtual card has already been linked to your account 🎉"
+  - "I'm excited to help you get started! 😊"
+  - "If you need assistance, I would be glad to guide you through everything in a quick activation call."
+  - "We're here to guide you through everything and ensure Swipey works perfectly for your business."
+[sources=2200-2422]
+
+---
+Pattern 115: Opening Greeting
 Notes: Agents always name themselves when first contacting. Proactive outreach ends with 'Do let us know how best we can reach you 😊'. Inbound greetings are brief — first name + identification + readiness to help.
 Examples:
   - "Hi PERSON_294, this is PERSON_7 from Swipey. I would like to follow up with you regarding the dispute transaction I mentioned last week."
@@ -639,10 +1109,10 @@ Examples:
   - "Hi PERSON_166, this is PERSON_13 from Swipey. Your card is ready! Just top it up, and you're all set to start using it! Do let us know how best we can reach you"
   - "Hi PERSON_333! I'm PERSON_7 from Swipey, thanks for reaching out!"
   - "Hi there, thank you for reaching out to Swipey! I am Vinod and will be assisting you with your inquiry."
-[sources=0000-0199,0200-0399,0400-0599,0600-0799,0800-0999,1000-1199,1200-1399]
+[sources=0000-0199,0200-0399,0400-0599,0600-0799,0800-0999,1000-1199,1200-1399,1600-1799,2000-2199]
 
 ---
-Pattern 71: outbound_nurture
+Pattern 116: outbound_nurture
 Notes: Outbound messages are friendly and non-pushy. Acknowledge that customers are busy. Use low-commitment CTAs. Progressive messaging cadence from generic tips to direct check-ins.
 Examples:
   - "Just checking in, your Swipey cards are all set up and waiting. Did you get a chance to set your team's first budget?"
@@ -652,16 +1122,78 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 72: Proactive Follow-up
-Notes: Agents proactively check in with customers who have been inactive, had pending issues, or need reminders. They use a friendly, non-pushy tone.
+Pattern 117: pain-point-discovery
+Notes: Sales-oriented agents use structured pain-point lists. Support agents ask open discovery questions before recommending solutions.
+Examples:
+  - "Do any of these pains sound familiar? 1. Using personal cards for business expenses 2. Lengthy and complex expense claim processes 3. Overwhelmed by subscription and marketing payments 4. Manual invoice management and high costs for overseas transfers"
+  - "Maybe you could let me know your interest in signing up as well. So I could understand better"
+[sources=2000-2199]
+
+---
+Pattern 118: Permission-seeking before taking action
+Notes: Agents ask permission before calling or accessing accounts, showing respect for customer boundaries.
+Examples:
+  - "Boleh ke kami cuba login daripada device kami, tapi kami takkan access account. Dan kami tak mintak OTP"
+  - "Would it be okay if I dropped you a call?"
+  - "Sure would you like me to drop you a call?"
+  - "Would it be possible if we could discuss the matter on call?"
+[sources=1400-1599]
+
+---
+Pattern 119: Polite requests for specific details needed for troubleshooting
+Notes: Agents always verify details before taking action - card numbers, company names, transaction specifics. Prevents errors and shows diligence.; Agents ask structured questions for troubleshooting. Sometimes use numbered lists for clarity.; Agents use structured templates to collect troubleshooting information.
+Examples:
+  - "Could you share the following details with us so we can assist you further: Cardholder email address: Card ending number: Amount: Date and timestamp:"
+  - "Could I please get these information from your end: Registered email address: 4 digit card ending number: Timestamp: Merchant Name: Amount:"
+  - "Is this the email that you're trying to invite? May I also have the mobile number that is entered for the invitation?"
+  - "Can you share me the following details? - Card last 4 digit - Transaction ID - Receipt of actual spending amount"
+  - "Would like to clarify that the transaction that you're referring here is to merchant GHL EPAYMENT*MyCoID?"
+[sources=1800-1999]
+
+---
+Pattern 120: Positive and encouraging closings
+Notes: Agents end on a positive note. Informal but professional tone.
+Examples:
+  - "Have a great day ahead!"
+  - "You're most welcome."
+  - "Drive safe"
+  - "Great to hear that!"
+  - "Glad that you're actively exploring, feel free to let me know if you need any assistance."
+[sources=2200-2422]
+
+---
+Pattern 121: Proactive check-in messages
+Notes: Standard outreach template used across agents for re-engagement. Always ends with an invitation to reply.
+Examples:
+  - "Hey PERSON_NAME, Swipey team here checking in. Kindly reply to us here so we can keep chatting :)"
+  - "Hi PERSON_NAME, this is PERSON_AGENT from Swipey. We would like to speak with you regarding [topic]. Do let us know how best we can reach you"
+  - "Just checking in if everything's alright on your end or if you require further assistance?"
+[sources=2200-2422]
+
+---
+Pattern 122: Proactive escalation with clear next steps
+Notes: Escalations are framed positively with promise of follow-up. Ticket numbers provided for reference. Team is referenced rather than specific individuals.; Agents explicitly state when escalating. They provide ticket numbers when created. Promise to 'revert' with updates - 'revert' is heavily used Malaysian English term.; Agents provide ticket numbers for reference. Language is transparent about escalation process and timeline.
+Examples:
+  - "I have submitted a ticket concerning the OTP problem for your reference in the future with the reference number HELP-XXXX."
+  - "We have generated a ticket for the payment problem you reported. Please refer to ticket number HELP-8731."
+  - "We would like to speak with you regarding your Swipey account. Do let us know how best we can reach you 😊"
+  - "We will raise a ticket and investigate this. If there are any updates, we will inform you."
+  - "I'd escalated the issue regarding the statement. Will keep you posted on the update."
+[sources=1800-1999]
+
+---
+Pattern 123: Proactive Follow-up
+Notes: Agents proactively reach out for unresolved issues, deposits not submitted, and follow-ups. Friendly but purposeful.; Agents proactively follow up on unresolved issues and check customer satisfaction before closing.; Agents proactively follow up on pending items. Standard template: '[Agent name] ...
 Examples:
   - "Hi PERSON_172, checking in with you that if you need help to get started with your Swipey account? It's been quite some time."
   - "Just checking in, have you had a chance to get started with your Swipey account, or did it slip your mind?"
   - "It's been a while since we last connected, and I wanted to check in to see if you need any assistance."
-[sources=0000-0199]
+  - "Hey PERSON_4610, Swipey team here checking in. Kindly reply to us here so we can keep chatting :)"
+  - "Hi PERSON_4780, this is Vinod from Swipey. We would like to speak to you regarding your card issue. Do let us know how best we can reach you"
+[sources=0000-0199,1400-1599]
 
 ---
-Pattern 73: proactive inactive user outreach
+Pattern 124: proactive inactive user outreach
 Notes: Check-in messages are warm and invite a response. Offer both self-service and call option. No pressure.
 Examples:
   - "Hello there, this is PERSON_22 from Swipey! 👋 It seems it's been a while since you last used Swipey. I'm reaching out to see if everything is alright with your Swipey account — do you need any assistance? 🌻 Alternatively, we'd be happy to schedule a brief call to catch up."
@@ -669,13 +1201,18 @@ Examples:
 [sources=0400-0599]
 
 ---
-Pattern 74: Proactive outreach message
+Pattern 125: Proactive outreach message
+Notes: Standard outreach format: name, from Swipey, purpose, 'Do let us know how best we can reach you' closing. Used extensively for follow-ups.; Agents proactively follow up on pending actions. Use 'gentle reminder' and 'checking in' phrases. Always end with 'Do let us know how best we can reach you'....
 Examples:
   - "Hi [Name], this is [Agent] from Swipey. We would like to speak with you regarding your recent inquiry. Do let us know how best we can reach you."
-[sources=1200-1399]
+  - "Hey PERSON_NAME, this is PERSON_22 from Swipey! 👋🏼 We would like to speak with you regarding your recent call on cards getting unlinked on Facebook Ads. Do let us know how best we can reach you 😊"
+  - "Hi PERSON_NAME, this is PERSON_13 from Swipey. Reaching out to you regarding your card's disputes are successful. Do let us know how best we can reach you 😊"
+  - "Hey PERSON_NAME, Swipey team here checking in 👋🏼 Kindly reply to us here so we can keep chatting :)"
+  - "Hey PERSON_8537, this is PERSON_16 from Swipey. We would like to check on the upgrade request. Do let us know how best we can reach you"
+[sources=1200-1399,2200-2422]
 
 ---
-Pattern 75: Proactive Problem Resolution
+Pattern 126: Proactive Problem Resolution
 Examples:
   - "I've just updated your phone number, yes you may try to login now!"
   - "I have updated your OTP to be sent to your email first, could you try?"
@@ -685,7 +1222,16 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 76: proactive_check_in_phrases
+Pattern 127: proactive_check_in
+Examples:
+  - "Just checking in to see how your Swipey journey is going. Noticed you've upgraded your account but haven't started using it yet. Is there anything you need help with to get started?"
+  - "Hey PERSON_X, just checking if you have been able to use your card?"
+  - "En PERSON_X, team nak follow up dengan decision untuk plan on new pricing, nak tau dah decide tak?"
+  - "Hi PERSON_X, nak follow up balik tentang [company] punya plan subscription."
+[sources=2200-2422]
+
+---
+Pattern 128: proactive_check_in_phrases
 Examples:
   - "Hey {name}, Swipey team here checking in 👋🏼 Kindly reply to us here so we can keep chatting :)"
   - "Hey {name}, this is {agent_name} from Swipey! 👋🏼 We would like to speak with you regarding {topic}. Do let us know how best we can reach you 😊"
@@ -694,12 +1240,12 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 77: proactive_follow_up_style
+Pattern 129: proactive_follow_up_style
 Notes: Agents proactively check in after resolving issues ('Just to clarify that all good with the transaction?'). Follow up on pending actions with gentle reminders. Use 'checking in' and 'reaching out' language. Time-boxed follow ups ('I'll monitor this for you and reach out when there's an update').
 [sources=0000-0199]
 
 ---
-Pattern 78: proactive_followup
+Pattern 130: proactive_followup
 Notes: Agents proactively commit to follow-up. 'Revert back' is common Malaysian business English. Shows ownership of the issue. Ask when to follow up when timing matters.
 Examples:
   - "Morning PERSON_489, our team had made some changes on the backend. Please try to re-login to the mobile app."
@@ -707,10 +1253,10 @@ Examples:
   - "Morning PERSON_333, checking in if everything's good after the mobile number change?"
   - "Hi PERSON_371, we advise terminating and reissuing the card as it was involved in a dispute case that has been successfully refunded."
   - "I would like to check with you if you are still facing some troubles with these?"
-[sources=0000-0199,0200-0399,0600-0799]
+[sources=0000-0199,0200-0399,0600-0799,2200-2422]
 
 ---
-Pattern 79: proactive_outreach
+Pattern 131: proactive_outreach
 Notes: Agents proactively follow up on open issues. Standard outreach format: 'Hi [name], this is [agent] from Swipey. [purpose]. Do let us know how best we can reach you'. Agents offer to call when complex explanation needed.
 Examples:
   - "Hi PERSON_3691, this is PERSON_13 from Swipey. Checking in with you regarding the dispute form. Do let us know how best we can reach you"
@@ -718,10 +1264,10 @@ Examples:
   - "Hi PERSON_3713, this is Zai from Swipey. I am just checking if you have received your physical card. This is us making sure that its not delivered to the wrong address."
   - "Would it be okay if I dropped you a call tomorrow morning at 10am?"
   - "Dropping you a call around 230pm, is that ok?"
-[sources=1000-1199,1200-1399]
+[sources=1000-1199,1200-1399,1600-1799,2000-2199]
 
 ---
-Pattern 80: proactive_outreach_patterns
+Pattern 132: proactive_outreach_patterns
 Examples:
   - "Hey {name}, this is {agent_name} from Swipey! 👋🏼 We would like to speak with you regarding {topic}. Do let us know how best we can reach you 😊"
   - "Hey {name}, Swipey team here checking in 👋🏼 Kindly reply to us here so we can keep chatting :)"
@@ -730,13 +1276,24 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 81: Processing request acknowledgment
+Pattern 133: Processing request acknowledgment
 Examples:
   - "Sure, let me make the changes on my end and I'll revert back to you once this is done."
 [sources=1200-1399]
 
 ---
-Pattern 82: Reassurance and Positive Framing
+Pattern 134: Reassurance and empathy phrases
+Notes: Agents regularly use reassurance language, especially when issues require investigation time.; Escalation is communicated transparently with promise of follow-up. Uses 'escalate', 'raise a ticket', 'check with the team'.; Agents acknowledge frustration, validate urgency, then explain process. Use...
+Examples:
+  - "We totally get that you want us to decline the transaction right now. However, there are some steps we need to follow for this situation but rest assured, we're here to help you every step of the way."
+  - "Rest assured our team is working on the development"
+  - "We understand the fustration, team is working to improve the mobile app and experience."
+  - "We understand the urgency of the card usage however, any transactions occurred after the dispute has been submitted is to be borne by the user."
+  - "We are checking on this issue as a few users are affected as well. Rest assured we are looking at it and the team is working on improvements"
+[sources=1400-1599]
+
+---
+Pattern 135: Reassurance and Positive Framing
 Notes: Agents consistently use reassuring language when acknowledging issues or processing requests. They frame tasks positively and use phrases like 'no worries', 'rest assured', 'great news'.
 Examples:
   - "Rest assured, we will keep user updated if there are any developments."
@@ -745,18 +1302,48 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 83: Reassurance Language
-Notes: Agents actively reassure customers when there's uncertainty. Use phrases like 'no worries', 'rest assured', 'no need to worry'. Always acknowledge inconvenience with apology.
+Pattern 136: Reassurance during technical issues
+Notes: Agents reassure customers about security concerns and acknowledge frustration.
+Examples:
+  - "Rest assured that this was not a fraudulent transaction attempt or an attempt to login into your account."
+  - "We completely understand how confusing and frustrating this can be, and we're truly sorry for the inconvenience caused."
+  - "The good news is that our team is actively working on a fix, and we're aiming to roll it out within the next 2-3 weeks."
+[sources=1400-1599]
+
+---
+Pattern 137: Reassurance Language
+Notes: Agents use calming language when customer has issues, always promising to follow up.; Agents acknowledge frustration before providing solutions. Use of 'rest assured' is common for reassurance.
 Examples:
   - "We regret to learn that."
   - "I'll proceed in updating your phone number and will get back to you shortly once it's done!"
   - "We are checking with payment team on this."
   - "We'll keep you updated on the status."
   - "Give me a moment!"
-[sources=0000-0199,0200-0399,0400-0599,0600-0799,1000-1199,1200-1399]
+[sources=0000-0199,0200-0399,0400-0599,0600-0799,1000-1199,1200-1399,1600-1799,2000-2199,2200-2422]
 
 ---
-Pattern 84: reassurance_phrases
+Pattern 138: Reassurance phrases during processing
+Notes: Agents use 'no worries', 'don't worry', and apology when there's inconvenience. Calm, reassuring tone.; Agents use 'no worries' frequently. Sincere apologies for errors. Compensatory gestures offered for service failures.; Agents set expectations about wait times and reassure the user that work is happening.; Agents use calm, reassuring language. 'No worries', 'rest assured', 'give me a moment' are common phrases to set expectations.; Agents acknowledge delays directly. Short and sincere rath...
+Examples:
+  - "Thanks for sending us your details. Kindly give us a few minutes to look into this for you and we'll be right back!"
+  - "Rest assured, if the transaction turns to Settled, we will help you raise this transaction as dispute to VISA."
+  - "As a token of apology for missing the scheduled call earlier, I would like to offer you a free physical card."
+  - "Don't worry—our customer success team is still here and will be with you in just a few minutes."
+  - "We deeply regret any frustration this situation has caused and truly understand your concerns."
+[sources=1800-1999]
+
+---
+Pattern 139: Reassurance when investigating
+Notes: Agents provide comfort and set expectations for timelines. Use 'no worries' frequently.
+Examples:
+  - "No worries, I'm here to assist you."
+  - "Let us check in with our billing team on this for you. Just a moment, please!"
+  - "We are chasing relevant teams on the timeline fix on this. We appreciate your patience."
+  - "I'll monitor this ticket closely, and I'll revert back to you with an update as soon as they get back to us."
+[sources=2200-2422]
+
+---
+Pattern 140: reassurance_phrases
 Notes: Acknowledge frustration, promise updates.
 Examples:
   - "No worries, though!"
@@ -767,7 +1354,7 @@ Examples:
 [sources=0000-0199,0200-0399,1000-1199]
 
 ---
-Pattern 85: Request for information gathering
+Pattern 141: Request for information gathering
 Notes: Agents ask for specific details methodically, often listing what they need. They confirm information back to the customer before proceeding.
 Examples:
   - "I'll need confirmation with the following details from user for the team to check. User: [EMAIL] Mobile number: [PHONE] Mobile Device: Telco Provider: Timestamp: Thank you."
@@ -777,18 +1364,48 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 86: Requesting card details for troubleshooting
+Pattern 142: Requesting card details for troubleshooting
 Examples:
   - "Could I please have the card last 4 digits and when was the transaction attempt?"
 [sources=1200-1399]
 
 ---
-Pattern 87: response_pacing
+Pattern 143: Requesting information with structured template
+Notes: When agents need information for troubleshooting, they list required fields in a clean structured format.; Agents use structured templates to collect troubleshooting information. Clean format with labels and colons.
+Examples:
+  - "May I further understand the situation with the details below? Merchant: Payment Amount: Timestamp: Error while making payment:"
+  - "Boleh kami dapat details nii tak: Email: OLD Phone number: NEW Phone number:"
+  - "Boleh saya dapatkan info ni: No telefon: Email cardholder: Masa dan tarikh last request OTP: Website yang cuba dibayar: Mobile service: (Maxis, Celcom, Digi):"
+  - "Could I have the following details for the action? User Email: Current number: New number:"
+  - "We will need the details: Phone model: App Version: OS (Android or iOS):"
+[sources=1400-1599]
+
+---
+Pattern 144: response_pacing
 Notes: Short, digestible messages rather than walls of text. Complex explanations broken into 2-4 separate messages sent sequentially. Links and guides shared as separate follow-up messages after the explanation.
 [sources=0000-0199]
 
 ---
-Pattern 88: Setting deadlines politely
+Pattern 145: Sales discovery questions
+Notes: Agents use a standard 4-pain-point framework to qualify prospects. They ask about business type and specific needs.
+Examples:
+  - "Could you share your interest with Swipey for me to better understand and help you as well"
+  - "Maybe you could share what kind of business you are running. This would greatly help the process as well"
+  - "We specialize in easing the common challenges of any business's financial operations. Do any of these pains sound familiar? 1. Using personal cards for business expenses 2. Lengthy and complex expense claim processes 3. Overwhelmed by subscription and marketing payments 4. Manual invoice management and high costs for overseas transfers"
+[sources=2200-2422]
+
+---
+Pattern 146: Security reminders
+Notes: Agents are proactive about security - immediately flag when users share sensitive card info.
+Examples:
+  - "Please delete the picture that you have sent to us (your card). This is to ensure that your card details are secure."
+  - "Oh my, please do not share your card details."
+  - "Please ensure not to share your OTP to anyone else."
+  - "Also, do not share the picture of your card, even with the Swipey team."
+[sources=1400-1599]
+
+---
+Pattern 147: Setting deadlines politely
 Notes: When agents need a response by a certain date, they phrase it as a question or suggestion rather than a demand.
 Examples:
   - "Sure, will you be able to check and revert to us by Friday (14 Nov 2025)?"
@@ -796,18 +1413,29 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 89: Sharing Help Center Links
-Notes: Agents regularly share help center article URLs when explaining features or processes, positioning them as supplementary guides.
+Pattern 148: Setting expectations on timelines
+Notes: Agents proactively set clear time expectations. Specific about business hours, processing windows, and costs before proceeding.
+Examples:
+  - "We would also like to let you know that we will be deducting RM19 from your Master Account for the statement request."
+  - "Upon request, we would require 3 working days for this to be ready and sent over to you via email."
+  - "This process will take 24-48 hours for it to be reviewed and approved."
+  - "The plan will usually be processed within 24-48hrs."
+  - "Physical card delivery will be processed within 7-10 business days."
+[sources=1800-1999,2200-2422]
+
+---
+Pattern 149: Sharing Help Center Links
+Notes: Agents consistently share help center links for self-service. Standard practice for step-by-step processes.; Agents proactively share relevant help center links alongside explanations. Links are given as full URLs.
 Examples:
   - "Sharing with you our knowledgebase, hope it helps you understand better navigating on Swipey. https://help.swipey.co/en/"
   - "Here is an article about the Bill Payment feature that I recommend: https://help.swipey.co/en/article/34-bill-payment-introduction"
   - "Here's a guide on how to assign cards: https://help.swipey.co/en/article/5-how-do-i-assign-new-cards-to-new-employees"
   - "Here's a guide on how you can do this on your end: https://help.swipey.co/en/article/62-update-user-role-and-department"
   - "Here's a quick guide on how you terminate the card. https://help.swipey.co/en/article/41-terminate-cards"
-[sources=0000-0199,1000-1199,1200-1399]
+[sources=0000-0199,1000-1199,1200-1399,1400-1599,2200-2422]
 
 ---
-Pattern 90: source_chunks
+Pattern 150: source_chunks
 Examples:
   - "1003"
   - "1004"
@@ -817,21 +1445,84 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 91: Standard Outreach Template
+Pattern 151: Standard greeting
+Notes: Multiple closing variants. Common thread: offer to help further, express welcome, wish good day.; Warm, inviting closure. Always thanks customer for using Swipey. Offers continued support.; Agents always introduce themselves by name. They state which company they're from and what they'll help wit...
+Examples:
+  - "Hi there, thank you for reaching out to Swipey! I am Vinod and will be assisting you with your inquiry."
+  - "Hi there, thank you for contacting Swipey! I am Vinod and will be assisting you with your enquiry."
+  - "Hey there, this is PERSON_22 from Swipey! We would like to speak with you regarding your recent message to us. Do let us know how best we can reach you"
+  - "Hi PERSON_4780, this is PERSON_13 from Swipey. Reaching out regarding your inquiry. Do let us know how best we can reach you"
+  - "You're welcome! Feel free to reach out to us anytime if you have any questions. Thanks for using Swipey!"
+[sources=1400-1599]
+
+---
+Pattern 152: Standard greeting by named agent (Vinod/Vinn)
+Notes: Vinod consistently uses this exact greeting formula when opening conversations.
+Examples:
+  - "Hi there, thank you for reaching out to Swipey! I am Vinod and will be assisting you with your inquiry."
+  - "Hi there, thank you for contacting Swipey! I am Vinod and will be assisting you with your inquiry."
+[sources=1400-1599]
+
+---
+Pattern 153: Standard outreach greeting for follow-up
+Notes: Pattern: [Name], this is [Agent] from Swipey. [Reason for contact]. Do let us know how best we can reach you. Often ends with emoji.
+Examples:
+  - "Hey PERSON_5055, this is PERSON_22 from Swipey! We would like to speak with you regarding your dispute transactions. Do let us know how best we can reach you"
+  - "Hi PERSON_5031, this is PERSON_13 from Swipey. Just checking in on your Swipey journey -- it's been a while since we last heard from you! Let us know if you need a hand with anything. Do let us know how best we can reach you"
+[sources=1400-1599]
+
+---
+Pattern 154: Standard outreach opener for proactive contact
+Notes: Standard follow-up pattern used extensively. Always ends with 'Do let us know how best we can reach you 😊'. Very consistent across all agents.; Almost every proactive outreach message ends with 'Do let us know how best we can reach you' followed by a smiley emoji.; Agents follow up warmly when users go quiet, and politely close conversations after extended silence.; Used when agents reach out proactively. Always ends with an invitation to reply. Emoji (smiley face) often appended.; Agents alw...
+Examples:
+  - "Hey there! It's been a while since we heard from you, so we'll wrap up this chat. Feel free to reach out if you have any questions in the future. Thanks for using Swipey!"
+  - "Hey PERSON_6465, We have received your inquiry on the weekends and we would like to assist for you. Kindly reply us here so we can keep chatting :)"
+  - "Swipey team here reaching out. We see you've hit a snag and is having some trouble with [issue]. Reply us here and we will sort it out for you"
+  - "Just following up on the issue you mentioned yesterday. Are you able to assign a card to Manjit now, or are you still facing this issue?"
+  - "We would like to speak with you regarding your new Swipey account registration. Do let us know how best we can reach you 😊"
+[sources=1800-1999]
+
+---
+Pattern 155: Standard Outreach Template
 Notes: Agents use a consistent template for first contact: 'Hey [NAME], this is [AGENT] from Swipey! We would like to speak with you regarding [TOPIC]. Do let us know how best we can reach you'
 Examples:
   - "Hey PERSON_312, this is Yaz from Swipey! We would like to speak with you regarding your eKYC verification. Do let us know how best we can reach you"
   - "Hey PERSON_218, this is PERSON_22 from Swipey! We would like to speak with you regarding your request to change phone number for one of your employees. Do let us know how best we can reach you"
-[sources=0000-0199]
+  - "Hey PERSON_4890, this is PERSON_22 from Swipey! 👋🏼 We would like to speak with you regarding your account here on Swipey. Do let us know how best we can reach you 😊"
+  - "Hi PERSON_4888, this is PERSON_13 from Swipey. Reaching out regarding your request. Do let us know how best we can reach you 😊"
+  - "Hey PERSON_4960, Swipey team here checking in 👋🏼 Kindly reply to us here so we can keep chatting :)"
+[sources=0000-0199,1400-1599]
 
 ---
-Pattern 92: Status update with next steps
+Pattern 156: Status update with next steps
 Examples:
   - "Would like to update that our team has [action]. Do let us know how best we can reach you."
 [sources=1200-1399]
 
 ---
-Pattern 93: Step-by-Step Instructions
+Pattern 157: Step-by-step instruction delivery
+Notes: Agents share help center links frequently. Instructions are clear and direct. They often preface with 'Here's a guide' or 'You may refer to'.; Agents frequently link to help center articles. Instructions are concise and step-by-step. Use 'you may refer here' as a common pattern.
+Examples:
+  - "You may refer here; https://help.swipey.co/en/article/62-update-user-role-and-department"
+  - "Here is a step-by-step video for you; https://help.swipey.co/en/article/41-terminate-cards"
+  - "You can easily set them as inactive. Just remember to terminate all the cards associated with them so that the cards can be reallocated back to you."
+  - "I'll share some links below for you to refer to as guidance:"
+  - "You can do it yourself via the web dashboard! I'll share some links below for you to refer to: Set Inactive User: https://help.swipey.co/en/article/62-update-user-role-and-department"
+[sources=1400-1599]
+
+---
+Pattern 158: Step-by-step instruction style with help center links
+Notes: Agents proactively share help center article links for self-service. Often paired with offer to call for further explanation.; Agents frequently share help article links as supporting resources. They introduce links with 'Here is a guide' or 'You may refer here'.; Agents frequently share specific help center URLs. Usually introduced with 'Here is a guide' or 'You may refer here'. Links are always to help.swipey.co.; Agents provide help center article links proactively. Steps are numbered or l...
+Examples:
+  - "Here's a guide on how you can do this: https://help.swipey.co/en/article/38-move-funds-from-card-to-master-account"
+  - "You may refer here; https://help.swipey.co/en/article/42-international-service-assessment-isa"
+  - "Here's a guide for your reference on the steps. https://help.swipey.co/article/33-top-up-instantly-today"
+  - "For web dashboard: A. Clear your cache and cookies. B. Use this link to log in: https://app.swipey.co/logout C. If you're still having trouble logging in, try accessing the link using Incognito mode."
+  - "Sharing with you a quick guide on how you can assign a card. https://help.swipey.co/en/article/5-how-do-i-assign-new-cards-to-new-employees"
+[sources=1400-1599,1800-1999,2200-2422]
+
+---
+Pattern 159: Step-by-Step Instructions
 Examples:
   - "Numbered steps: '1. Allocate a card to yourself. 2. Sign in to the Swipey App and complete the verification process. 3. Once verified, load funds onto your card and you're all set.'"
   - "With links: 'You may refer to this link on how to assign cards: [URL]'"
@@ -839,7 +1530,7 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 94: Step-by-step numbered instructions with help center links. Uses 'you can/may' and 'here's a guide'. Provides clickable links inline. Confirms understanding before proceeding.
+Pattern 160: Step-by-step numbered instructions with help center links. Uses 'you can/may' and 'here's a guide'. Provides clickable links inline. Confirms understanding before proceeding.
 Examples:
   - "Here's a guide for your reference: {link}"
   - "You may refer here: {link}"
@@ -849,7 +1540,16 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 95: Structured troubleshooting instructions
+Pattern 161: Step-by-step troubleshooting guidance
+Notes: Agents use numbered lists or bullet points for multi-step instructions. Clear sequential ordering.
+Examples:
+  - "To get everything up and running smoothly, we'll suggest a few troubleshoot steps: - Ensure your app is updated to the latest version. - Uninstall the app and then reinstall it. - Log out and log in to initiate the card issuance."
+  - "Could you try the following to troubleshoot. 1. Restart your mobile device. 2. Send another request for OTP after you'd restart your mobile device."
+  - "Please follow these steps: first, claw back funds from any cards assigned to the user, then terminate the cards, and last set the user as inactive."
+[sources=2200-2422]
+
+---
+Pattern 162: Structured troubleshooting instructions
 Notes: Agents provide clear, step-by-step troubleshooting instructions. Often start with a simple action and escalate if needed.
 Examples:
   - "Hi PERSON_3608, user boleh cuba delete app dan reinstall balik app tak? Should be ok lepas tu."
@@ -859,17 +1559,25 @@ Examples:
 [sources=1000-1199]
 
 ---
-Pattern 96: Thank you for the details. We will go ahead and raise this to the team for further checking.
+Pattern 163: Thank you for the details. We will go ahead and raise this to the team for further checking.
 Notes: Category: escalation
 [sources=1200-1399]
 
 ---
-Pattern 97: Thank you for your patience in this matter. If you were to face similar issues, do reach out to us.
+Pattern 164: Thank you for your patience in this matter. If you were to face similar issues, do reach out to us.
 Notes: Category: reassurance
 [sources=1200-1399]
 
 ---
-Pattern 98: verification
+Pattern 165: Ticket reference sharing
+Notes: Agents provide ticket reference numbers (HELP-XXXXX format) for tracking.
+Examples:
+  - "I have generated a ticket with the reference HELP-10025 to oversee and follow up on your transaction"
+  - "Kita dah submit bagi team check, ticket untuk follow up case ni adalah HELP-14314."
+[sources=1400-1599]
+
+---
+Pattern 166: verification
 Notes: Always verify details before taking action. Repeat back understanding to confirm. Polite requests, never demands. Ask for screenshots when troubleshooting.
 Examples:
   - "Just to confirm, you are inquiring about [specific thing]?"
@@ -880,7 +1588,15 @@ Examples:
 [sources=0600-0799]
 
 ---
-Pattern 99: Warm Check-In
+Pattern 167: Verification review notification
+Notes: Verification status updates use upbeat tone for approvals (🎉). For issues, agents use 'hit a snag' as a friendly way to describe problems.
+Examples:
+  - "Hey there! Great news: your user verification has been approved! 🎉 Just log back into your Swipey mobile app to access your card."
+  - "Swipey team here reaching out. We see you've hit a snag and is having some trouble with IC/Passport verification on the mobile app. Reply us here and we will sort it out for you 😊"
+[sources=1400-1599]
+
+---
+Pattern 168: Warm Check-In
 Examples:
   - "Just checking in to make sure everything's going well on your Swipey adventure."
   - "Checking in if you need a hand on your Swipey journey?"
@@ -890,32 +1606,62 @@ Examples:
 [sources=0000-0199]
 
 ---
-Pattern 100: Warm sign-off
+Pattern 169: Warm personal greeting with name and role introduction
+Notes: Agents consistently introduce themselves by name and role. The greeting template is standardized but personalized.; Agents consistently open with personalized greeting using customer name, introduce themselves, and use 👋🏼 and 😊 emojis. Business/support team outreach messages follow a template pat...
+Examples:
+  - "Hi there, thank you for contacting Swipey! I am Vinod and will be assisting you with your inquiry."
+  - "Hey PERSON_NAME, this is PERSON_NAME from Swipey! 👋🏼 We would like to speak with you regarding your inquiry. Do let us know how best we can reach you 😊"
+  - "This is PERSON_62 from Swipey's Onboarding Team 😊"
+  - "Hey PERSON_5250, this is PERSON_22 from Swipey! 👋🏼 We would like to speak with you regarding your inquiry. Do let us know how best we can reach you 😊"
+  - "Good morning PERSON_5239! There's no problem if you would like to downgrade to our Freemium Plan."
+[sources=1400-1599,2200-2422]
+
+---
+Pattern 170: Warm personal touches
+Notes: Agents use customer names frequently. Personal, conversational tone rather than corporate. Show genuine care for customer situation.
+Examples:
+  - "Hello there Sereen, this is PERSON_22 from Swipey! It seems it's been a while since you last used Swipey. I'm reaching out to see if everything is alright with your Swipey account - do you need any assistance?"
+  - "No worries at all! Just feel free to reach out if you have any questions or need help."
+  - "We hope we have answered this question as well."
+  - "No worries, drive safe"
+  - "We totally get where you're coming from!"
+[sources=1400-1599]
+
+---
+Pattern 171: Warm sign-off
 Examples:
   - "You're most welcome. Have a great day ahead."
 [sources=1200-1399]
 
 ---
-Pattern 101: We have update regarding your [TOPIC] for you. Kindly reply us here so we can keep chatting :)
+Pattern 172: We have update regarding your [TOPIC] for you. Kindly reply us here so we can keep chatting :)
 Notes: Category: follow_up
 [sources=1200-1399]
 
 ---
-Pattern 102: We truly understand the frustration caused here, and I would like to personally apologize on behalf of me and my team. Rest assured, we will fix this as soon as possible.
+Pattern 173: We truly understand the frustration caused here, and I would like to personally apologize on behalf of me and my team. Rest assured, we will fix this as soon as possible.
 Notes: Category: reassurance
 [sources=1200-1399]
 
 ---
-Pattern 103: We'd raise the issue to our card processor's end to further check, currently pending revert from their end. I'll keep you updated.
+Pattern 174: We'd raise the issue to our card processor's end to further check, currently pending revert from their end. I'll keep you updated.
 Notes: Category: escalation
 [sources=1200-1399]
 
 ---
-Pattern 104: When requesting user information, agents use structured format: 'Can we get these details: Mobile Number: / Timestamp: / Carrier: / Last 4-digit card number:'
+Pattern 175: Weekend/after-hours auto-response
+Notes: Consistent after-hours message sets expectations. Monday follow-up message re-engages the customer.
+Examples:
+  - "Thanks for reaching out. We're currently away from our desks — our hours are Monday to Friday, 8am to 7pm (9am to 6pm on Public Holidays). In the meantime, check out our Help Center for some quick answers: https://help.swipey.co 😊"
+  - "Hey [name], We have received your inquiry over the weekend and would like to assist for you. Kindly reply us here so we can keep chatting :)"
+[sources=1800-1999]
+
+---
+Pattern 176: When requesting user information, agents use structured format: 'Can we get these details: Mobile Number: / Timestamp: / Carrier: / Last 4-digit card number:'
 Notes: Category: instruction_style
 [sources=1200-1399]
 
 ---
-Pattern 105: You're most welcome.
+Pattern 177: You're most welcome.
 Notes: Category: closing
 [sources=1200-1399]

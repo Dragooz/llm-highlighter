@@ -958,16 +958,11 @@ Focus: Precision controls, smart alerts, mobile mission control.
 
 Real world useful knowledge:
 
-# Compiled from: swipey_knowledge_0000 through swipey_knowledge_1399
-# Total entries: 942
+# Swipey Knowledge Base
+# Compiled from: swipey_knowledge_0000 through swipey_knowledge_2422
+# Total entries: 1252
 # Sorted alphabetically by topic
 
-
-## 1
-
-### 1% Cashback Programme
-1% cashback on all digital marketing tools and SaaS subscriptions via VISA corporate card. Reward points earned on every spend, redeemable at stores like Zus Coffee, IKEA, Decathlon, Grab, Mr DIY, Costa Coffee, Setel.
-[sources=0000-0199]
 
 ## 3
 
@@ -983,6 +978,18 @@ Upon registering, users get 2 virtual cards plus access to 8 more cards during t
 
 ## A
 
+### Account Closure Process
+To close an account: download account statements first, clawback all card balances, terminate all cards, transfer remaining master account funds out via payout, then contact support to close. Data is lost upon account termination.
+[sources=2200-2422]
+
+### Account deactivation vs deletion
+Swipey can deactivate user access (stops billing, blocks login), but the account itself is not permanently deleted. Inactive employees free up user seat allocations in the plan.
+[sources=1800-1999]
+
+### Account flagging and fraud detection
+Accounts can be flagged for suspicious activity: 71+ e-wallet/QR transactions in 3 days triggers investigation, IC mismatch during verification, unauthorized admin role changes. Flagged accounts have temporary access paused until investigation completes. Users may be asked for IC photo and video selfie for verification.
+[sources=1600-1799]
+
 ### Account Funding Transaction (AFT)
 Some banks process e-wallet top-ups using AFT method since May 2025. Swipey cards do not support AFT, causing failed top-ups. Visa is working on resolving this.
 [sources=1200-1399]
@@ -991,6 +998,14 @@ Some banks process e-wallet top-ups using AFT method since May 2025. Swipey card
 If account requires reactivation (e.g., after phone number update), user needs to relogin to mobile app to reactivate. Card will be declined until reactivation.
 [sources=1200-1399]
 
+### Account registration requirements
+SSM business documents required (Section 14 Superform preferred). Director's signature on consent form. Unique email and mobile number per account. Each person can only hold a card under one entity. Companies less than 1 year old may not need consent letter.
+[sources=1800-1999]
+
+### Account Suspension
+Accounts can be suspended for irregular activity (e.g., unusual credit card top-up patterns). User must contact support with company name and email to resolve.
+[sources=2200-2422]
+
 ### Account Termination Process
 Steps: Clawback all funds -> Terminate all cards -> Withdraw remaining -> Download statements -> Complete churn survey.
 [sources=0200-0399]
@@ -998,6 +1013,14 @@ Steps: Clawback all funds -> Terminate all cards -> Withdraw remaining -> Downlo
 ### Account Transfer Between Companies
 IC/eKYC verification can only be tied to one email and one phone number. To transfer an account: (1) old company admin must terminate cards and set user as inactive, (2) Swipey verifies with both old and new admins, (3) process takes 1-2 business days.
 [sources=1000-1199]
+
+### Account transfer between companies
+Account transfer is not directly possible. To move a user between companies: (1) clawback funds and terminate card in old company, (2) Swipey does internal transfer of user details, (3) new entity is set up. User must have card terminated in previous company before being set up in new one.
+[sources=1800-1999]
+
+### Accounting Feature Access
+Accounting integration (Xero, QuickBooks) is available on Growth plan and above. Bukku and AutoCount integrations are planned.
+[sources=2200-2422]
 
 ### Accounting Integration
 Available on Plus plan. 7-day trial available. Connects Swipey with accounting software.
@@ -1016,9 +1039,21 @@ Swipey has QuickBooks integration (in beta).
 Guide: https://help.swipey.co/en/collection/8-accounting-integration-beta
 [sources=1000-1199]
 
+### Accounting Integration
+Swipey can integrate with accounting software like QuickBooks or Xero. Bukku integration was mentioned as upcoming.
+[sources=1800-1999]
+
+### Accounting Integration
+Supports QuickBooks and Xero. Excel/CSV transaction export for other systems. Alfie AI for receipt scanning and matching on paid plans. Email forwarding for auto-receipt matching.
+[sources=2000-2199]
+
 ### Accounting Integration Details
 QuickBooks and Xero integrations available on Plus Plan only. Integration is synced via Rutter. Access from Swipey web dashboard accounting tab. Xero itself does not accept prepaid cards for subscription payment.
 [sources=1000-1199]
+
+### Accounting integration support
+Supports QuickBooks and Xero. Autocount is not yet supported. Bulky integration is upcoming. Sync may take up to 30 minutes. Available under beta for all users including free plan.
+[sources=1400-1599]
 
 ### Accounting integrations
 Swipey integrates with Xero and QuickBooks for automatic transaction sync. Bukku integration in development. Swipey is not an accounting software or e-invoicing platform.
@@ -1040,9 +1075,17 @@ For transactions to US bank accounts, the ACH code (Automated Clearing House Cod
 For bill payments to US recipients requiring ACH routing numbers, the routing number must contain exactly 9 digits. Recipient should confirm with their bank.
 [sources=0400-0599]
 
+### Ad Platform Compatibility
+Facebook/Meta Ads: ACCEPTED. TikTok Ads: ACCEPTED. Google Ads: NOT ACCEPTED (doesn't take prepaid cards). Swipey working on Google Ads support. Recommendation: dedicated virtual card per ad platform.
+[sources=2000-2199]
+
 ### Admin Change Procedure
 Admin role changes must be requested through Swipey support. The current admin or authorized company representative must make the request.
 [sources=1000-1199]
+
+### Admin change request verification
+For user information change requests (phone number, email), Swipey requires verification. A 4-digit OTP is sent to the company admin's registered email. The admin must share this code to authorize changes.
+[sources=1800-1999]
 
 ### Admin vs Employee roles
 Admin: access to web dashboard + can hold card. Employee/Staff: can only hold card, no dashboard access for top-up. Each person counts as one user toward plan pricing.
@@ -1051,6 +1094,10 @@ Admin: access to web dashboard + can hold card. Employee/Staff: can only hold ca
 ### AFT (Account Funding Transaction)
 Some e-wallets changed to AFT processing which Swipey cards don't yet support. Working with Visa to enable.
 [sources=0200-0399]
+
+### AFT (Account Funding Transaction) issue with e-wallets
+Some banks and e-wallet platforms (TnG, GrabPay) changed their processing to use AFT method. Swipey VISA cards don't currently support AFT, causing top-up failures. Swipey is working with Visa on implementation. This affects card-to-e-wallet transfers, not all card transactions.
+[sources=1600-1799]
 
 ### AI Onboarding Assistant
 Swipey has an AI onboarding assistant available at app.quarterzip.ai.
@@ -1063,9 +1110,21 @@ User enters their email address and follows step-by-step instructions.
 Swipey uses an AI onboarding assistant at app.quarterzip.ai. Must be used on laptop/PC (not mobile). User needs to log into Swipey dashboard and share screen. Available 24/7.
 [sources=1200-1399]
 
-### App error [80000]
-Error [80000] on mobile app is usually resolved by completely deleting and reinstalling the app.
-[sources=0000-0199]
+### Alfie AI Feature
+Alfie AI function on the dashboard reads uploaded receipts and matches them to the correct transaction automatically.
+[sources=1400-1599]
+
+### Annual statement fees
+Annual statement requests incur a fee of RM49 per year.
+[sources=1600-1799]
+
+### App auto-triggering OTP bug
+Known issue where the Swipey mobile app unintentionally triggers repeated login attempts in the background, causing users to receive unrequested OTPs. This is a system behavior issue, not unauthorized access. Fix was being rolled out.
+[sources=1400-1599]
+
+### App error codes and fixes
+Error 20141: Card display issue, resolved by clearing cache or reinstalling app. Error 80000: Cache error, resolved by app reinstall. JSON parse error: Can occur when viewing card details, usually resolved by reinstalling. General login issues: Delete app, redownload, and reattempt login.
+[sources=1600-1799]
 
 ### App Troubleshooting
 For app login issues: try log out and log in, check for app updates on App Store, reinstall app. For web issues: try app.swipey.co/logout then log in again.
@@ -1075,9 +1134,29 @@ For app login issues: try log out and log in, check for app updates on App Store
 Physical cards can be used for ATM withdrawals. Fee: RM2 per transaction.
 [sources=1200-1399]
 
+### ATM withdrawal - account type
+When withdrawing from ATM, select 'Current Account' (not Savings Account). Can withdraw from Maybank ATMs. Some CIMB ATMs may have issues.
+[sources=1400-1599]
+
+### ATM withdrawal details
+RM2 charge per withdrawal. Select 'Current' account at ATM. Works at any ATM supporting MEPS in Malaysia and abroad. Card can get swallowed if too many failed attempts.
+[sources=1400-1599]
+
+### ATM withdrawal fees
+Domestic ATM withdrawal fee: RM2 per transaction. Overseas ATM withdrawal fee: RM10 per transaction or 2% of withdrawal amount, whichever is higher. Monthly ATM withdrawal limit: RM10,000.
+[sources=1600-1799]
+
+### ATM Withdrawal Fees
+Local: RM2 per withdrawal. International: RM10 or 2% of amount, whichever is higher.
+[sources=1800-1999]
+
 ### ATM withdrawal limits
 Per transaction: RM2,000. Daily: RM5,000. Monthly: RM10,000. Must select 'Current Account'. 5 attempts per 24 hours (including failed).
 [sources=0600-0799]
+
+### ATM withdrawal limits
+Per transaction: RM2,000 max (individual ATMs may have lower limits). Daily limit: RM5,000. Monthly limit: set by Bank Negara Malaysia regulation, cannot be increased. If PIN entered wrong 5+ times, reset PIN via mobile app.
+[sources=2200-2422]
 
 ### ATM Withdrawal Limits (BNM regulated)
 Per transaction: RM1,500. Daily limit: RM5,000. Monthly limit: RM10,000. These limits are per user (not per card). Even with multiple cards, the total monthly limit remains RM10,000 per user. These limits are determined by BNM and cannot be increased.
@@ -1087,6 +1166,18 @@ Per transaction: RM1,500. Daily limit: RM5,000. Monthly limit: RM10,000. These l
 When ATM withdrawal is declined: 1) Reset card PIN through mobile app, then activate with chip & PIN at POS terminal. 2) Select 'Current' account at ATM. 3) Try smaller amounts. 4) Use a different ATM. ATM withdrawal limit is RM5000 within 24 hours.
 [sources=1200-1399]
 
+### ATM withdrawal with Swipey physical card
+Must select 'Current' account type (not Savings). Per transaction: RM2,000. Daily: RM5,000. Monthly: RM10,000. CIMB ATM max: RM1,000. Maybank ATM max: RM1,500 (incl. RM2 fee). Failed attempts may trigger card block by VISA.
+[sources=1400-1599]
+
+### Audit Confirmation
+External audit firms can request balance confirmation via email or form provided by support.
+[sources=2000-2199]
+
+### Audit confirmation process
+For audit confirmation requests, Swipey handles via form submission. Audit confirmation letters need to be sent directly to auditors (not via the company). PDF copies of forms sent via email. Statements and audit confirmation handled by the CS team.
+[sources=2200-2422]
+
 ### Audit Statement
 Costs RM 49. Requires user consent. Company access needed to obtain statements. Period specified by requestor.
 [sources=0000-0199]
@@ -1094,6 +1185,10 @@ Costs RM 49. Requires user consent. Company access needed to obtain statements. 
 ### Audit Statement Process
 Fee: RM49 per audit statement. Requires explicit consent from the account holder before Swipey proceeds. Processed by Swipey team after consent and payment.
 [sources=1000-1199]
+
+### Auto Logout Security
+Swipey automatically logs users out after periods of inactivity as a security measure. Duplicate logins from multiple browsers/devices will logout the first session. Dashboard and mobile app sessions are independent.
+[sources=1400-1599]
 
 ## B
 
@@ -1121,6 +1216,10 @@ Agents provide support in English, Malay (Bahasa), and occasionally respond to C
 Bank transfers and Jompay supported. Bulk payment template available. Vendor list: cannot delete (edit/rename instead). Cross-border fee: RM5/transaction.
 [sources=0200-0399]
 
+### Bill Payment Bounce Handling
+If a bill payment bounces, funds return to master account within 1-3 working days. Agent verifies correct account details before reprocessing.
+[sources=2200-2422]
+
 ### Bill Payment Confirmation Email Timezone
 Timestamps in bill payment confirmation emails are based on UTC, not Malaysia time (UTC+8). This means times appear 8 hours earlier. The actual bill payment receipt shows correct local time.
 [sources=1000-1199]
@@ -1132,6 +1231,10 @@ Bill payment cut-off time is 4:30 PM. Bills submitted before cut-off are process
 ### Bill Payment Cut-off Time
 Bill payment daily processing cut-off time is 5pm. Payments scheduled after this time will be processed the next business day.
 [sources=1000-1199]
+
+### Bill payment cut-off times
+Bills approved before 10am are processed at 12:30pm batch. Bills approved before 1pm catch the afternoon batch. Bills approved after 1pm are processed the next business day. Payee typically receives funds by EOD.
+[sources=1400-1599]
 
 ### Bill payment duplicate invoice handling
 If duplicate invoices are submitted (same attachment), the system flags it as 'Duplicated invoice'. The earlier one will be refunded.
@@ -1176,6 +1279,14 @@ Bill payment receipts are delivered after processing.
 Cross-border payments: 1-3 working days processing, 3-5 business days for bank clearance. Memo limited to 30 characters. Supported currencies for Pakistan: AUD, EUR, USD, JPY, GBP (not PKR for companies). INR transfers require IFSC code (11 digits).
 [sources=1200-1399]
 
+### Bill Payment feature
+Employees can send invoices to a designated Swipey email. AI captures invoice data and presents it on the admin dashboard for approval. Scheduled bills are processed in batches - no separate email needed for approval. Rejected bills cannot be reprocessed; new transaction required.
+[sources=1400-1599]
+
+### Bill Payment feature
+Bill Payment allows transferring funds to any bank account. No limit implemented on bill payment amounts. Requires invoice attachment for vendor payments. Processing follows cut-off times on working days. Faster than withdrawal/payout for fund transfers. Bill payment can be scheduled.
+[sources=1600-1799]
+
 ### Bill payment feature request: attach document to completed payment
 Currently cannot attach an invoice or document to a completed payment. Can only attach supporting documents to a payment that has not been scheduled or paid yet. This has been raised as a product development feature request.
 [sources=1200-1399]
@@ -1192,6 +1303,10 @@ Steps: Submit bill > Pending review > Mark as reviewed > Approve and schedule > 
 Bill payment funds are deducted from the Master Account balance, not from card balance. To use card funds for bill payment, you must first clawback the amount to the Master Account.
 [sources=1200-1399]
 
+### Bill payment invoice processing
+Bills submitted via email or dashboard are processed with varying times based on invoice complexity. Vendor details (name, bank, account number) must be correct. Bills with incomplete information will need manual review. Vendor name can be edited in the vendor list on dashboard.
+[sources=2200-2422]
+
 ### Bill payment processing
 Available on Plus plan. Processed in 3 batches on working days (10am, 3pm, 5pm/7pm). After final batch = next working day. Cross-border = 1-3 business days. Approval only via web dashboard (not mobile). Locked bills cannot be cancelled. Email invoices: admin email only, max 10 per email.
 [sources=0600-0799]
@@ -1200,9 +1315,17 @@ Available on Plus plan. Processed in 3 batches on working days (10am, 3pm, 5pm/7
 Bill payments processed via IBG only, 3 batches per working day. Not available on weekends. No DuitNow option for bill payments.
 [sources=1200-1399]
 
+### Bill Payment Processing
+Processed in batches at 10am, 1pm, 5pm. JomPay follows same schedule. Scheduled bills auto-paid on specified date. Funds locked on payment date. Local: 1-2 business days. No invoicing feature (Swipey doesn't generate invoices to send to customers).
+[sources=2000-2199]
+
+### Bill payment processing schedule
+Bills submitted before 11am on working days are processed same day. After 11am goes to next working day. Not processed on weekends or public holidays. Vendor receives funds by end of day when processed. Email notification sent by 11pm. Standard processing goes through banking partner HSBC. Bill payments are processed in batches during regular working hours. Receipt is sent via email once processed. Supplier bank account details are required. Bills need to be reviewed and approved after creation to schedule payment. Workflow: Pending Review > To Approve > Approved & Scheduled > Paid. Supports domestic (RM) and international payments. Can automate recurring payments. International bill payments support multiple currencies. Agent verifies correct currency (e.g., HKD vs CNY) before processing. When bill payments are rejected due to incorrect bank account details, Swipey notifies user and requests vendor to confirm correct details. Funds are refunded to master account. User can resubmit with correct details. Vendor details can be updated on the dashboard. Admin can pay bills via dashboard. Employees send invoices to designated Swipey email and AI captures data. Vendors must be added with bank details before payment. Once submitted, vendor appears in vendor list. SWIFT code auto-fills when bank name is selected. Bill payment guide: help.swipey.co/en/article/34-bill-payment-introduction
+[sources=1000-1199,1800-1999,2200-2422]
+
 ### Bill Payment Processing Schedule
-Bill payments submitted before 11am are processed same working day. Payments after 11am go to next working day. Weekend and public holiday submissions are processed on the next working day. The team processes bills starting at approximately 1pm.
-[sources=1000-1199]
+Bill payments are processed in batches on working days. Cut-off is around 1pm for same-day processing. After 1pm approval, bills go to next business day. Overseas payments take 1-5 business days for bank release. INR transfers take 1-2 business days. RM5 fee per cross-border bill payment.
+[sources=1400-1599]
 
 ### Bill Payment Processing Time
 Bill payments are processed in the latest batch at 7pm (if submitted before 5pm). Funds are disbursed by 12:30pm next day and cleared by 8:30pm next day.
@@ -1216,9 +1339,17 @@ Payouts processed in 3 daily batches: 10am, 1pm, 5pm cutoff times. IBG transfers
 Vendors can be set to automatically receive receipts by adding the vendor's email under vendor settings. They'll get an update once the bill payment moves to paid status.
 [sources=1200-1399]
 
+### Bill payment receipt downloads
+Bill payment receipts can only be downloaded individually, not as bulk. The Excel master account statement includes bill payment records. Bill payment receipts appear in the master account statement.
+[sources=1400-1599]
+
 ### Bill Payment Receipt Timing
 Bill payment receipts now display the correct processing time. Fix was released to show accurate processing time on receipts for new transactions.
 [sources=1200-1399]
+
+### Bill Payment Rejected Refund Process
+When bill payments are rejected by the bank due to incorrect details, Swipey processes a refund to the master account. The bill status shows 'Paid' (not 'Rejected') to avoid affecting statement reporting. Refund transactions are noted separately.
+[sources=1400-1599]
 
 ### Bill payment rejection and refund flow
 When a bill payment reaches final pending process and needs to be cancelled, the system puts it as 'Paid' first then rejects it to refund back to the user. This is done to avoid affecting the statement report.
@@ -1228,9 +1359,17 @@ When a bill payment reaches final pending process and needs to be cancelled, the
 Bill payments appear on recipient's bank statement as from 'SWIPEY DIGITAL SERVICES SDN. BHD.' Recipient email can be included to receive transaction receipt.
 [sources=1000-1199]
 
+### BNM prepaid card limit
+Bank Negara Malaysia (BNM) sets the per-transaction limit for prepaid cards at RM10,000. This cannot be increased even by Swipey. For larger transactions, recommend splitting payments or using the Payouts feature. Daily limit per user is RM50,000.
+[sources=2200-2422]
+
 ### Bookkeeper Role
 Bookkeeper role can access the Swipey Dashboard for viewing funds and downloading statements. Can be set up via admin settings.
 [sources=0000-0199]
+
+### Bookkeeper role
+Bookkeeper role allows view-only access to the web dashboard (view spending transactions, download statements) but cannot process transactions. External partners can be invited as bookkeepers.
+[sources=2200-2422]
 
 ### Bookkeeper Role Capabilities
 Bookkeeper role can: view all transactions, access web dashboard, add notes and receipts, view all notes and receipts, download statements. Cannot handle bill payments or fund transfers.
@@ -1248,11 +1387,39 @@ Bukku integration is being rolled out. Waitlist available — contact support to
 Not all card transactions count as business expenses. Only those used wholly for business purposes qualify. Personal expenses do not count. Keep supporting documents for verification.
 [sources=0000-0199]
 
+### Business hours and after-hours
+Working hours: Monday to Friday, 8am to 7pm. Public holidays: 9am to 6pm (or 9am to 1pm). Outside hours, automated message directs to Help Center at https://help.swipey.co
+[sources=2200-2422]
+
 ## C
+
+### Card account is tied to NRIC
+Each user's card is tied to their NRIC (Bank Negara requirement). Cannot simply switch email/phone to transfer a card to another person. New admin must be invited as new user; old admin should be set inactive.
+[sources=1400-1599]
+
+### Card add-on plans
+If more cards are needed beyond the plan allocation, card add-on plans are available. For 25+ cards for one company, a custom/catered plan can be discussed with management.
+[sources=1400-1599]
+
+### Card allocation by plan
+Growth Plan: 5 physical cards and 20 virtual cards. Plus Plan: 10 physical cards and more virtual cards. Lite Plan: 2 physical cards and 5 virtual cards. Freemium: limited card allocation. Additional cards cost RM25/month (before SST) per additional user. Freemium: 2-3 virtual cards, no physical cards. Growth Plan: 1 physical + 3 virtual per user. Plus Plan: 2 physical + 5 virtual per user. During 30-day trial: 10 virtual cards available. Physical cards only with paid plans.
+[sources=0000-0199,1200-1399,1800-1999]
+
+### Card allocation per plan
+Growth: 1 physical card + 3 virtual cards per user. Plus: 2 physical cards + 5 virtual cards per user. Terminated cards release allocation back. Card allocation is consumed when assigned, even if user is set to inactive - must terminate cards before deactivating user.
+[sources=0000-0199,2200-2422]
 
 ### Card Allocation Per Plan
 Freemium: 1 virtual card per user. Growth/Plus: 1 physical card + 3 virtual cards per user. Trial: Plus Plan features without physical card for 1 month, then auto-downgrades to Freemium.
 [sources=1000-1199]
+
+### Card assignment and ownership rules
+Cards are linked to the cardholder's IC/NRIC. Ownership cannot be transferred. To change cardholder: terminate card and assign new one. Phone numbers cannot be reused across different users. Each user needs unique email and phone number.
+[sources=1800-1999]
+
+### Card clawback limitation
+Maximum clawback per transaction is RM10,000. If more needs to be clawed back, split into multiple transactions.
+[sources=1400-1599]
 
 ### Card Clawback Process
 To clawback funds from a user's card: 1) User must first log in on mobile app. 2) Admin refreshes dashboard. 3) Admin can then proceed with clawback from the dashboard.
@@ -1274,13 +1441,25 @@ Physical card delivery address follows the one set while the card was being trig
 Physical cards delivered to company address registered on dashboard. Address can be changed by agent on backend or by user in web dashboard company details. Cards can be sent to home address if requested.
 [sources=0000-0199]
 
+### Card Deposit via Credit/Debit Card
+There is a 1.5% platform fee for depositing via card. This information is shown in a pop-up on the deposit page (appears 3 times). A refund may be given as goodwill for first-time users who missed the notice.
+[sources=1400-1599]
+
 ### Card Details Access
 Full card details are only visible to the cardholder via the mobile app under Cards > Show Card Details. Support team can only see the last 4 digits for security.
 [sources=1200-1399]
 
+### Card details visibility
+16-digit card number, expiry date, and CVV can only be viewed via the Swipey mobile app. They cannot be viewed via PC/web dashboard. Card must be assigned and eKYC completed first.
+[sources=2200-2422]
+
 ### Card dispute process
 Unauthorized transaction goes through stages: 'Approved' may turn 'Voided' (funds return) or 'Settled' (dispute needed). 21-day monitor period for merchant to claim/reject. Dispute form requires cardholder signature. Dispute investigation takes up to 180 days.
 [sources=1200-1399]
+
+### Card dispute process with VISA
+Disputes are sent to VISA for investigation. Usually takes 60 days, but can extend up to 180 days. Card must be frozen during investigation -- unfreezing stops the investigation. Customer signs a dispute form. If transaction status is Voided, funds return immediately. If Settled, dispute is raised.
+[sources=1400-1599]
 
 ### Card fraud flagging by VISA
 VISA proactively flags compromised cards and notifies Swipey. Swipey then notifies the customer and recommends clawback + terminate the affected card, then issue a new one.
@@ -1290,29 +1469,61 @@ VISA proactively flags compromised cards and notifies Swipey. Swipey then notifi
 For unauthorized transactions, users should immediately freeze the card via the mobile app to prevent further charges.
 [sources=1200-1399]
 
+### Card Freeze vs Termination
+Freeze: reversible, done from mobile app, recommended first step for suspicious activity. Terminate: permanent, card cannot be reactivated, admin must assign new card. Clawback funds before terminating.
+[sources=2000-2199]
+
 ### Card Funds vs Master Account
 Swipey maintains a Master Account (main company balance) separate from individual card funds. Cards are topped up from the Master Account. Overdraft situations can occur on the Master Account.
 [sources=1000-1199]
+
+### Card Issuance Architecture
+Swipey cards are issued through Fasspay, a BNM (Bank Negara Malaysia) licensed entity. VISA is the card network.
+[sources=1800-1999]
 
 ### Card Limits (BNM regulated)
 Per transaction: RM 10,000. Daily: RM 50,000. Monthly: RM 500,000. Cannot be increased as regulated by BNM.
 [sources=0000-0199]
 
+### Card Migration - Classic to Platinum
+Non-Platinum virtual Swipey cards were terminated on 25 July 2025. Users were notified to create new Platinum cards. If no action was taken, the system automatically clawed back and terminated existing cards.
+[sources=0600-0799,1400-1599]
+
+### Card Name for Online Payments
+When making online payments, first name should be company name (e.g., 'Addex') and last name should be the suffix (e.g., 'Sdn Bhd'). Virtual card details (number, expiry, CVV) are viewable in the mobile app under Cards > Show Card Details.
+[sources=2200-2422]
+
 ### Card name on physical card
 Physical card displays company name only, not employee name. Employee name shown on dashboard and mobile app.
 [sources=0600-0799]
 
+### Card name printing limitation
+VISA can only print below 20 characters (including spaces) on physical cards. Names exceeding this will be truncated.
+[sources=1400-1599]
+
+### Card name uniqueness requirement
+When assigning a new card, the card name must be different from existing card names. Users get error if they enter a same card name. Workaround: use a variation like 'Marketing 2'.
+[sources=2200-2422]
+
+### Card name vs physical/virtual distinction
+Physical and virtual cards must have different names. If both have the same name, the system will not create a new card. Card name can be changed by admin via Swipey Web Dashboard.
+[sources=1800-1999]
+
 ### Card Ownership
 Card ownership cannot be transferred between users. Must terminate and issue new card. Each card tied to specific user.
-[sources=1200-1399]
+[sources=1200-1399,2200-2422]
+
+### Card ownership BNM regulation
+Per Bank Negara Malaysia regulations, each Swipey card is bonded to an individual's NRIC/IC. Cards cannot be transferred between individuals. If an employee leaves, the card must be terminated and a new one issued to the replacement employee.
+[sources=1600-1799]
 
 ### Card PIN Reset
 Done via Swipey mobile app: Cards Tab > Reset Card PIN > Enter OTP after App PIN/biometric > Enter new PIN > Confirm.
 [sources=0000-0199]
 
-### Card PIN vs User PIN
-Card PIN (for physical card transactions) is different from user PIN (for app login). Card PIN can be reset via the mobile app.
-[sources=1200-1399]
+### Card PIN vs App Passcode
+Physical card PIN is for in-store POS transactions and ATM. App passcode (6-digit) is set upon first login to the mobile app and is used to view card details. Virtual cards do not have a card PIN. These are distinct credentials that users commonly confuse.
+[sources=1200-1399,1400-1599]
 
 ### Card Reassignment Restriction
 Card reassignment to another user is not possible due to Bank Negara Malaysia regulations. Must terminate existing card and issue new one. Terminating a card returns +1 to the card quota allocation.
@@ -1322,30 +1533,49 @@ Card reassignment to another user is not possible due to Bank Negara Malaysia re
 Card replacement is free of charge. Process: clawback remaining balance, terminate old card, assign new card (immediate), user relogs to initiate delivery.
 [sources=1200-1399]
 
+### Card Scanning Issue
+The card scanner on the mobile app may misread card details during activation. Users should try entering card number manually if scan-based activation fails.
+[sources=1400-1599]
+
 ### Card slot allocation
 Terminated cards free up card slots. Pending cards (user hasn't logged in) still count against allocation. Pending cards can be rejected if user won't be onboarding.
 [sources=0400-0599]
-
-### Card Spending Limits
-Per-transaction spending limit: RM10,000. Daily spending limit: RM50,000. Bill payment limit to personal accounts: RM50,000. Top-up has no restricted amount.
-[sources=0000-0199,1000-1199]
 
 ### Card spending limits
 Physical card: RM10,000/transaction, RM50,000/day, RM500,000/month. ATM withdrawal: RM2,000/transaction, RM5,000/day, RM10,000/month. At ATM, select 'Current Account'.
 [sources=0400-0599]
 
-### Card Spending Limits (per user)
-Per transaction: RM10,000.
-Daily limit: RM50,000.
-Monthly limit: RM500,000.
-Limits apply per user, not per card.
-Custom transaction limits per card are NOT supported.
-Per BNM regulation, transaction limit is RM10,000.
-[sources=0200-0399,0600-0799,1000-1199]
+### Card spending limits (BNM regulated)
+Per transaction: RM10,000. Daily limit: RM50,000. Monthly limit: RM500,000. These are set by BNM and cannot be increased. Spending limits are at user level -- if a user has multiple cards, the total across all cards is the limit.
+[sources=0200-0399,0600-0799,1000-1199,1800-1999,2200-2422]
+
+### Card spending limits (BNM-set)
+Per transaction: RM10,000. Daily limit per user: RM50,000. Monthly limit: RM500,000. These limits are set by Bank Negara Malaysia and cannot be changed. Monthly QR limit is also tied to user, not card.
+[sources=1400-1599]
+
+### Card termination and replacement
+NRIC is linked to account, so cannot create duplicate accounts. Terminating a card does not delete past transactions. Clawback funds from old card before terminating. New card assignment is immediate for virtual cards. Physical card replacement is free of charge.
+[sources=2200-2422]
+
+### Card termination and replacement process
+Steps: 1) Clawback all funds from card to Master Account 2) Terminate the card via dashboard 3) Issue new card. No charges for replacement. Card allocation returns to user for reassignment. If card is compromised, refund/dispute patching to new card takes 7 working days.
+[sources=1400-1599]
 
 ### Card Top-Up Control
 Only admin can top up cards. This is because top-ups involve moving company funds from Master Account to individual cards. This serves as the spending control mechanism.
 [sources=0000-0199]
+
+### Card Top-Up Timing (VCC)
+VCC Mastercard top-ups take 24-48 hours to reflect on the card. Early funding recommended to avoid payment failures.
+[sources=2200-2422]
+
+### Card types
+Swipey offers virtual cards (for online transactions) and physical cards (for physical and online transactions). Virtual cards cannot be converted to physical cards. A Mastercard charge card product is in beta to support merchants that reject prepaid cards (e.g., Google, OpenAI).
+[sources=2200-2422]
+
+### Card Types - Virtual vs Physical
+Virtual cards: online transactions only (apps, services, e-commerce, FPX). Physical cards: can be used for offline transactions at retail, petrol pumps, ATM withdrawals, and online. Comparison article: help.swipey.co/en/article/26-virtual-cards-vs-physical-cards Swipey offers virtual cards (instant, no physical delivery) and physical VISA prepaid cards (require paid plan, first use must be Chip & PIN not paywave). Process: Clawback virtual card balance > Terminate virtual card > Assign new physical card to user. Virtual cards are for online transactions only (subscriptions, digital marketing, etc.). Card details are only viewable via the Swipey mobile app by the cardholder. Admin cannot see full card numbers on the dashboard for security.
+[sources=0000-0199,0400-0599,1800-1999]
 
 ### Card Types and Allocation
 Freemium plan: max 2 users, no physical cards, virtual cards only.
@@ -1356,6 +1586,10 @@ Non-Platinum virtual cards were being terminated on 25 July 2025 — users neede
 VCC Mastercard (Charged Card) is in BETA — top-ups take 24-48 hours to reflect.
 Swipey cards are NOT currently supported on Apple Wallet.
 [sources=1000-1199]
+
+### Card Types and Features
+Virtual cards: instant issuance, online payments only, light green in app. Physical cards: VISA prepaid, online + in-store via chip/PIN/paywave, dark green in app, 7-10 business days delivery via Citylink. Mastercard beta available for international. Cards are bonded to individual NRIC per BNM regulation.
+[sources=2000-2199]
 
 ### Card Types and Usage
 Physical cards: used for online and offline payments (retail stores, restaurants).
@@ -1401,9 +1635,29 @@ Beta Charged Card: for international merchants (Facebook, Google), top-ups not i
 DuitNow QR limits: per transaction RM10,000, daily RM50,000, monthly RM500,000.
 [sources=0000-0199]
 
+### Card wallet limit
+Each user account is 1 wallet with RM10,000 maximum top-up. If a user has multiple cards, they share the same wallet. The daily transaction limit of RM50,000 is shared across all cards for that user.
+[sources=1400-1599]
+
 ### Cashback and rewards
 Swipey VISA corporate card earns 1% cashback on all transactions. Reward points earned per spend, redeemable at partner stores (Zus Coffee, IKEA, Decathlon, Grab, Mr DIY, Setel, Costa Coffee).
 [sources=0400-0599]
+
+### Cashback and rewards program
+1% cashback on digital marketing tools and SaaS subscriptions. Reward points earned with every spend, redeemable at Mr DIY, Costa Coffee, Setel, Zus Coffee, IKEA, Decathlon, Grab. Previous campaign: RM5 cashback per domestic bill payment, RM10 per international bill payment. 1% cashback on digital marketing tools and SaaS subscriptions. Eligible merchants include Adobe, Figma, BambooHR, Calendly, Canva, Sendinblue, Slack, ChatGPT. List is not exhaustive.
+[sources=1800-1999]
+
+### Cashback Program
+1% cashback on digital marketing tools and SaaS subscriptions. Issued to master account up to 20 days after month end. Minimum RM100 spend. Reward points redeemable at Zus Coffee, IKEA, Decathlon, Grab, Mr DIY, Costa Coffee, Setel.
+[sources=0000-0199,1400-1599,2000-2199]
+
+### Cashback program
+1% cashback on VISA corporate card transactions. 1% cashback on digital marketing tools and SaaS subscriptions. Reward points redeemable at Zus Coffee, IKEA, Decathlon, Grab, Mr DIY, Costa Coffee, Setel, and more.
+[sources=2200-2422]
+
+### Charge Card (Beta)
+Mastercard charge card available in beta. Can only be used for international merchants (Facebook, Google). Top-ups are not instant (24-48 hours). No clawback feature - must use full balance. No OTP required for transactions. Limited to one card per user and one card per company. No spending limit. Transactions not real-time; take 2-3 days to appear.
+[sources=1400-1599]
 
 ### ChatGPT / prepaid card restrictions
 ChatGPT (OpenAI) does not accept prepaid cards, so Swipey card cannot be used for ChatGPT subscriptions.
@@ -1413,6 +1667,10 @@ ChatGPT (OpenAI) does not accept prepaid cards, so Swipey card cannot be used fo
 First in-store transaction with a new physical card MUST be chip & PIN (insert card + enter PIN). PayWave/contactless will not work until after the first chip & PIN transaction. 6-digit PIN must be set via Swipey app. Error code 20289 indicates this requirement.
 [sources=0600-0799]
 
+### CIMB Octo Biz FPX limitation
+Some CIMB Octo Biz accounts do not offer B2B FPX. Users need to check with their account manager for CIMB. Regular online banking may work as an alternative.
+[sources=1400-1599]
+
 ### Clawback feature
 Retrieves funds from a card back to Master Account. Immediate once OTP is entered. Card must be unfrozen before clawback. If dispute in progress, re-freeze card immediately after clawback.
 [sources=0400-0599]
@@ -1420,6 +1678,18 @@ Retrieves funds from a card back to Master Account. Immediate once OTP is entere
 ### Clawback Process
 Admin can clawback funds from card to master account instantly via dashboard Cards section.
 [sources=1200-1399]
+
+### Clawback process
+Clawback means transferring funds from a card back to the master account. Guide: https://help.swipey.co/en/article/38-move-funds-from-card-to-master-account. Must unfreeze card before clawback. If spending controls turned off for payments permission, the card may error during clawback - need to re-enable payments first.
+[sources=1600-1799,2200-2422]
+
+### Common Login Fix - Error 80000
+Error 80000 on mobile app login is resolved by deleting and reinstalling the Swipey mobile app to get the latest version. This is a known fix after app updates.
+[sources=0000-0199,1400-1599]
+
+### Company admin role vs employee role
+Company Admin has same dashboard access as account owner. Employee role does not have dashboard access. Admin can manage funds, assign cards, approve payments. For maternity leave or absences, the Company Admin role user can manage operations. Removing a company admin requires written request submitted to Swipey. Can be done via WhatsApp message.
+[sources=1800-1999]
 
 ### Company Migration Process
 Terminate all cards in old company. New SSM documents required. New consent letter from new director.
@@ -1433,6 +1703,14 @@ Submit new SSM with name change. Swipey makes changes on their end. Company name
 Registration system requires company name with max 21 characters and two or more words. Workaround: shorten company name.
 [sources=0600-0799]
 
+### Company name length limit for cards
+Company name must not exceed 21 characters for virtual cards to display correctly on mobile app. If exceeded, change the name on admin dashboard to a shorter version.
+[sources=1400-1599]
+
+### Company Name Registration Limit
+Company name limited to 21 characters during Swipey registration.
+[sources=1800-1999]
+
 ### Consent Form
 Required for onboarding. Sent to director's email via Documenso for digital signature. Contains company registration details. Must be signed by a director listed in SSM documents.
 [sources=0000-0199]
@@ -1441,6 +1719,10 @@ Required for onboarding. Sent to director's email via Documenso for digital sign
 Consent letter sent via email from Dropbox Sign (or Documenso). Requires director signature and IC copy. If not received, check spam/junk. Agent can resend or provide PDF via WhatsApp for manual signing.
 [sources=0600-0799]
 
+### Consent Form Process
+Sent via Documenso or Dropbox Sign to director's email. Requires digital signature - no printing needed. Director fills in company name, registration number, address, email, then signs. BNM requires director signature. CEO can replace director if appropriate documentation provided.
+[sources=1800-1999,2000-2199]
+
 ### Consent Form Purpose
 The consent form specifies which bank account will be used for deposits. Sent via Dropbox Sign to director's email.
 [sources=0200-0399]
@@ -1448,6 +1730,10 @@ The consent form specifies which bank account will be used for deposits. Sent vi
 ### Consent form requirement
 All new accounts require a consent form signed by company director. Sent via Documenso to director's email for digital signature. Account cannot be activated without it.
 [sources=0400-0599]
+
+### Consent letter for registration
+A consent letter requiring director's signature is sent via DropBox Sign/HelloSign. Must be signed digitally through the HelloSign platform. Cannot use DocuSign or manual signature. This is the final step before account setup.
+[sources=1400-1599]
 
 ### Consent Letter Process
 Consent letter is sent via DropBox Sign to director's email. Requires director's digital signature. One consent form per company. Can be skipped for recently incorporated companies.
@@ -1461,31 +1747,83 @@ Consent form is final step before account is active. Sent via DropBox Sign to di
 For account verification or updates, a consent letter may be required from the company director. Sent via HelloSign (digital signature software) to director's email.
 [sources=1200-1399]
 
+### Consent Letter Process
+After registration and document submission, a consent letter is sent via DropBox Sign to the director's email. Requires digital signature. After signing, the director must also attach IC. System auto-sends the signed document back to Swipey. Account setup takes 15-30 minutes after signing.
+[sources=1400-1599]
+
+### Consent letter requirement
+Director must sign a consent letter sent via DropBox Sign/email before account can be activated. This is the final step in the registration process. The consent letter is addressed to the director listed in the SSM documents.
+[sources=1800-1999]
+
 ### Contactless payment limit
 Contactless payment limit: RM250 per transaction. Set by Bank Negara, cannot be increased. Must use Chip & PIN for amounts above RM250.
 [sources=0000-0199]
+
+### Credit Card Deposit Eligibility
+Only available on Growth and Plus plans. Requires: 1) Regular account usage for min 1 month, 2) Bank deposits for at least 1 month, 3) Regular spending for at least 1 month. 1.5% fee for domestic credit card deposits.
+[sources=2200-2422]
 
 ### Credit Card Deposit Fees
 Credit card deposits incur 1.5% fee for domestic cards and 2.5% for foreign cards. FPX deposits are fee-free on Growth plan and above.
 [sources=1200-1399]
 
+### Credit Card Deposit Restriction
+Credit Card Deposit is not available for trial accounts as a safety measure since trial users cannot be fully validated. Can be enabled upon request after review.
+[sources=1800-1999]
+
+### Credit Card Deposits
+Users can deposit to master account using credit cards, earning bank rewards (cashback, miles, points) on business deposits like rent, salaries, and invoices.
+[sources=2000-2199]
+
 ### Cross-Border Bill Payment
 Beneficiary ID verification required. Bank rejection may occur. Cross-border transfers cost RM5. Local transfers are RM0.
 [sources=0000-0199]
+
+### Cross-border fee
+RM5 charge as cross-border fee from Swipey's end. Exchange rate is under VISA. 1% ISA (International Service Assessment) fee is charged by VISA on international merchant transactions.
+[sources=2200-2422]
+
+### Cross-Border Payment
+Cross-border payments must be submitted as cross-border (not local transfer). Selecting wrong bank (e.g., Indonesian CIMB instead of Malaysian) causes rejection. Refund goes back to master account. Special characters in vendor names can cause delays.
+[sources=2200-2422]
+
+### Cross-border payment cashback campaign
+Swipey offers up to RM2,800 cashback for international payments made through the invoice and bill management feature. Also offers 1% cashback on digital marketing tools and SaaS subscriptions. Reward points earned on every spend, redeemable at stores like Zus Coffee, IKEA, Decathlon, Grab.
+[sources=1600-1799]
 
 ### Cross-border Payment Currencies for Pakistan
 PKR not supported for company payments to Pakistan due to local regulatory limitations. Supported currencies: AUD, EUR, USD, JPY, GBP. PKR allowed for personal accounts.
 [sources=1200-1399]
 
+### Cross-border Payment Fee
+RM5 per cross-border bill payment, deducted from Master Account, not from the transaction amount itself.
+[sources=1800-1999]
+
 ### Cross-border payment fees
 Cross-border bill payment incurs a RM5 cross-border fee. Additional bank charges (e.g. RM30) may apply depending on the destination. These charges appear as separate transactions on the master account's funds movement.
 [sources=1200-1399]
+
+### Cross-border Payment Requirements
+For international bill payments, IBAN (International Bank Account Number), IFSC code (India), BSB code (Australia), ACH/routing number (US), or SWIFT code may be required depending on the destination country. Bill payment team will reach out if details are missing.
+[sources=1400-1599]
 
 ## D
 
 ### Dashboard Login Authentication
 Web dashboard login uses email OTP for authentication. Mobile app login uses registered phone number.
 [sources=1200-1399]
+
+### Dashboard Login OTP
+Dashboard login requires OTP sent to registered mobile or email. Support can switch between SMS and email OTP. If user changes telco, OTP issues may occur requiring telco realignment.
+[sources=2200-2422]
+
+### Dashboard login troubleshooting
+If dashboard login fails: clear browser cache and cookies, try incognito/private browsing, try different browser, use direct link app.swipey.co/logout, try Ctrl+F5 force refresh. For mobile app: check for latest version update in App Store/Play Store.
+[sources=1800-1999]
+
+### Dashboard OTP Methods
+Dashboard login OTP can be received via SMS or email. Accounts can be configured for either method. If OTP not received, check spam/junk mail. Multiple login attempts may cause issues.
+[sources=1800-1999]
 
 ### Declined Transactions Cost
 Each declined transaction incurs costs on Swipey's side. High numbers of declined transactions (e.g., exceeding spending limit repeatedly) may trigger Swipey to recommend plan changes.
@@ -1498,6 +1836,18 @@ Customers must submit a deposit slip/claim through the Swipey dashboard after ma
 ### Deposit Approval Process
 Bank transfer deposits must be submitted via the web dashboard with proof of transfer for approval. FPX deposits are instant. Deposits not submitted via dashboard will not be approved.
 [sources=1200-1399]
+
+### Deposit approval process
+After making a bank transfer deposit, users must upload the deposit slip/proof of payment via the Swipey Dashboard. Finance team then reviews and approves. Without the slip, funds cannot be approved. FPX deposits are instant. Bank transfers take 4-8 working hours.
+[sources=1400-1599]
+
+### Deposit approval process
+Bank transfer deposits require submitting a deposit slip via the dashboard. Approval happens within 4-6 hours (by 4pm on working days). FPX deposits require account approval but are faster. Deposits received without a slip submission cannot be approved until slip is uploaded.
+[sources=2200-2422]
+
+### Deposit approval schedule
+Direct bank deposits are approved at 4pm daily on working days. FPX deposits are reflected instantly after checker approval. Bank-to-bank transfers take 4-8 business hours. FPX deposits initiated by the maker still require approval from the checker before funds are reflected in the master account.
+[sources=1800-1999]
 
 ### Deposit claim process
 For bank transfers without dashboard reference, submit deposit claim through Funds tab with payment proof. Team reviews and approves within 4-6 business hours. Weekend deposits approved next working day.
@@ -1515,6 +1865,22 @@ Deposits should come from the company's bank account. Stripe account under compa
 FPX: instant, free on Growth/Plus. Manual bank transfer: 4-8 hours, approved at 4pm. Credit card deposit: available by request. USD deposits: converted to MYR by HSBC.
 [sources=0200-0399]
 
+### Deposit methods
+FPX and direct online bank transfers are supported. Manual bank-to-bank transfer requires deposit slip submission via dashboard and takes 4-8 business hours for approval. Credit card top-up for master account is no longer available. Guide: https://help.swipey.co/en/article/1-how-to-fund-my-master-account
+[sources=1400-1599,2200-2422]
+
+### Deposit Methods
+Three deposit methods: (1) FPX Transaction - instant, fee waived for Growth/Plus, (2) Manual Bank to Bank Transfer - requires deposit slip upload, 4-8 hours processing, no fees, (3) Credit Card Deposit - not available for trial accounts as safety measure. FPX deposit: instant, RM1.50 fee on Freemium (waived on paid plans). Bank transfer (IBG): takes 1 working day. DuitNow transfer: approved at 4pm on working days. Credit card deposit: available by request, requires 3 months minimum account history.
+[sources=1800-1999]
+
+### Deposit methods and processing
+FPX deposits: Usually instant, done via dashboard. Manual bank transfer: Requires deposit slip submission via dashboard, approved at 4pm on working days. Credit card deposit: Temporarily disabled. Admin can only top up cards via website, not app.
+[sources=1600-1799]
+
+### Deposit Methods and Processing
+FPX: instant via online banking. Bank-to-bank transfer: 4-8 hours, requires deposit slip upload via dashboard. Credit card deposit: available, earn bank rewards on deposits. No deposit limit. Maybank Biz FPX depends on bank M2E support.
+[sources=2000-2199]
+
 ### Deposit Policy - Own Account Only
 Deposits must originate from the company's own bank account. Third-party deposits require explanation and verification. FPX deposits must come from the company's registered bank.
 [sources=1000-1199]
@@ -1526,6 +1892,14 @@ FPX deposits: immediate after bank approval. Bank-to-bank transfers: 4-6 hours a
 ### Deposit Requirements
 Bank transfer deposits must come from the company's designated bank account. Direct bank transfers are approved Mon-Fri at 4pm. FPX deposits are instant.
 [sources=0200-0399]
+
+### Deposit Rules - Source of Funds
+Swipey account is for business use only. Funds must be transferred from the company's bank account or declared bank accounts. Personal account deposits may be delayed or rejected. Directors/employees not on company records may trigger additional verification.
+[sources=1400-1599]
+
+### Deposit slip requirement
+When making manual deposits, users must submit the deposit slip/receipt via the Swipey dashboard. Funds cannot be approved without the deposit slip submission. Deposit slips can be submitted to Swipey for fund verification. Agent confirms receipt and processing.
+[sources=1800-1999]
 
 ### Deposit Slip Submission
 When making a deposit to Swipey master account, the deposit slip/bank receipt must be submitted via the dashboard. Funds cannot be approved until the deposit slip is submitted. Users can attach bank receipt PDF to the deposit request.
@@ -1566,6 +1940,14 @@ FPX B2B channel availability depends on the user's bank.
 ### Deposits and Funding
 If deposit amount does not match the submitted amount, it may be rejected.
 [sources=0000-0199]
+
+### Digi/CelcomDigi OTP issues
+Periodic issues have been reported affecting Digi/CelcomDigi users not receiving OTP. Swipey escalates these to the telco provider.
+[sources=1400-1599]
+
+### Director Consent for Registration
+During company registration, director details are verified against company documents (Section 14 SSM). Consent document is sent to director via email.
+[sources=2200-2422]
 
 ### Dispute and refund process
 Dispute cases involve filing with card processing partner. Successful disputes result in refund to card. If charged and refunded amounts differ, Swipey processes return of difference. After dispute, card should be terminated and reissued.
@@ -1611,6 +1993,14 @@ Steps: (1) freeze card, (2) contact support, (3) support prepares ticket and dis
 Transaction disputes raised with VISA through Swipey support. Resolution can take up to 180 days.
 [sources=1200-1399]
 
+### Dispute Process
+For fraudulent transactions: card should be frozen/suspended immediately. Dispute is raised with VISA. Investigation takes up to 180 days. Transactions in 'Approved' status are monitored for 21 days - merchant can claim or reject. If Voided, funds return. If Settled, formal dispute is raised. Refund goes to the suspended card, then user clawbacks to master account and terminates card.
+[sources=1400-1599]
+
+### Dispute process for unauthorized transactions
+Transactions in 'Approved' status may be voided within 21 days (no action needed). If status turns 'Settled', Swipey raises a dispute with VISA. Cardholder must sign a dispute form. Investigation can take up to 180 days. Swipey monitors transaction status and keeps customer updated.
+[sources=1400-1599]
+
 ### Dispute Process Timeline
 Merchants have up to 21 days to update Visa on claim status. If transaction shows 'Approved', it may change to 'Voided' (funds returned) or 'Settled'. If settled after dispute is raised, a dispute form is submitted to Visa. Dispute cases may take up to 180 days to resolve.
 [sources=1000-1199]
@@ -1618,6 +2008,18 @@ Merchants have up to 21 days to update Visa on claim status. If transaction show
 ### Dispute Requirement: Card Must Be Frozen
 To proceed with a dispute request, the affected card must be frozen first. If the card was not frozen, Swipey is unable to proceed with the dispute.
 [sources=1000-1199]
+
+### Dispute/Chargeback Process
+Freeze card immediately. Submit signed dispute form. Raised to VISA. Resolution takes up to 180 days (14 working days in some cases). Must clawback funds and terminate affected card.
+[sources=2000-2199]
+
+### Dispute/unauthorized transaction process
+Transaction disputes follow a 180-day investigation period involving Swipey's card processor and Visa. Users must fill out a dispute form. Card should be frozen immediately. For ATM transactions that fail but charge the card, there's a 21-day void period before reversal.
+[sources=1600-1799]
+
+### Double charge / pre-authorization
+When a merchant puts a pre-authorization hold, the amount shows as approved but is in a floating/unsettled state. Contact the merchant directly to resolve. Transactions take up to 21 days for merchants to update status via VISA. If Voided, funds return; if Settled, a dispute can be filed.
+[sources=2200-2422]
 
 ### Dual SIM OTP issues
 Users with dual SIM phones may experience OTP delivery issues. Agent checks SIM card settings and whether phone blocks 5-digit sender numbers.
@@ -1651,6 +2053,10 @@ The RM1 charge when linking to TnG is from TnG, not Swipey.
 Shopee Pay may still work for some transactions.
 [sources=1000-1199]
 
+### E-wallet Top-up Limitation
+Swipey cards cannot be used to top up e-wallets (Touch N Go, Grab, Boost). This is due to Account Funding Transaction (AFT) not being supported. Physical card tap at POS may work but online e-wallet top-up will fail. Swipey is working with Visa to support AFT.
+[sources=1400-1599]
+
 ### E-Wallet Top-Up Restriction
 Swipey prepaid cards cannot be used for e-wallet top-ups. This is a general prepaid card limitation.
 [sources=1200-1399]
@@ -1680,9 +2086,17 @@ eKYC is per-individual via mobile app (ID + selfie). Can only exist under one co
 Via mobile app: upload clear IC/passport photo (all 4 edges visible, no glare) + selfie. Takes 2-4 working days. Required for cardholders only; admin-only users without cards don't need eKYC.
 [sources=0000-0199]
 
+### eKYC Process
+Required by BNM regulations. Done via mobile app. Steps: submit IC photo, then selfie. Usually instant, but unclear documents trigger manual review (up to 4 business days). If IC is pending second review, user gets notification to submit selfie after IC is verified.
+[sources=2200-2422]
+
 ### eKYC requirement
 Each user must complete ID verification (eKYC) on the Swipey mobile app before physical cards are sent. Involves IC/Passport photo upload.
 [sources=0000-0199]
+
+### eKYC requirements
+eKYC requires scanning front of IC (not a photocopy) and taking a clear selfie via the mobile app. Processing takes 1-2 business days. Common failures: soft copy of passport uploaded, blurry images, NRIC not valid. Manual upgrade possible by providing selfie and NRIC picture to support.
+[sources=2200-2422]
 
 ### eKYC Verification
 Takes 1-2 business days. Requires original IC or passport with all 4 edges visible. Smile detection may have issues. If verification fails, user can resubmit via mobile app. Agent can verify by collecting: email, checking status in system.
@@ -1720,21 +2134,45 @@ Each user's eKYC is bound to one account.
 eKYC takes 24-48 hours. Requires IC front/back photos and selfie. Failed verification may require re-submission with clearer images.
 [sources=1200-1399]
 
+### eKYC verification
+eKYC can only be completed via mobile app. Takes 24-48 hours. IC photo must be clear with all four edges visible. If auto-verification fails, manual verification is possible by sending IC photo and selfie to support. Name must match NRIC exactly. After card assignment, user logs into mobile app and submits IC photo and selfie. Approval takes 24-48 hours. If rejected (e.g., blurry IC photo), user must resubmit. Required for both virtual and physical cards. Malaysian users: use IC. Non-Malaysian users: select correct country and use passport. Original documents required (not photocopies), as mandated by BNM. Photos and selfie must be clear. Manual verification possible if Swipey staff receives original passport photo. Takes 24-48 working hours. eKYC requires selfie with empty/plain background. Name must match IC exactly. Approval takes 24-48 working hours.
+[sources=1800-1999]
+
 ### eKYC verification process
 Required for cardholders, regulated by BNM. Done via Swipey mobile app: IC photo (4 edges visible, not PDF/photocopy) + selfie. Automated review usually instant; manual review 24-48 hours. Only Malaysian IC (MyKad) or passport accepted — IKAD not accepted. Bookkeeper role doesn't need eKYC. One eKYC per company at a time.
 [sources=0400-0599]
 
-### eKYC Verification Requirements
-Done via Swipey mobile app. Requires clear IC/passport photo and selfie with smile detection. Address must match IC address (incomplete address causes rejection). Blurry photos cause rejection. If automated verification fails, Swipey can do manual upgrade with IC photo and selfie submitted directly to support.
-[sources=1000-1199]
+### eKYC Verification Process
+Done via mobile app. Requires clear physical IC photo (not photocopy/scan) and clear selfie. Takes 24-48 hours (up to 3 working days). Common failures: blurry IC, wrong birthdate, incomplete address, invalid selfie. Manual resubmission possible by sending selfie + IC to support. Foreign passport holders need manual upload.
+[sources=1000-1199,2000-2199]
+
+### eKYC verification process
+eKYC requires downloading the Swipey mobile app, inputting IC/passport photo, and taking a selfie. Address must match IC. Verification may take 24-48 business hours. Users can attempt up to 5 times per day. Manual upgrade is available if app fails. The app must capture front-facing NRIC/passport and selfie.
+[sources=2200-2422]
 
 ### eKYC Verification Requirements
 Requires clear IC/Passport photo (rectangular shape, no extra edges, no glare) and selfie. Verification can be resubmitted via mobile app if rejected. Once approved, user relogs to access card.
 [sources=1200-1399]
 
+### eKYC verification requirements
+User verification requires a clear photo of physical IC (not a photo of IC on another device screen). Photos with significant glare, blurriness, or cropping will be rejected. Verification takes 1-2 business days. Agents can manually resubmit verification on behalf of users if needed. Foreign passport holders need manual selfie + passport upload.
+[sources=1600-1799]
+
+### eKYC/ID verification process
+Users must complete verification via Swipey Mobile App. Requires clear IC/passport photo and selfie. Processing takes 1-2 business days. Scanned copies not accepted, must take photo of original. For foreign passport holders from high-risk countries, manual upgrade may be needed with passport photo, selfie, and Malaysian address.
+[sources=1800-1999]
+
+### eKYC/Verification Issues
+Verification rejections can occur due to: eyes closed in selfie, incomplete mailing address, wrong date of birth, using digital copy instead of original passport photo. Passport photo must show all 4 edges. Swipey can manually submit verification if user provides selfie and front NRIC photo.
+[sources=1400-1599]
+
 ### Email and phone uniqueness
 Email and phone number must be unique across ALL Swipey accounts. Cannot reuse same credentials for different entities. Dummy phone numbers used as workaround for multi-entity admin users.
 [sources=0600-0799]
+
+### Email Invoice Scanning
+Forward invoices to designated Swipey email. System uses AI to automatically capture invoice data. Invoices from forwarded email threads may produce duplicates - compose new emails instead. System detects and tags duplicate invoices.
+[sources=1800-1999]
 
 ### Email OTP Alternative
 When SMS OTP is not working (especially overseas), the Swipey team can enable email OTP as a temporary alternative. Email OTP does not include payment OTP.
@@ -1744,9 +2182,17 @@ When SMS OTP is not working (especially overseas), the Swipey team can enable em
 Employees cannot be removed from the system. They can only be set to 'inactive'. Cards must be terminated first before deactivating user.
 [sources=0600-0799]
 
+### Employee Removal Process
+Steps: 1. Clawback funds from their cards. 2. Terminate their cards. 3. Set user status to Inactive. Users cannot be deleted, only deactivated.
+[sources=2200-2422]
+
 ### Employee Role Limitations
 Employee role: limited to mobile app features only. Can view transactions and card balance. Cannot access admin dashboard or submit bill payments.
 [sources=1200-1399]
+
+### Employee roles and permissions
+Employee role users cannot login to the web dashboard and can only access via the Swipey mobile app. Employees cannot view transactions. Bookkeeper role can view transactions and download statements. All admins receive email notifications on account updates by default.
+[sources=1400-1599]
 
 ### Enhanced Due Diligence (EDD)
 EDD emails sent to users requiring urgent submission of details by a deadline. Non-compliance may result in account disruption.
@@ -1756,6 +2202,10 @@ EDD emails sent to users requiring urgent submission of details by a deadline. N
 Swipey may request Enhanced Due Diligence documentation for compliance purposes. Users receive email notification with a deadline to submit required details to avoid account disruption.
 [sources=1000-1199]
 
+### Enhanced Due Diligence (EDD)
+Some accounts may be flagged for Enhanced Due Diligence, requiring additional documentation and verification before the account can be fully activated.
+[sources=1600-1799]
+
 ### EPF/SOCSO/PCB Payments
 Swipey cannot pay EPF/SOCSO/PCB because government sites require FPX payment. Swipey does not support FPX. Salaries can be paid via Payouts to bank accounts directly.
 [sources=1000-1199]
@@ -1764,11 +2214,19 @@ Swipey cannot pay EPF/SOCSO/PCB because government sites require FPX payment. Sw
 Error code 80000 is a cache issue. Fix: delete and reinstall the mobile app.
 [sources=1200-1399]
 
+### Exchange rate for overseas transactions
+Swipey follows VISA's exchange rate at the point of payment for overseas card transactions. For bill payments, Swipey tries to match rates offered by user's bank, or provides rebate. Users can submit bank rate screenshot for comparison.
+[sources=1400-1599]
+
 ## F
 
 ### Facebook Ads Card Linking
 Facebook may block a card linked to multiple ads accounts. Issue a new virtual card for each ads account.
 [sources=0200-0399]
+
+### Facebook/Meta Phishing Attempts
+Multiple phishing messages targeting Swipey's WhatsApp from fake Meta/Facebook accounts claiming violations. These are scam messages and not legitimate.
+[sources=1400-1599]
 
 ### Fasspay Partnership and BNM Regulation
 Swipey operates under Fasspay, which holds the BNM e-money license.
@@ -1778,6 +2236,18 @@ Swipey operates under Fasspay, which holds the BNM e-money license.
 First in-store payment with a physical card must use Chip & PIN method to activate PayWave functionality.
 [sources=1200-1399]
 
+### Foreign number limitation
+Swipey does not support foreign phone numbers for registration. For users with foreign numbers, a dummy Malaysian number is used and OTP is switched to email.
+[sources=1400-1599]
+
+### FPX Deposit - Instant vs Manual Transfer
+FPX deposits are instant and reflect immediately in the master account. Manual bank transfers take 4-8 business hours for approval. FPX deposits through corporate banking with maker-checker systems may delay if checker hasn't approved. Freemium plan has RM1.50 FPX fee; paid plans have fee waived.
+[sources=1400-1599]
+
+### FPX deposit availability
+FPX deposit is enabled by default for all accounts. No minimum deposit. FPX fee is waived on Plus plan. Occasional issues with specific banks (e.g., Maybank) may require manual bank transfer as alternative.
+[sources=1400-1599]
+
 ### FPX Deposit Fee
 FPX deposit incurs a platform fee of RM1.50 per transaction. This fee is waived for Growth and Plus plan subscribers. Stated in product disclosure sheet.
 [sources=0000-0199]
@@ -1785,6 +2255,10 @@ FPX deposit incurs a platform fee of RM1.50 per transaction. This fee is waived 
 ### FPX Deposit Fee
 FPX deposit fee is RM1.50 per transaction. Waived for Growth and Plus plan subscribers.
 [sources=1000-1199]
+
+### FPX deposit fees
+Non-paid (Freemium) users charged RM1.50 per FPX deposit. FPX deposits are instant. Bank transfer deposits have no platform fee but take 4-6 hours.
+[sources=1400-1599]
 
 ### FPX Deposit Issues
 If FPX deposit shows processing but not reflected, likely an FPX provider timeout. Support can help trace and approve. Bank-to-bank transfers require uploading proof of payment on the web dashboard.
@@ -1798,6 +2272,10 @@ FPX deposits are instant. Bank transfers take 4-6 hours to reflect. Curlec FPX d
 Maybank FPX (Maybank2u and Maybank2u Biz) does not work for Swipey deposits. This is a limitation on Maybank's side. Customers should use manual bank transfer + dashboard upload as an alternative. Other supported FPX banks: CIMB, RHB, Public Bank, Hong Leong, Bank Islam, Bank Rakyat, Bank Muamalat, BSN, Affin Bank.
 [sources=0400-0599]
 
+### FPX fees
+Swipey charges FPX deposit fees for free plan users. Paid plan customers have FPX fees absorbed/waived by Swipey.
+[sources=1400-1599]
+
 ### FPX Not Available for Outgoing Payments
 Swipey is not listed for FPX outgoing payments. FPX is only for depositing funds INTO Swipey. Statutory payments must be done via company bank account FPX.
 [sources=1200-1399]
@@ -1806,6 +2284,10 @@ Swipey is not listed for FPX outgoing payments. FPX is only for depositing funds
 FPX has deposit limits depending on the bank, approximately RM50k. Bank to bank transfer has no Swipey-imposed limit but depends on the user's bank.
 [sources=1200-1399]
 
+### Fraud and dispute process
+Step 1: Freeze/terminate compromised card. Step 2: Clawback remaining balance to Master Account. Step 3: Agent raises ticket to VISA. Step 4: Dispute form sent requiring cardholder signature. Step 5: Investigation up to 180 days. Approved transactions need 21 days to turn Voided/Settled. If Voided, funds return automatically in 21 days. If Settled, formal dispute filed with VISA.
+[sources=2200-2422]
+
 ### Fraud Detection Process
 Swipey fraud team flags suspicious transactions. For unauthorized transactions completed without OTP, users should freeze card immediately, then dispute is raised with Visa. Refund can be processed to a different card if the original is terminated.
 [sources=1000-1199]
@@ -1813,6 +2295,10 @@ Swipey fraud team flags suspicious transactions. For unauthorized transactions c
 ### Fraud/Dispute Process
 Steps: (1) Freeze card. (2) Clawback remaining funds. (3) Wait 21 days. (4) If Settled, dispute form prepared. (5) Form submitted to VISA. (6) Investigation up to 180 days. RM15 processing fee if dispute invalid. Minimum VISA dispute amount: USD 25.
 [sources=0200-0399]
+
+### Fraud/suspicious transaction process
+Swipey proactively contacts users when suspicious transactions are detected (e.g., from TikTok Ads, Google Bytedance, KFC etc.). User can freeze card from mobile app. Admin can freeze from web dashboard. After freeze: clawback funds, terminate card, assign new one. Dispute can be raised with VISA.
+[sources=1800-1999]
 
 ### Fraudulent Transaction Process
 Process: clawback funds to card, terminate compromised card, submit dispute form to VISA. Card termination returns quota allocation.
@@ -1830,13 +2316,17 @@ Freemium plan includes 2 virtual cards, no physical card allocations, and no tim
 Freemium plan: 2 virtual cards included, FPX fee of RM1.50 per transaction, no physical cards. Physical cards available in Growth or Plus plans.
 [sources=1200-1399]
 
+### Freemium plan limitations
+Freemium plan provides 2 free virtual cards. Physical cards require a paid plan. Multi-card feature (more than 1 card per user) requires Growth or Plus Plan. Employees on Freemium cannot add a second card beyond the 2 free allocation.
+[sources=1400-1599]
+
 ### Freemium plan limits
 Freemium gives 2 virtual cards. No physical cards. Physical cards require a paid plan.
 [sources=0000-0199]
 
 ### Freemium Plan Limits
 Maximum 2 active users. 1 virtual card per user (2 total). No physical cards. Card Add-On pack discontinued for Freemium effective Feb 20, 2024. Accounts exceeding 2-user limit must upgrade before deadline or users will be deactivated.
-[sources=1000-1199]
+[sources=1000-1199,2200-2422]
 
 ### Freemium Plan Physical Card Eligibility
 Some freemium companies eligible for free physical card via promotion. Process: login to web-app, click 'invite employee', fill out details. Invite three company contacts to receive free card.
@@ -1845,6 +2335,10 @@ Some freemium companies eligible for free physical card via promotion. Process: 
 ### Freemium statement fees
 Statement download on Freemium plan costs RM49 yearly or RM19 monthly (8% SST not included). Free on Growth and Plus plans.
 [sources=0600-0799]
+
+### Freemium User Limit Enforcement
+Freemium plan limited to 2 users. Accounts exceeding this must upgrade or deactivate excess users before a deadline. Reminder notifications sent.
+[sources=2200-2422]
 
 ### Frozen card behavior
 Transactions can still go through if a card was not frozen at the time. Freezing only prevents future transactions from the freeze date forward.
@@ -1865,6 +2359,10 @@ Swipey only accepts deposits from: 1) Company bank account 2) Director's persona
 ### Fund Withdrawal
 Funds can be withdrawn from master account back to original funding bank account. Requires admin action and finance team processing.
 [sources=1200-1399]
+
+### Fund withdrawal from master account
+Usual withdrawal process takes 5 working days. Bill Payment is recommended as a faster workaround (processed every working day). Only admin role can process withdrawals.
+[sources=1800-1999]
 
 ### Funding and Deposits
 FPX deposit is instant/immediate.
@@ -1887,11 +2385,27 @@ FPX deposit (instant, RM 1.50 fee waived on Growth/Plus) or bank-to-bank transfe
 FPX: instant, RM1.50 fee on Freemium (waived on paid plans). Bank transfer: 4-8 hours, must upload proof. Credit card top-up not available.
 [sources=1200-1399]
 
+### FX Rate for Cross-Border Payments
+Initial conversion rate is indicative. Swipey selects the best rate from multiple partners during payment process. Once settled, any difference in amount is credited back to master account. If customer finds a better rate with other banks, Swipey will match or do better.
+[sources=1800-1999]
+
 ## G
 
 ### Geographic Restriction
 Swipey only available for Malaysian registered businesses. Non-Malaysian businesses cannot sign up.
 [sources=1200-1399]
+
+### GIRO payment timing
+Bill payments via GIRO are processed in the morning and recipients typically receive funds around 4pm the same day. GIRO validates account number and bank name only, not the recipient name. DuitNow will enable real-time payments in future.
+[sources=1800-1999]
+
+### Google Ads Payment Setup
+Create dedicated virtual card for Google Ads. Set as manual payment method (not auto-debit). Change payment method in Google Ads settings tab.
+[sources=1800-1999]
+
+### Google products limitation
+Google does not currently support prepaid cards as a payment option, so Swipey cards cannot be used for Google products directly.
+[sources=1800-1999]
 
 ### Google Wallet / Apple Pay
 Google Wallet and Apple Wallet features are not yet available. Virtual cards cannot be used for tap/wave payments in stores.
@@ -1901,9 +2415,9 @@ Google Wallet and Apple Wallet features are not yet available. Virtual cards can
 Swipey card is not available to link to Google Wallet. Google Wallet only supports a few specific cards available in the market.
 [sources=0000-0199]
 
-### Growth Plan features
-Growth Plan includes: 20 virtual and 5 physical cards, multi-card (assign more than 1 card per user), FPX fee waived for instant deposits, bill payment (local or international), schedule ahead of time.
-[sources=0000-0199,1200-1399]
+### Growth Plan Details
+Growth plan: minimum 2 users. Each user gets 1 physical card and 3 virtual cards. Monthly: RM19/user/month + 8% SST. Yearly: 12 months discounted. Includes: FPX fee waived, bill payment, multi-card, auto top-ups, account statements, accounting integration.
+[sources=2200-2422]
 
 ### Growth Plan pricing
 Growth monthly plan total including SST: RM117.72. Plan fee automatically deducted from master account balance when sufficient funds available.
@@ -1947,7 +2461,7 @@ Accounting software integrations: Swipey currently supports integration with Qui
 
 ### integration
 Xero Integration: Swipey integrates with Xero. Guide: https://help.swipey.co/en/article/58-connect-to-xero-on-swipey
-[sources=0800-0999]
+[sources=0800-0999,1600-1799]
 
 ### International Bill Payment Refunds
 If an international bill payment fails (e.g., due to local banking policies in the recipient's country), the payment bounces back and funds are refunded to the Master Account.
@@ -1966,17 +2480,33 @@ Reference article: https://help.swipey.co/en/article/42-international-service-as
 RM5 per international bill payment regardless of amount. FX rate follows Visa's rate with ISA fee imposed. Local transfers: RM0 (free).
 [sources=0000-0199]
 
-### ISA Fee
-1% International Service Assessment (ISA) fee is charged by VISA on transactions processed in foreign currency or through international payment networks. Applies to merchants like Grab, Shopee, Google, Meta, Facebook Ads even if they appear local. Not a Swipey fee.
-[sources=0000-0199,0200-0399,0800-0999,1000-1199,1200-1399]
+### INVOKE partnership
+Swipey had a partnership with INVOKE offering freemium access (Lite Plan worth RM468). INVOKE clients received special registration deadlines and complimentary plans.
+[sources=2200-2422]
+
+### iOS PIN Reset Bug
+Known issue with 'reset card PIN' feature on iOS devices. Workaround: use Android device. Fix deployed via app update.
+[sources=2200-2422]
+
+### ISA (International Service Assessment) fee
+ISA is a fee charged by Visa for cross-border transactions. It applies when the merchant's acquiring bank is outside Malaysia, even if the transaction is in MYR. Common examples: Meta/Facebook ads, Google services, Adobe, LinkedIn - these may incur ISA fees because their acquiring banks are overseas. The fee is typically around 1%.
+[sources=0000-0199,0400-0599,0600-0799,1600-1799]
+
+### ISA (International Service Assessment) fee
+VISA charges 1% ISA fee on international transactions. This fee may be deducted from refund amounts. Explanation at: https://help.swipey.co/en/article/42-international-service-assessment-isa
+[sources=1800-1999]
 
 ### ISA Fee (International Service Assessment)
 Visa imposes an ISA fee on transactions involving international companies. Example: Booking.com (Amsterdam-based) charges will show a slightly higher amount than the merchant receipt. Reference: https://help.swipey.co/en/article/42-international-service-assessment-isa
 [sources=1000-1199]
 
-### ISA fee on international transactions
-1% International Service Assessment fee charged by VISA on all international card transactions. Not a Swipey fee. Not currently visible on Swipey statements. Noted as future product improvement.
-[sources=0000-0199,0400-0599,0600-0799]
+### ISA Fee Details
+1% International Service Assessment (ISA) fee is charged by VISA (not Swipey) on transactions with international merchants. Applies even if the transaction currency is MYR, as long as the merchant is not registered in Malaysia. Examples: Canva (AU), Google (US), Trip.com. No separate receipt/invoice currently available from Swipey for ISA charges.
+[sources=0000-0199,0200-0399,0800-0999,1000-1199,1200-1399,1400-1599]
+
+### ISA fee for international transactions
+1% charge from VISA called ISA (International Service Assessment) fee on total international spending. Conversion rates follow exchange rates set by VISA. Flat RM5 fee for overseas bank transfers regardless of amount.
+[sources=1800-1999]
 
 ## J
 
@@ -2000,15 +2530,47 @@ BNM identity verification may take up to 3 working days. May be delayed on publi
 
 ## L
 
+### Labuan Companies
+Labuan-registered companies are accepted on Swipey platform.
+[sources=1800-1999]
+
 ### Lite Plan Discontinuation
 Swipey Lite plan is no longer available for new subscriptions.
 [sources=0200-0399]
 
+### Login troubleshooting for web dashboard
+Try clearing cache and cookies. Use app.swipey.co/logout to force re-login. Try incognito/private browser mode. During platform updates, minor access issues may occur.
+[sources=1400-1599]
+
 ## M
+
+### Maker-Approver for bill payments
+Maker and Approver feature is not available for bill payments at this time. Bill payments can only be done by one access role: Admin.
+[sources=1400-1599]
+
+### Maker/Approver workflow
+On paid plans, transactions can require approval workflow. A maker creates the transaction request, and an approver (usually admin) must approve it before execution. This provides spending control and oversight.
+[sources=1600-1799]
+
+### Malaysia-Only Service
+Current license only accepts Malaysian-registered business entities per BNM regulations. Singapore, UK, Myanmar, and other foreign companies cannot register. Sole proprietorships and foundations (with ROS docs) accepted.
+[sources=2000-2199]
+
+### Malaysia-only service requirement
+Swipey only serves Malaysian-registered entities. SSM registration is required. Foreign companies (UK, Singapore, Myanmar etc.) cannot register. Labuan-registered companies are accepted with supporting documents. Sole proprietorships are accepted.
+[sources=1600-1799]
+
+### Malaysian business requirement
+Swipey requires a Malaysian registered business to onboard. Foreign companies without Malaysian registration cannot use the service. Non-local directors are acceptable as long as details match company documents.
+[sources=2200-2422]
 
 ### Mandarin Support
 Available after onboarding. Group demo sessions are conducted in English. Demo videos available at https://swipey.co/demo/
 [sources=0000-0199]
+
+### Manual bank transfer deposit process
+After transferring funds, must upload proof of payment (deposit slip/receipt) via dashboard under Funds > Deposit > Manual Bank to Bank Transfer. Finance team approves once funds are sighted. Same-day approval if submitted before 4pm.
+[sources=1400-1599]
 
 ### Master Account
 Master Account functions as the main wallet for company funds. All deposits go into Master Account. Admin distributes funds from Master Account to individual cards via top-up.
@@ -2022,21 +2584,61 @@ Account statements show opening and closing balance for each card per month. Dow
 The Swipey master account is part of a trustee account with HSBC to store company funds.
 [sources=1200-1399]
 
+### Master Account vs Card Balance
+Master Account holds the company's pooled funds. Individual card balances are separate — cards must be topped up from Master Account. Transactions deduct from card balance, not Master Account directly.
+[sources=1800-1999]
+
+### Master Account vs Cards
+Master Account holds company funds. Cards are topped up from Master Account. Invoices for attachments cannot be added to Master Account transactions (sent separately via email). Clawback moves funds from card back to Master Account. Bill payments are deducted from Master Account, not cards.
+[sources=2200-2422]
+
+### Mastercard Beta Restrictions
+During Mastercard beta stage, clawback (funds withdrawal from Mastercard back to master account) is not available. Users must spend the balance directly from the card.
+[sources=2200-2422]
+
 ### Mastercard VCC (Beta)
 Swipey offers a Mastercard Virtual Charge Card in beta. No spending limit. Only 1 card per user. Transactions not reflected instantly.
 [sources=0200-0399]
+
+### Maximum cards per user
+Each user can have up to 60 cards on the mobile app. This is a display limitation. Multi-card feature requires Growth or Plus plan.
+[sources=1400-1599]
 
 ### Merchant acceptance limitations
 ChatGPT/OpenAI does not accept Swipey prepaid cards. Google Ads does accept Swipey (guide available). Mastercard beta may work for merchants rejecting prepaid VISA. Touch n Go QR ≠ DuitNow QR (different systems).
 [sources=0600-0799]
 
+### Merchant Control
+Admins can set merchant control restrictions on cards. These settings are configured by the admin on the dashboard, not by Swipey support.
+[sources=1400-1599]
+
 ### Merchant Control and Transaction Blocking
 VISA categorization may differ from expected merchant type. Check merchant control settings on the card if transactions blocked.
 [sources=0200-0399]
 
+### Merchant control feature
+Merchant control is only available on the Plus Plan, not Growth. It allows admins to control the types of spending/merchants employees can use their cards at. Merchant control does not affect OTP settings.
+[sources=1800-1999]
+
+### Merchant Control Feature
+Admins can allow/block specific merchant categories on employee cards. Examples: blocking ATM withdrawals, gambling, massage parlours. Prevents employees from spending at restricted merchant categories.
+[sources=2000-2199]
+
+### Merchant Controls
+Cards can have merchant category restrictions. Changes take up to 5 business days to take effect.
+[sources=1800-1999]
+
 ### Merchant Refund Behavior
 Merchant refunds update the original transaction amount rather than creating a separate credit entry. Refund investigation may require the merchant's refund reference number.
 [sources=1200-1399]
+
+### Merchants that do not accept Swipey prepaid cards
+Google Workspace, LinkedIn Jobs, and OpenAI/ChatGPT do not accept prepaid cards. Google Ads works with manual payment method. Some merchants may require different payment verification (TAC vs no TAC depending on merchant).
+[sources=1400-1599]
+
+### Mobile App Access
+Employee-role users must have a card assigned (virtual or physical) before they can log into the Swipey mobile app.
+[sources=1800-1999]
 
 ### Mobile App Access Requirements
 Swipey mobile app is for cardholders only. Must first assign a card via web dashboard before logging into mobile app. App version 3.0.5 or later required to see cards.
@@ -2050,6 +2652,22 @@ Error 80000: Cache issue - delete and reinstall app. Token invalid error: Reinst
 Common fix: delete current Swipey app, redownload from App Store/Play Store, and login again. This resolves cache conflicts and ensures latest version. Also applies when cards are not showing after updates.
 [sources=1000-1199]
 
+### Mobile App Login Troubleshooting
+Users can only log in after a card has been assigned to them. Phone number must match what was registered. If phone number field shows +60 prefix, do not include +60 again. Try: delete and reinstall app, close and relaunch, check device model and OS. For persistent issues, provide screen recording, email, timestamp, and device details.
+[sources=2200-2422]
+
+### Mobile App Requirements
+The Swipey mobile app requires a card to be assigned before login is possible. The app is for card management - viewing card details, attaching receipts. Web dashboard is for admin functions. Users under 'Employee' role can only login to the mobile app, not the web dashboard.
+[sources=1400-1599]
+
+### Mobile app vs Web dashboard access
+Mobile app is for users to get card details, manage transactions, upload receipts. Web dashboard (app.swipey.co) is for admin functions: topup cards, manage users, view reports, bill payments, deposits. Admin functions only available on web.
+[sources=1400-1599]
+
+### Mobile app vs web dashboard access
+Mobile app requires a card to be assigned for login. Web dashboard accessible for admin functions even without a card. Admin can top up cards only via website, not via app. Card details viewing available on mobile app. Some features like bill payment are web-dashboard only.
+[sources=1600-1799]
+
 ### Mobile App vs Web Dashboard Functions
 Mobile app: for cardholders only (need card assigned first), used for eKYC, viewing card details, PIN reset, OTP. Web dashboard (app.swipey.co): for admins, used for creating cards, managing users, bill payments, statements, accounting integration.
 [sources=1000-1199]
@@ -2057,6 +2675,10 @@ Mobile app: for cardholders only (need card assigned first), used for eKYC, view
 ### Mobile Wallet Support
 No Apple Pay, Samsung Pay, Google Wallet, or NFC contactless support. Feature planned for future.
 [sources=1200-1399]
+
+### Monthly Settlement Report / Statements
+Statements include all transactions of each card, segregated by card, in one statement. Statements can be downloaded from the Funds tab on the dashboard. Available monthly. Excel export includes shareable links to receipts and invoices.
+[sources=1800-1999]
 
 ### Multi Entity Feature (Beta)
 Allows switching between multiple company dashboards under one login.
@@ -2086,9 +2708,17 @@ Feature must be enabled by support team.
 Up to 99 cards per user on Growth and Plus plans. Plus plan: 2 physical cards + 5 virtual cards per user. Growth plan: 1 physical card per user.
 [sources=0000-0199]
 
+### Multi-Company Accounts
+Users can create multiple company accounts. One user can only be a cardholder in one company account. Same phone number can be used across companies. Admin-only role (no card) can be assigned in multiple companies.
+[sources=1800-1999]
+
 ### Multi-Company Limitation
 One mobile number = one company. One email = one company.
 [sources=0200-0399]
+
+### Multi-Company Management
+Multi-company feature is under development. Currently, each company requires separate registration with unique email and phone number. Users with cards in Company A cannot have cards in Company B. Admin-only roles (without cards) can use different email across companies.
+[sources=2200-2422]
 
 ### Multi-Entity Feature
 Recently released as beta. Allows users to be linked across multiple company entities via KYC verification.
@@ -2102,9 +2732,21 @@ Allows management of multiple related companies under one structure. Must be act
 Beta feature for managing multiple Swipey accounts across companies. User movement between entities processed within 1-2 business days.
 [sources=1000-1199]
 
+### Multi-Entity Feature
+Manage multiple companies under one login. Each entity requires separate registration with own SSM docs, unique email and phone number. Same NRIC user can only have cards in one entity.
+[sources=2000-2199]
+
 ### Multi-entity management
 Each entity needs separate Swipey account. Card can only be assigned under one company at a time. User porting requires removal from current entity first. Multi-Entity feature (beta) allows switching between companies in one phone login. Each entity requires its own subscription.
 [sources=0600-0799]
+
+### Multi-workspace feature
+Multi-workspace/multi-company feature is currently in testing phase (as of April 2026). Each company account currently requires unique email and mobile number.
+[sources=2200-2422]
+
+### Multi-workspace feature (planned)
+Currently building multi-company feature. One login will access multiple workspaces/entities with same credentials. Currently, 1 email and 1 phone can only have 1 Swipey account, and each person can hold a card under only 1 entity.
+[sources=1800-1999]
 
 ### Multiple Account Management
 Users can manage multiple Swipey accounts. Each account is tied to a company. Admin can switch between accounts if managing multiple companies.
@@ -2136,11 +2778,23 @@ Swipey cannot receive funds from third parties. It is not a bank. Only outgoing 
 Currently no referral programme available.
 [sources=0000-0199]
 
-### Non-Platinum Card Termination
-Swipey is terminating non-Platinum virtual cards. Users must create new Platinum cards to prevent disruption.
-[sources=1200-1399]
+### No transaction fees on card spend
+There are no fees for transactions made using Swipey card. Fees apply to: ATM withdrawal, bill payment (RM5 for international), and ISA (1% for cross-border card transactions by VISA).
+[sources=1400-1599]
+
+### Non-Platinum card termination
+Swipey terminated non-Platinum virtual cards on 22 August 2025. Users were asked to create new Platinum cards to prevent disruptions.
+[sources=1200-1399,1400-1599]
+
+### Non-platinum card termination (July 2025)
+Non-Platinum virtual Swipey cards were terminated on 25 July 2025. Users received 3 emails and 1 WhatsApp notification. Funds were clawed back to master account and card reallocated. Users needed to create new Platinum cards. Platinum tag visible on Dashboard > Cards Tab.
+[sources=1800-1999]
 
 ## O
+
+### Onboarding AI assistant
+Swipey has transitioned activation calls to an Onboarding AI at app.quarterzip.ai. Users key in their email, share screen with the AI, and it guides them through setup. Available 24/7.
+[sources=2200-2422]
 
 ### Onboarding Flow
 Register on swipey.co -> Submit SSM documents -> Director signs consent form (via Documenso) -> Account setup -> Reset password email -> Book activation call -> Fund master account -> Choose plan -> Assign cards -> Complete eKYC -> Top up cards -> Start using.
@@ -2153,6 +2807,14 @@ Registration -> SSM submission -> Consent form via DropBox Sign -> Account setup
 ### Onboarding flow
 Register at swipey.co -> Upload SSM documents -> Sign consent letter (via Dropbox Sign or Documenso, requires director signature) -> Account setup -> Book activation/onboarding call -> Assign cards -> Each employee completes eKYC via mobile app -> Fund master account via FPX -> Top up individual cards.
 [sources=0600-0799]
+
+### Onboarding flow
+Register online (3-5 mins) -> Upload SSM documents -> Sign consent form -> Account activated -> Assign card -> Complete eKYC -> Deposit funds -> Top up card -> Start swiping. Activation call available to book. 30-day premium trial for new users.
+[sources=1800-1999]
+
+### Onboarding flow for new companies
+Steps: 1) Register on swipey.co. 2) Provide business documents (Section 14 superform/SSM). 3) Director signs consent form via Documenso/Dropbox Sign. 4) Account is set up, reset password email sent. 5) Login to dashboard, assign cards, invite users. 6) Users complete eKYC via mobile app. 7) Deposit funds and top up cards. Optional: activation call available via booking link.
+[sources=2200-2422]
 
 ### Onboarding Process
 Step 2: Upload SSM business documents (Section 14 superform preferred, must show business name + director/owner names).
@@ -2186,6 +2848,18 @@ Activation Call available (up to 30 minutes, via Microsoft Teams) to guide new u
 Steps: 1) Register, 2) Upload SSM documents, 3) Sign consent letter via Dropbox Sign, 4) Account activation, 5) Activation call with Swipey team, 6) Fund master account, 7) Create cards.
 [sources=1200-1399]
 
+### Onboarding process
+Steps: 1) Register on website 2) Upload SSM/company documents (Section 14 superform or SSM Business Registration) 3) Director signs consent form via DropBox Sign 4) Account activated 5) Book activation call. Sole proprietors can provide SSM Business Registration instead of Section 14.
+[sources=1400-1599]
+
+### Onboarding Process
+Onboarding typically done via Microsoft Teams call. Support team creates WhatsApp group for ongoing support.
+[sources=1800-1999]
+
+### Onboarding Process
+Registration via swipey.co -> submit SSM documents (Section 14 superform) -> consent form sent to director email for signature -> account setup -> first-time password email sent -> eKYC via mobile app -> deposit funds -> top up cards. AI onboarding assistant available at app.quarterzip.ai (use laptop/PC, share screen).
+[sources=2200-2422]
+
 ### One cardholder per company limitation
 A user (identified by IC/eKYC) can only be a cardholder in one company at a time. Can be admin in multiple companies. Different email/phone doesn't bypass this — eKYC is tied to the individual. Multi-company feature in development.
 [sources=0400-0599]
@@ -2198,9 +2872,9 @@ OpenAI API Platform does not accept prepaid cards. Only credit cards are accepte
 OpenAI no longer accepts prepaid cards as payment. Users need an alternative card for ChatGPT subscriptions.
 [sources=1000-1199]
 
-### OTP / TAC System
-OTP sent via SMS by default. Can be switched to email OTP if SMS issues occur.
-[sources=0000-0199]
+### OpenAI/ChatGPT Compatibility
+OpenAI does not accept VISA prepaid cards. Transactions occasionally go through but are unreliable. Swipey is developing a Virtual Charge Card Mastercard to address this. Unsupported merchants list: https://help.swipey.co/en/article/15-where-can-i-use-a-swipey-card
+[sources=1400-1599,1800-1999]
 
 ### OTP / TAC System
 Known SMS providers that may block OTP: numbers starting with 6 (62000, 62622, 62002).
@@ -2228,7 +2902,11 @@ Maxis telco has had known OTP delivery issues.
 When troubleshooting OTP issues, support requests: email, 4-digit card ending, timestamp of last OTP request, merchant, and telco provider.
 After phone number change, user must relogin to resync their account.
 Dashboard OTP and mobile app OTP are different — important to clarify which one.
-[sources=1000-1199]
+[sources=1000-1199,2200-2422]
+
+### OTP Carrier Issues
+Known SMS OTP delivery issues with TuneTalk, Maxis, CelcomDigi, and Umobile at various times. Swipey works with SMS OTP provider to resolve. Merchant names with 'WWW' were flagged by SMS system causing OTP failures.
+[sources=1400-1599]
 
 ### OTP Daily Limit
 Maximum 5 login OTP requests per day for security. Resets the next day.
@@ -2236,7 +2914,7 @@ Maximum 5 login OTP requests per day for security. Resets the next day.
 
 ### OTP Delivery and Limits
 OTP can be delivered via SMS or email. Agents can switch between delivery methods. Maximum 5 OTP requests per 24 hours before lockout. Celcom telco has known issues with OTP SMS delivery. Users should check if sender numbers starting with '6' are blocked on their device.
-[sources=1000-1199]
+[sources=1000-1199,1600-1799]
 
 ### OTP delivery channels
 Mobile app login OTP is always sent via SMS to registered phone number. Dashboard login OTP can be sent to email. These are separate channels and cannot be mixed. OTP can be switched to email delivery by agent (backend change) for dashboard login only.
@@ -2246,9 +2924,25 @@ Mobile app login OTP is always sent via SMS to registered phone number. Dashboar
 Mobile app OTP sent to registered mobile number only. Web dashboard OTP can be sent to registered email. For overseas users or those unable to receive SMS, support can switch OTP to email. OTP limited to 5 attempts per day.
 [sources=0400-0599]
 
+### OTP delivery methods
+OTP can be sent via SMS (default) or switched to email by Swipey support. Dashboard OTP and mobile app OTP are separate. Payment OTP is different from login OTP.
+[sources=0000-0199,1400-1599]
+
+### OTP delivery methods
+OTP can be sent via SMS or email. SMS OTP is needed for mobile app login and payment OTP. Email OTP can be enabled for web dashboard login as a fallback. Maximum 5 OTP requests per day with 24-hour cooldown. Common SMS provider issues occur with Celcom/CelcomDigi.
+[sources=2200-2422]
+
 ### OTP delivery options
-OTP for card topups can be delivered via SMS or email. If SMS OTP is not working, agent can switch to email OTP. OTP goes to the user's registered mobile number.
-[sources=1200-1399]
+OTP for card top-up can be delivered via SMS or email. Support can switch between the two methods. OTP issues may be caused by blocked SMS senders (numbers starting with '6' like 66688), full device storage, or traffic issues on the SMS provider side. OTP sent via SMS by default. Can be switched to email delivery if SMS fails. Some carriers (U Mobile noted) experience delays. Agent collects mobile number, carrier, and timestamp for troubleshooting.
+[sources=1200-1399,1800-1999]
+
+### OTP Exceeded Attempts
+If user exceeds the maximum number of OTP request attempts, they must wait 30 minutes before retrying. If this happens during off-hours, they must wait until the next day.
+[sources=1400-1599]
+
+### OTP Routing
+Login OTP: sent to registered email or phone. Transaction OTP (merchant purchases): sent to card holder's mobile number. Top-up OTP: configurable to email. Email OTP can be enabled by support.
+[sources=2200-2422]
 
 ### OTP security
 Never share SMS OTP with anyone, including Swipey staff. Unsolicited OTPs should be reported and monitored for suspicious activity.
@@ -2262,6 +2956,10 @@ Maximum 5 OTP requests per day. After hitting the limit, there is a 24-hour cool
 OTP delivery via SMS or email (configurable by support). Max 5 OTP requests per day with 24-hour cooldown. Known Maxis SMS delivery issues - email OTP as workaround.
 [sources=1200-1399]
 
+### OTP System
+Delivered via SMS or email (toggled by support). Max 5 attempts before lockout. Sender numbers start with '6' (62000, 66688, 62002). Carrier switching can cause delivery issues. Email OTP available as fallback but disables mobile app login (dashboard only).
+[sources=2000-2199]
+
 ### OTP System Details
 Maximum 5 login OTPs per 24-hour period. Web dashboard OTP can be switched to email. Mobile app OTP always via SMS. Sender numbers start with '6'.
 [sources=0200-0399]
@@ -2270,6 +2968,10 @@ Maximum 5 login OTPs per 24-hour period. Web dashboard OTP can be switched to em
 Login OTP and top-up OTP come from different systems. Issue with one doesn't affect the other. Troubleshooting: restart phone, check telco, try email OTP as alternative.
 [sources=0600-0799]
 
+### OTP troubleshooting
+OTP can be sent via SMS or switched to email temporarily. Check if 5-digit senders are blocked, restart phone, reset network settings, toggle airplane mode. Ensure device storage is not full. OTP for payments goes to mobile number only (cannot go to email for payments).
+[sources=1400-1599]
+
 ### OTP Troubleshooting Data Collection
 When troubleshooting OTP issues, agents collect: Mobile number, Telco/carrier, Date and Time of request, Merchant/context, Last 4 digits of card, Email address.
 [sources=0000-0199]
@@ -2277,6 +2979,14 @@ When troubleshooting OTP issues, agents collect: Mobile number, Telco/carrier, D
 ### OTP troubleshooting steps
 Standard troubleshooting: 1. Check no blocks on 5-digit senders (62000, etc.), 2. Toggle airplane mode, 3. Reset network settings, 4. Restart phone, 5. Remove and reinsert SIM card, 6. Verify line is active. Also check if telco was recently changed.
 [sources=0000-0199]
+
+### OTP Types and Channels
+OTPs are used for: mobile app login, web dashboard login, card top-ups, and transaction authorization (TAC). SMS OTP is the default. Email OTP can be enabled for web dashboard login and card top-ups but NOT for mobile app login. OTP limit exists - too many attempts locks user out until 12 AM reset.
+[sources=1400-1599]
+
+### OTP via e-SIM issue
+When an e-SIM is activated, it becomes the primary line and may prevent receiving SMS OTP. Users need to switch back to their Malaysia SIM to receive OTP.
+[sources=1400-1599]
 
 ### Outsourced accountant multi-entity setup
 For outsourced accountants managing multiple client entities, each entity needs a different Swipey Admin Dashboard, requiring separate registration. Same email/phone cannot be used across multiple companies. One IC can only be a cardholder in one company.
@@ -2292,6 +3002,38 @@ Swipey cards work for international merchant payments. FX conversion follows Vis
 Two paid plans: Growth and Plus. Growth plan recommended for expanding businesses. Monthly billing option available. Plus Plan includes Accounting Integration (QuickBooks).
 [sources=0000-0199]
 
+### Partnership inquiries
+Partnership-related inquiries (reseller, co-branding, distribution) are handled by the CFO. Interested parties should email the designated partnership email address.
+[sources=1800-1999]
+
+### Password reset for web dashboard
+Users can reset password via the 'Forgot Password' button on the login page. An email with a reset link (not OTP) is sent to reset the Swipey password.
+[sources=1400-1599]
+
+### Pay-In Virtual Account
+Growth/Plus plans provide pay-in virtual account to receive funds from customers via bank transfer. Freemium plan only allows payouts, not pay-in.
+[sources=2000-2199]
+
+### Payout batch processing
+Bill payments follow the 'Pay On' date and are processed in batches. 10am batch is common. Payments not processed on weekends or Malaysian public holidays. International payouts may take 3-5 working days for receiver. Incorrect vendor details (bank account) will cause rejection.
+[sources=2200-2422]
+
+### Payout batch processing times
+Payouts are processed in batches (e.g., 10am batch, 5pm batch). Once transaction is under 'Scheduled' tab, it will be processed in the next batch. An email notification is sent once bill payment is successful.
+[sources=1800-1999]
+
+### Payout Batches
+Later batch for Payouts is at 5pm and disbursement at 7pm. Once a bill payment is approved, it cannot be edited - you must reject and reschedule.
+[sources=1800-1999]
+
+### Payout bulk payment process
+Add each vendor one by one first. Then use 'Bulk Payment with Template' from the Payouts tab. Admin must review and approve each payout individually (no bulk approval for security reasons). Once approved, it moves to Scheduled and is paid on payment date.
+[sources=1400-1599]
+
+### Payout Cut-off Times
+Before 10am: disbursed 12:30pm same day. Before 1pm: disbursed 4:30pm same day. Before 5pm: disbursed 12:30pm next working day.
+[sources=2200-2422]
+
 ### Payout Feature
 Supports local bank transfer, foreign transfers, and JomPay. Funds come from master account. Has a cut-off time for same-day processing. Admin-only feature. Card top-ups are instant; payouts have processing time.
 [sources=0000-0199]
@@ -2299,6 +3041,10 @@ Supports local bank transfer, foreign transfers, and JomPay. Funds come from mas
 ### Payout feature
 For amounts RM2,000 and above, Payouts is an alternative to QR transfers. Can be scheduled to pay directly to bank accounts.
 [sources=0600-0799]
+
+### Payout Lock/Reserve Mechanism
+When a payout is scheduled, the amount is locked/reserved from the master account immediately to avoid insufficient funds on payment day. This is why balance appears reduced before the actual disbursement.
+[sources=2200-2422]
 
 ### Payout methods supported
 Local bank transfer, JomPay, international/foreign transfer via Payout tab. FPX not supported for outgoing payments. Touch N Go transfers supported under Local Bank > TnGo option. Bulk bill payments require Excel template (PDF invoices rejected).
@@ -2312,6 +3058,26 @@ Payouts submitted and approved before 1pm processed by 4:30pm same business day.
 Payouts allow transfers to personal/vendor bank accounts via the dashboard. Recommended over cash withdrawal for paying workers. Invalid bank details in bill payments will not be processed; finance team will reach out to retrieve correct details.
 [sources=1000-1199]
 
+### Payout/withdrawal to overseas banks
+For overseas bank payouts (e.g., Taiwan), users may need to use a country selection workaround. Taiwan is not always listed in standard country dropdown. Bill payment feature can facilitate international transfers.
+[sources=1600-1799]
+
+### Payouts / Bill Payment
+Local bill payments are free. International payments have RM5 flat fee. Vendors must be added before creating payments. Bulk payments use an Excel template (sent via email). Invoices can be emailed to a designated address for AI-powered transaction creation. JomPay is also supported. Scheduled transactions will be processed; rejected ones will not.
+[sources=2200-2422]
+
+### Payouts/Bill Payment
+Payouts deduct from master account, not card balance. Supports local bank transfer, JomPay, and foreign disbursement. Smart scan captures invoices automatically when sent to designated email. Admins have full access; employees with 'Employee' role can submit invoices to the designated email for admin review. Vendor name must match bank account holder name for verification.
+[sources=1800-1999]
+
+### PayWave contactless limit
+Contactless/PayWave payments have a RM250 per transaction limit. If the amount exceeds RM250, the user must insert chip and enter PIN.
+[sources=1400-1599]
+
+### PayWave/contactless limit
+Terminal point limit for contactless transactions is RM250. Above that, chip & PIN is required.
+[sources=1800-1999]
+
 ### PDF Statement Pricing
 Ad-hoc PDF statements: RM19/month or RM49/year (before SST). Includes running balance column. Available without plan upgrade.
 [sources=0000-0199,1200-1399]
@@ -2320,13 +3086,37 @@ Ad-hoc PDF statements: RM19/month or RM49/year (before SST). Includes running ba
 PDF statements: RM49/year or RM19/month (+ 8% SST). Only available for completed past months.
 [sources=0200-0399]
 
+### PDF statement pricing (Freemium)
+Freemium plan: RM19/month per request or RM49/year. Requires 3 working days to prepare. Amount deducted from Master Account. Statements are sent monthly (not combined yearly).
+[sources=1800-1999]
+
 ### PDF Statement Service
 PDF statements available free on Growth and Plus plans. For Freemium users: RM20/month or RM49/year. Statements include spending, top-up, clawback, decline, refund, and fees data.
 [sources=1000-1199]
 
+### Pending Deposit Audit Trail
+Pending deposit entries in fund history cannot be deleted — maintained as audit trail.
+[sources=1800-1999]
+
+### Per-transaction limit
+Per-transaction limit is RM10,000, set by Bank Negara Malaysia (BNM). This cannot be customized. Daily limit per user is RM50,000.
+[sources=1400-1599]
+
+### Personal QR codes not supported
+Swipey QR scan only supports merchant business QR codes. Personal QR codes are not supported.
+[sources=1400-1599]
+
 ### Petrol Station Pre-Authorization
 Petrol stations pre-authorize RM200 on all cards. The unused balance is reversed back in 3-21 days depending on the merchant.
 [sources=1200-1399]
+
+### Petrol station pre-authorization
+Petrol stations like BHPetrol may pre-authorize a fixed amount (e.g. RM200) regardless of actual fuel amount. The pre-auth should void within 21 days, returning excess funds.
+[sources=1400-1599]
+
+### Petrol Transaction Behavior (Setel)
+When filling full tank via Setel, a certain amount is deducted initially and refunded later once actual amount settles. Original transaction is refunded and merchant makes reverse charge of actual amount. Transaction status goes from 'Approved' to 'Settled'.
+[sources=1800-1999]
 
 ### Petrol/Setel Transactions
 Petrol stations pre-authorize a fixed amount (e.g., RM250) then settle for actual amount. Settlement can take up to 21 days.
@@ -2340,9 +3130,33 @@ Must contact support. Provide email, old number, new number. After update, user 
 Agent requests: User email, Old number, New number. Backup number must not already be registered with Swipey. Agent updates on backend and user must re-login through mobile app to reactivate account.
 [sources=0000-0199]
 
+### Phone number change process
+Users cannot change their own phone number via dashboard. Must provide old number, new number, and reason for change. Swipey team processes the change. User must re-login to mobile app to reactivate after change.
+[sources=1800-1999]
+
+### Phone Number Change Process
+Admin must request via support. Required: user email, current mobile, new mobile, reason. Affects mobile app login and OTP. User must re-login after change. Takes effect within 1-2 hours.
+[sources=2000-2199]
+
+### Phone number change restrictions
+A phone number cannot be reassigned if it already belongs to another Swipey user. To reuse a number from a departing employee, a dummy number must be assigned to the departing user's profile first.
+[sources=1400-1599]
+
+### Phone Number Change Verification
+When a phone number change request is received, agents verify with the account holder that the request is legitimate before processing. Unrecognized requests are rejected.
+[sources=2200-2422]
+
+### Phone Number for OTP
+Each Swipey cardholder needs a unique local Malaysian phone number that is not used in any other Swipey account to receive OTP. Mobile app login OTP is SMS-only to Malaysian numbers. Dashboard OTP can be set to email delivery.
+[sources=1400-1599]
+
 ### Phone Number Requirements
 Only Malaysian phone numbers (+60) are accepted for card-assigned users. Foreign numbers can be added by support for admin/viewing-only roles with email OTP enabled. Phone number changes require company admin to contact support.
 [sources=1000-1199]
+
+### Phone number tied to user account
+Phone numbers are linked to user profiles after eKYC. Even after user resignation, the number remains attached. To reuse a number for a new user, the old number must be released by providing a replacement number for the original user.
+[sources=2200-2422]
 
 ### Phone Number Update for OTP Issues
 When a user loses access to registered phone number, agent can update the number. Requires: current phone number, new phone number, registered email. Agent can also switch OTP to email delivery as interim solution.
@@ -2352,6 +3166,10 @@ When a user loses access to registered phone number, agent can update the number
 To change registered phone number: provide email, old phone number, new phone number. Team processes the change. User must relogin after update. Account may need reactivation after number change.
 [sources=1200-1399]
 
+### Phone/Email Change Policy
+Cannot update existing user's phone or email. Must invite as new user with new details, then remove old account.
+[sources=1800-1999]
+
 ### Physical Card Activation
 After assignment and eKYC: user logs into mobile app to trigger embossing -> 7-10 day delivery -> First transaction MUST be chip and PIN -> After that, paywave works.
 [sources=0200-0399]
@@ -2360,13 +3178,17 @@ After assignment and eKYC: user logs into mobile app to trigger embossing -> 7-1
 Physical card activation must be done by the cardholder in the Swipey mobile app. It cannot be done via the admin dashboard.
 [sources=0400-0599]
 
+### Physical Card Activation
+Physical cards must be activated via the mobile app. First physical card transaction must use Chip & PIN (not Paywave). User needs to reset PIN from mobile app before first use. Cards are sent to the company mailing address registered in the account.
+[sources=1400-1599]
+
 ### Physical Card Add-On Pricing
 Additional physical card allocations cost RM216 per card per year.
 [sources=1200-1399]
 
 ### Physical Card Delivery
-Standard delivery takes 7-10 business days. Cards can be delivered anywhere in Malaysia. Delivery address is set during card request; otherwise defaults to company address. Courier partner sends tracking email to cardholder.
-[sources=0000-0199,1000-1199,1200-1399]
+Physical card delivery takes 7-10 business days. Cards are delivered to the company's registered business address on the Swipey dashboard (Mailing & Delivery Address). A tracking number is shared via email once the card is with the courier partner (Citylink). Address must be changed before issuing a new card if delivery location needs to change.
+[sources=0000-0199,1000-1199,1200-1399,1400-1599]
 
 ### Physical Card Delivery
 Delivered to the mailing address set in the dashboard.
@@ -2381,11 +3203,11 @@ Card is printed after user completes eKYC on mobile app.
 [sources=0000-0199]
 
 ### Physical Card Delivery
-Sent to company mailing address on dashboard. Takes 7-10 working days. Tracking number sent via email once card is picked up by courier. Cards may arrive separately based on when eKYC was completed.
-[sources=0000-0199]
+Delivered via Citylink courier. 7-10 business days after eKYC. Tracking number emailed within 3 working days of dispatch. Sent to registered company address on dashboard. Address can be changed before issuance. Invalid address = returned, replacement issued.
+[sources=0000-0199,2000-2199]
 
-### Physical card delivery process
-Physical cards delivered via CityLink courier. 7-10 business days after embossing. Tracking link sent via email. Delivered to company address on dashboard (can be changed in web desktop company details). Card embossing triggered when a user is assigned.
+### Physical Card Delivery
+Sent to company mailing address on dashboard. Takes 7-10 working days. Tracking number sent via email once card is picked up by courier. Cards may arrive separately based on when eKYC was completed.
 [sources=0000-0199]
 
 ### Physical card delivery process
@@ -2395,6 +3217,14 @@ After admin assigns a physical card and the cardholder completes eKYC via mobile
 ### Physical card delivery process
 After card assigned via dashboard + eKYC done + user logs in -> card triggered for printing (embossing) -> courier picks up -> tracking email sent -> 7-10 working days to company address. Card details available in dashboard for online/QR use before delivery.
 [sources=0600-0799]
+
+### Physical card delivery process
+After card assignment: card goes to printing, courier collects it, user receives tracking email. Delivery takes 7-10 business days. Cards are delivered to the registered business address. No pick-up option available. Rerouting address takes longer than usual. Physical card delivery takes 7-10 days including weekends. Cards are delivered to the address registered on the dashboard. Users receive a notification when the tracking number is updated. Physical cards delivered by Citylink courier to registered company address. Delivery takes 7-10 business days after eKYC approval. Card tracking available via Citylink tracking. Cards can be delivered to alternate addresses if specified at issuance time. When a card is terminated, the balance is automatically clawed back to the master fund. Terminated cards cannot be reactivated - a new card must be issued. Cards should not be terminated before pending dispute refunds are completed.
+[sources=1800-1999]
+
+### Physical Card Delivery Process
+After card assignment + eKYC completion -> card sent for printing -> courier collects -> email with tracking number sent to user -> delivery takes 7-10 working days. Cards are sent to the mailing address set in dashboard profile unless a different delivery address was specified during assignment.
+[sources=2200-2422]
 
 ### Physical card embossing trigger
 After a physical card has been allocated, the user needs to sign in to the mobile application to start the embossing and delivery procedure. Without this login step, the card will not be processed for delivery.
@@ -2407,6 +3237,10 @@ For the first payment with a physical card, users MUST use chip and PIN (insert 
 ### Physical Card First Use Requirement
 Physical cards must make their first transaction using chip+PIN (card inserted into terminal). Only after a successful PIN transaction can PayWave (contactless) and online transactions be used.
 [sources=1000-1199]
+
+### Physical card first-time activation
+New physical cards require the user to reset the 6-digit PIN via mobile app, then perform first transaction using chip & PIN (insert card). PayWave is only available after the first successful chip & PIN transaction.
+[sources=1800-1999]
 
 ### Physical card first-time PIN activation
 For first-time physical card payment, must use chip & PIN method. After the first successful chip & PIN payment, subsequent payments can be done via payWave/wave.
@@ -2430,7 +3264,11 @@ The physical card displays the company name, not the individual cardholder's nam
 
 ### Physical Card Operations
 First payment must use chip insert and PIN. Contactless may not work until after first chip-and-PIN use. PIN can be reset via mobile app. Lost cards: terminate from web dashboard, then issue new card. No physical return needed. Card termination guide: https://help.swipey.co/en/article/41-terminate-cards
-[sources=1000-1199]
+[sources=1000-1199,1400-1599]
+
+### Physical card requirements
+Physical cards are only available on paid plans (Plus or Growth). Freemium users only get virtual cards. Physical card PIN can be reset via the mobile app. After 3 wrong PIN attempts, card gets blocked but can be reactivated via app.
+[sources=1600-1799]
 
 ### Physical Card Usage
 First physical card transaction MUST use chip and PIN (not PayWave/contactless).
@@ -2439,15 +3277,23 @@ To receive a card at a different address, update company address in Swipey setti
 Cards issued before a company name change will still display the old name.
 For ATM withdrawals, select 'Current Account' (not 'Saving Account').
 Card PIN can be reset via the Swipey mobile app.
-[sources=1000-1199]
+[sources=1000-1199,2000-2199]
 
 ### Physical vs Virtual Card Use Cases
 Physical card: in-store shopping, overseas spending, cash withdrawals. Virtual card: online purchases, subscriptions (Facebook Ads, Shopee, airlines).
 [sources=0000-0199]
 
+### PIN reset for physical cards
+6-digit PIN must be reset via Swipey Mobile App before first use. If chip & PIN fails at merchant, try resetting PIN in the app first. Invalid PIN attempts can cause card issues.
+[sources=1800-1999]
+
 ### Placeholder user for account transfers
 When a user needs to transfer between companies, the old company cannot be left with zero users. A placeholder user with temporary email/phone must be added first. When using placeholder phone, OTPs route to email instead.
 [sources=0400-0599]
+
+### Plan features - Plus
+Unlimited virtual and 10 physical cards, multi-card per user, FPX fee waived, bill payment, spend customisation/merchant control, bookkeeper role, shareable receipt links, accounting integration.
+[sources=1400-1599]
 
 ### Plan Fee Deduction
 Subscription plan fees are deducted from the Master Account balance, not from card balance.
@@ -2461,9 +3307,9 @@ Freemium: 2 users. Growth: user-based pricing, 1 physical card per user. Plus: m
 Growth Plan yearly: RM1,068. Plus Plan monthly: RM205.20, yearly: RM1,879.20 (minimum 5 users). All prices are subject to +8% SST from Feb 2025. Pricing is user-based. Emzi Holdings example: RM579.96/quarter, Emzi Properties: RM353.16/quarter (inclusive of 8% SST).
 [sources=1000-1199]
 
-### Plan Pricing and Structure
-Freemium: 2 virtual cards, 2 users, no physical cards. Growth: minimum 2 users, 20 virtual + 5 physical cards, FPX fee waived, bill payments. Plus: minimum 5 users, 30 virtual + 12 physical cards, QR payments (DuitNow), merchant control, bookkeeper role. All paid plans include 8% SST.
-[sources=0000-0199,0200-0399]
+### Plan pricing structure
+Plans are priced per user seat, not per year. Growth Plan quarterly: ~RM25/user/month. Growth Plan annually: ~RM19/user/month (RM228/year per user). Minimum 2 user seats. Plus Plan yearly: RM29/user/month. All prices exclude 8% SST. Lite Plan: RM468/year. Plan upgrades are processed within 24-48 hours after payment. Growth Plan: min 2 users, RM19/user/month (yearly billing) or RM25/user/month (monthly/quarterly). Plus Plan: min 5 users, RM29/user/month (yearly) or RM38/user/month (monthly). Lite Plan: RM468/year, includes 2 physical cards and 5 virtual cards. All plans subject to 8% SST from Feb 2025. Growth Quarterly: RM327 (RM353.16 with SST). Plus Plan Yearly for 5 users: RM1,879.20 with SST. Growth Monthly: RM81. Lite Plan: RM39/month billed yearly (RM468). Plus Quarterly: RM537. Card add-on pack: RM18/month billed annually (requires paid plan).
+[sources=1800-1999]
 
 ### Plan structure
 User-based pricing with 3 tiers: Freemium (free, max 2 users, 1 virtual card/user, no statement download, no physical cards), Growth (min 2 users, 1 physical + 3 virtual cards/user, from RM27/user/month), Plus (unlimited virtual + 10 physical cards, QR payments, bill payment, bookkeeper role, FPX fee waived, from RM29/user/month). 8% SST applies.
@@ -2473,6 +3319,10 @@ User-based pricing with 3 tiers: Freemium (free, max 2 users, 1 virtual card/use
 Freemium: free, limited features, RM1.50 FPX fee. Growth: minimum 2 users. Plus: minimum 5 users. All paid plans include 8% SST. FPX fee waived on paid plans.
 [sources=1200-1399]
 
+### Plan Tiers and Pricing
+Freemium: free, 2 users, 2 virtual cards, payouts only. Lite: RM39/month. Growth: min 2 users, RM25/user/month (RM19 yearly), includes physical cards. Plus: min 5 users, RM205.20/month for 5 users, unlimited virtual + 10 physical, all features. SST 8% applies. Subscription auto-deducted from master account.
+[sources=0000-0199,0200-0399,2000-2199]
+
 ### Plan Upgrade Process
 Submit upgrade form on Swipey web dashboard. Master Account must be funded with subscription amount for deduction. Upgrades are prorated.
 [sources=0000-0199]
@@ -2481,9 +3331,13 @@ Submit upgrade form on Swipey web dashboard. Master Account must be funded with 
 Upgrade request submitted via dashboard. Master account must have sufficient funds. Relevant department processes deduction. Invoice provided to email. Monthly fee auto-deducted from master account balance.
 [sources=0000-0199]
 
-### Plans and Pricing
-Plus plan: 2 physical cards + 5 virtual cards per user. Minimum 5 users. Yearly RM1,931.04 incl SST for 5 users. Monthly RM179+8%SST per month. Includes bookkeeper access, accounting integrations (Xero/QuickBooks), QR payments, bill payment.
-[sources=0000-0199]
+### Plan Upgrade Process
+Fund master account first, then team deducts subscription fee. Plan is upgraded once funds are deducted along with an invoice. Plan subscriptions are not transferable between company accounts. Prorating of remaining credits applies when switching plans.
+[sources=1800-1999]
+
+### Plan Upgrade Proration
+When upgrading mid-cycle, remaining value of current plan is prorated against new plan cost. Example: RM 37,584 new pricing minus RM 1,275.02 prorate = RM 36,308.98 total.
+[sources=2200-2422]
 
 ### Plans and Pricing
 Lite plan: RM505.44/year with SST for 2 users. Includes 2 physical cards and 10 virtual cards.
@@ -2517,9 +3371,13 @@ User-based pricing model: each additional user added to the plan affects subscri
 Freemium: free, max 2 users, 2 virtual cards only. Growth: RM25/user/month (RM27 with 8% SST), min 2 users, 3 virtual + 1 physical card/user, FPX fee waived, Bill Payment. Plus: RM38/user/month (~RM41.04 with SST), min 5 users, 5 virtual + 2 physical cards/user, 7-year storage, DuitNow QR, Xero integration. Billing quarterly or yearly. 8% SST from Feb 2025.
 [sources=0400-0599]
 
-### Platinum card migration
-Non-Platinum virtual cards were terminated (Aug 2025) during migration to Platinum version. Users issue new Platinum cards at no extra charge. Platinum is safer and more widely accepted.
-[sources=0600-0799]
+### Platform maintenance troubleshooting
+When platform is updating: Clear cache/cookies, use logout link (app.swipey.co/logout), try Incognito mode. For mobile app: check for updates. WiFi blocking can prevent access to deposit functionality -- try switching to hotspot. For login/platform issues after updates: clear cache/cookies, use provided logout link, try incognito mode, check app store for updates.
+[sources=1800-1999]
+
+### Platinum Card Label
+Platinum is a new card environment. New assigned virtual cards will have a Platinum label. This is distinct from the older virtual card type.
+[sources=1800-1999]
 
 ### Platinum Card Programme
 New virtual card programme replacing previous card types. New assigned cards are issued under Platinum programme. Users switching from old cards may experience temporary app loading issues when creating multiple new cards.
@@ -2637,13 +3495,29 @@ Consent letter process: A director's signature on a consent letter sent via Docu
 eKYC verification requirements: IC photos must be clear with all four edges visible and no glare. Blurred photos result in rejection and the user must resubmit via the mobile app.
 [sources=0800-0999]
 
-### Prepaid Card Merchant Restrictions
-Some merchants do not accept prepaid VISA cards: OpenAI/ChatGPT, certain Google services (Workspace, Ads). PayPal linking is suggested as workaround.
-[sources=1200-1399]
+### Pre-Authorization Charges
+Some merchants place pre-authorization holds on cards. These may appear as transactions but can be voided by the merchant. If voided, customer should contact the merchant for clarification.
+[sources=2200-2422]
+
+### Pre-Authorization Holds
+Fuel stations hold RM200 pre-authorization. Merchant has 21 days to update VISA. Usually voided within 21 business days. If settled instead of voided, contact support for dispute.
+[sources=2000-2199]
+
+### Prepaid Card Daily/Transaction Limits
+Prepaid card daily spending limit: RM50,000. Per-transaction limit: RM10,000. These are BNM-approved limits and cannot be changed. International charge card has no spending limit.
+[sources=1400-1599]
+
+### Prepaid card merchant restrictions
+Some merchants do not accept prepaid cards: Google (Ads, Workspace), XERO, certain others. Facebook/Meta Ads DO accept prepaid cards. Swipey launched Mastercard charge cards (beta) to address prepaid card rejection by certain merchants.
+[sources=1200-1399,2200-2422]
 
 ### Prepaid Card Nature
 Swipey cards are prepaid VISA cards. Must deposit funds before use. No credit facility. Some merchants that require credit cards will reject them.
 [sources=0200-0399]
+
+### Prepaid Model
+Swipey operates on a prepaid basis. Users deposit funds into Master Account, then allocate/distribute to cards. Swipey does not provide financing or credit.
+[sources=2200-2422]
 
 ### pricing
 Plan pricing and billing: Growth plan (monthly) is RM117.72 inclusive of 8% SST. Growth plan (quarterly) is RM327. Growth plan (annual) is RM1,068 (billed yearly). Pricing is user-based. SST was added from 1 February 2025.
@@ -2663,7 +3537,7 @@ Growth Plan structure: Growth Plan requires a minimum of 2 user seats. Each user
 
 ### pricing
 Trial Account: New accounts start on a 30-day trial providing access to 10 virtual cards, PDF statements, waived FPX fees, auto top-ups, bill payment, and accounting integration. Accounts are deactivated if documents are not submitted during the trial.
-[sources=0800-0999]
+[sources=0800-0999,2200-2422]
 
 ### pricing
 Registration document requirements: Sdn Bhd: Section 14 superform is preferred; older companies (pre-Companies Act 2016) may submit Form 24, 49, and 9. Sole proprietors and partnerships: full SSM business profile. NGOs: documentation with president/board member details. No CTC certification required. Company website is requested but not mandatory.
@@ -3883,7 +4757,7 @@ First login process: After account setup, the customer receives an email to rese
 
 ### process
 AI onboarding assistant: Swipey uses an AI onboarding assistant at app.quarterzip.ai to guide new users through setup. It requires a laptop/PC, screen sharing, and the user's email address. Available 24/7.
-[sources=0800-0999,1000-1199]
+[sources=0800-0999,1000-1199,1800-1999]
 
 ### process
 Support hours: Customer support hours are Monday to Friday, 8am to 7pm, and 9am to 6pm on Public Holidays. Outside these hours, an automated message directs customers to the Help Center at https://help.swipey.co.
@@ -4371,6 +5245,14 @@ Login security — IP address check: The Swipey web dashboard has a security che
 QR payment feature is available in beta for all plan holders. Once officially launched, it will be exclusive to Plus plan holders.
 [sources=1000-1199]
 
+### QR Pay feature
+QR Pay is currently in Beta. It supports payment to merchant/business DuitNow QR only. Personal QR or e-wallet QR not yet supported. QR Pay on Plus Plan can also be used to transfer to personal bank accounts (TNG QR supported). Available via Swipey mobile app for cardholders only.
+[sources=1800-1999]
+
+### QR Pay supported types
+Swipey QR Pay only supports B2B (Business-to-Business) DuitNow QR codes. Personal/P2P DuitNow QR codes are not supported. Some merchants at physical locations like Shell petrol stations may not provide compatible QR codes. QR transaction limits: RM2,000 daily for P2P, RM10,000 per transaction for B2B.
+[sources=1600-1799]
+
 ### QR Payment (DuitNow)
 Available via mobile app. If payment stalls/shows 'processing', may be an issue on the merchant's payment processor side (e.g., TnG). Contact merchant's support if Swipey card side shows no errors.
 [sources=0000-0199]
@@ -4379,11 +5261,23 @@ Available via mobile app. If payment stalls/shows 'processing', may be an issue 
 QR payment is in beta, available on Plus plan only. Works with DuitNow QR (bank QR). TnG QR not supported. Virtual cards only, not physical.
 [sources=1200-1399]
 
+### QR Payment Availability
+QR payment (DuitNow) is currently in Beta and available to all users. Once officially launched, it will be restricted to Plus plan holders. QR works for merchant DuitNow only (not personal).
+[sources=2200-2422]
+
+### QR payment beta details
+QR payment supports DuitNow QR only (not e-wallet QR like Grab). Available in beta. If mobile PIN entered incorrectly 3+ times, QR payment shows generic error - user must reset PIN in app settings. Transaction receipt available in Transactions tab on mobile app or dashboard.
+[sources=2200-2422]
+
 ### QR Payment Feature
 QR feature supports Business DuitNow QR only.
 Touch n Go QR, EasyEat QR, and other non-DuitNow QR codes are NOT supported.
 QR feature was released as of May 2025.
 [sources=1000-1199]
+
+### QR Payment Feature Limitations
+QR payment only supports Scan-to-Pay for merchant DuitNow QR codes. Does not support: personal DuitNow QR, TnG E-wallet QR, MAE wallet QR, Grab QR. Must use VISA card for QR payment (not charge card).
+[sources=1400-1599]
 
 ### QR Payment for TnG
 TnG (Touch n Go) QR is a different QR environment from DuitNow QR. Swipey QR payment only works with DuitNow QR codes.
@@ -4393,13 +5287,17 @@ TnG (Touch n Go) QR is a different QR environment from DuitNow QR. Swipey QR pay
 QR payments are in beta. Only supports B2B QR payments. Does not support personal QR codes (DuitNow QR, TnG). Feature still under development.
 [sources=1200-1399]
 
+### QR Payment limitations
+QR payment is beta. Only Business DuitNow QR supported; personal QR in future release. QR scan from gallery not supported (live view only). Cannot receive funds via QR. Personal QR (P2P) payments only reflect at end of each day.
+[sources=2200-2422]
+
 ### QR Payment Limits
 Personal DuitNow QR: RM2,000/txn, RM2,000/day, RM10,000/month. Business DuitNow QR: RM10,000/txn, RM50,000/day, RM500,000/month. Plus plan only.
 [sources=0200-0399]
 
 ### QR payment limits
 Personal DuitNow QR: RM2,000/transaction, RM2,000/day, RM10,000/month. Business DuitNow QR: RM10,000/transaction, RM50,000/day, RM500,000/month. Limits set by BNM, cannot be increased. Scan-to-pay only (user scans merchant QR). Merchant scanning user QR not supported. Only business-registered QR codes accepted, not personal QR codes.
-[sources=0400-0599,0600-0799,0800-0999]
+[sources=0400-0599,0600-0799,0800-0999,1800-1999,2200-2422]
 
 ### QR Payment Limits
 Personal QR payment daily limit is RM2,000 per user, set by BNM regulation. This cannot be changed by Swipey in the short term. The limit is per user across all their cards.
@@ -4427,9 +5325,9 @@ Email receipts to receipt@swipey.co as attachments. System auto-matches to trans
 Available on Growth and Plus plans only. Swipey provides a dedicated account number. Takes approximately 1 business day for funds to reflect in Master Account. Requires team setup before activation.
 [sources=0000-0199]
 
-### Referral Program
-Referrer earns RM50 for every successful referral.
-[sources=0000-0199]
+### Referral program
+RM50 earned for every successful referral. Referred friend gets one year of Swipey Lite Plan free. Program had a defined period and is no longer available (ended by July 2025). RM50 for referrer per successful referral. Friend gets one year of Swipey Lite plan. Unique referral link sent via email.
+[sources=0000-0199,1400-1599,1800-1999,2200-2422]
 
 ### Referral Program
 Referred friend gets 1 year of Swipey Lite plan free.
@@ -4440,8 +5338,12 @@ Unique referral link sent via email.
 [sources=0000-0199]
 
 ### Referral Program
-RM50 reward per successful referral. Referred friend gets one year of Swipey Lite plan free.
-[sources=0200-0399]
+RM50 reward for each successful referral. Referred friend gets one year of Swipey Lite plan free. Unique referral link sent via email.
+[sources=0200-0399,2000-2199]
+
+### Refund processing
+Merchant refunds depend on the merchant's processing time. Some refunds show as Voided transactions within 21 days. Refunds go back to the card they were charged from. If card is terminated, funds can be patched to master account.
+[sources=1400-1599]
 
 ### Registration and Onboarding Process
 Steps: 1) Submit registration and business documents (Section 14 superform for Sdn Bhd). 2) Swipey reviews documents manually. 3) Consent letter sent via Documenso for director signature. 4) Account processed and password reset email sent. 5) Activation call booked via Microsoft Teams. 6) eKYC verification on mobile app for cardholders.
@@ -4451,27 +5353,63 @@ Steps: 1) Submit registration and business documents (Section 14 superform for S
 Step 1: Register on swipey.co. Step 2: Submit SSM Section 14 Superform or Business Profile. Step 3: Swipey reviews documents. Step 4: Consent letter sent via Documenso for director's signature. Step 5: Account setup and onboarding. Only Malaysia-registered companies with valid SSM are eligible.
 [sources=0000-0199,1000-1199]
 
+### Registration Process
+Steps: 1) Register on app.swipey.co/register 2) Provide Section 14 superform/SSM documents 3) Director signs consent letter (sent via DropBox Sign) 4) Account activated. Registration can be completed within a day.
+[sources=1400-1599]
+
 ### Registration requirements
 Required documents: Business document (ideally Section 14 Superform / SSM business profile). Must be current/not expired. Consent letter requires director's signature (sent via DropBox Sign).
 [sources=0000-0199]
+
+### Registration requirements
+Malaysian registered business with valid SSM required. Ideally Section 14 superform (or annual return with current director/business name). Director's digital signature on consent form via email (DropBox Sign/HelloSign). Director must be in Malaysia for OTP (no international numbers). Account setup 1-2 days after consent signed.
+[sources=2200-2422]
 
 ### Registration via website only
 Registration must be done through https://app.swipey.co/register — cannot register through the mobile app. Mobile app is only for users who already have a card.
 [sources=0400-0599]
 
+### Reward Points
+Users earn reward points with every spend. Redeemable at partners including Zus Coffee, IKEA, Decathlon, Grab, Mr DIY, Costa Coffee, Setel.
+[sources=1800-1999]
+
 ## S
+
+### Sabah Business Registration
+Businesses in Sabah use Trading License instead of SSM registration. Swipey accepts this alternative document.
+[sources=1800-1999]
+
+### SDN BHD registration documents
+For SDN BHD companies: Section 14 from SSM, or Form 24 from SSM, showing director name and latest business name. For enterprise/PLT: SSM business profile with owner name.
+[sources=1800-1999]
 
 ### Section 14 Superform
 Section 14 superform (SSM business document) is required for company registration with Swipey. Ideally provided during the registration process.
 [sources=0000-0199]
 
+### Section 14 superform document
+For newer company registrations, SSM provides a Section 14 superform instead of the traditional Form 9/Form 24. This is an accepted document for Swipey registration.
+[sources=1600-1799]
+
 ### Security: phone/email change impact
 After phone number or email change, user must log out and log back into mobile app before cards will work. This is a security measure.
 [sources=0600-0799]
 
+### Shared login security
+Only one active session per credential is allowed. Logging in from another device will log out the first session. Each individual should have their own login for security. Sharing credentials between finance team and admin is not recommended - add them as separate users.
+[sources=1400-1599]
+
+### Spend Category Controls
+Cards can have spending categories enabled/disabled. Disabling all 6 main categories plus the 600+ 'other' categories will effectively block the card. Categories like groceries, restaurants, hardware shops fall under the 'other' category.
+[sources=2200-2422]
+
 ### Spend category restrictions
 Admins can restrict card spending by merchant category via Admin Dashboard > Cards tab > Spend Customization > toggle categories. Blocking a specific supplier by name is not possible — only category-level restrictions.
 [sources=0400-0599]
+
+### SSM Documents
+SSM (Suruhanjaya Syarikat Malaysia) documents required for company registration/onboarding.
+[sources=1800-1999]
 
 ### SSM documents for Sabah/Sarawak
 Businesses in Sabah and Sarawak use SSM registration same as Peninsular Malaysia and can register with Swipey.
@@ -4481,6 +5419,38 @@ Businesses in Sabah and Sarawak use SSM registration same as Peninsular Malaysia
 8% SST applied to all plans starting February 2025. Customers who renewed before Jan 31, 2025 locked in pre-SST rates for that renewal cycle.
 [sources=0000-0199,0200-0399]
 
+### SST charges
+8% SST is applicable on subscription plans. SST was implemented effective 1st Feb 2025.
+[sources=1400-1599]
+
+### SST charges
+8% SST charge applies to plan upgrades and pricing. This is a standard Service Sales Tax applied to Swipey plans.
+[sources=2200-2422]
+
+### SST charges on subscription
+Starting 1st Feb 2025, Swipey applies 8% SST charge on all plans. Customers were given option to renew before deadline to lock in old rates.
+[sources=1400-1599]
+
+### SST implementation
+8% SST charge applied to all plans effective 1st February 2025. Early renewal before the date locked in pre-SST rates.
+[sources=1800-1999]
+
+### SST Implementation
+8% SST (Sales and Services Tax) applies to all Swipey subscription fees effective Feb 2025.
+[sources=2000-2199]
+
+### SST implementation from Feb 2025
+Swipey implemented SST (Sales and Services Tax) charges effective 1st February 2025. Users were encouraged to renew subscriptions before 30th Jan to benefit from savings before SST took effect.
+[sources=1600-1799]
+
+### SST on Subscription
+8% SST is applied to all Swipey subscription fees. Examples: Growth 2 users yearly = RM492.48, Growth 3 users monthly = RM81, Growth 6 users yearly = RM1,477.44 (monthly RM162), Plus 4 users yearly = RM1,503.36.
+[sources=2200-2422]
+
+### Statement Access (Paid Plans)
+Monthly statements available under Funds tab > Financial Reports on dashboard only (not mobile app). Statements available from May 2023 onwards.
+[sources=2200-2422]
+
 ### Statement Download
 Available for Admin and Bookkeeper roles. Path: app.swipey.co/dashboard > Funds > Funds History > Export > Select date range > Download (.xlsx format).
 [sources=0000-0199]
@@ -4488,6 +5458,10 @@ Available for Admin and Bookkeeper roles. Path: app.swipey.co/dashboard > Funds 
 ### Statement formula
 Closing Balance = Opening Balance + Top Up - Spending - Clawback + Refund.
 [sources=0400-0599]
+
+### Statement PDF Pricing (Freemium)
+Freemium users: RM19/month statement (3-day access) or RM49/year statement (7-day access). Prices subject to 8% SST. RM52.92 for yearly incl. SST. Deducted from master account. Statement download via dashboard > Funds > Financial Reports.
+[sources=2200-2422]
 
 ### Statement/Report Downloads
 Transactions tab: card transaction history. Funds tab: master account history (deposits, bill payments) plus downloadable PDF statement with all transactions. Links: https://help.swipey.co/en/article/75-export-master-account-statement and https://help.swipey.co/en/article/31-how-to-download-transaction-statements
@@ -4528,6 +5502,18 @@ Automated renewal deducted from master account. Reminder email sent before deduc
 Charges based on active users, not cards. Subscription fee deducted from master account. Inactive users not charged. No monthly billing option — quarterly or yearly only. Invoice sent by Swipey.
 [sources=0400-0599]
 
+### Subscription billing
+Subscription fees are deducted from the Master Account. Available in monthly or yearly billing cycles. Growth plan minimum is 2 users. Plus plan minimum is 5 users. Negative balance from subscription deduction must be topped up to avoid service disruption.
+[sources=1400-1599]
+
+### Subscription billing and negative balance
+Subscription charges are deducted from master account. If insufficient funds, account goes to negative balance. Company must fund the account to clear negative balance. Subscription changes must be made before renewal date to take effect in next cycle. Inactive users don't count toward subscription.
+[sources=2200-2422]
+
+### Subscription billing cycle
+Subscription charges follow the subscription cycle date. E.g., if subscribed on a certain date, billing recurs on that same date each quarter/year. Insufficient Master Account balance causes failed subscription processing.
+[sources=1800-1999]
+
 ### Subscription Cancellation
 No refunds for activated paid subscriptions per T&C. Inform Swipey at least 1 week before renewal date to cancel.
 [sources=0200-0399]
@@ -4536,9 +5522,21 @@ No refunds for activated paid subscriptions per T&C. Inform Swipey at least 1 we
 No fixed notice period yet. Advised to reach out at least 1 week before renewal date. Changes must be requested via WhatsApp.
 [sources=1200-1399]
 
+### Subscription Plans
+Freemium: virtual cards only. Growth and Plus: include physical cards. NGOs get 50% discount on Plus Plan. Annual subscription, no refunds.
+[sources=1800-1999]
+
+### Subscription plans and pricing
+Freemium: Free, limited features, limited card allocation. Plus Monthly: ~RM193.32. Growth Plan: For 4+ users, includes physical card option. Growth Yearly: ~RM1,231.20. SST charges apply from Feb 2025. Subscription is auto-deducted from Master Account. Overdue payments result in downgrade to Freemium.
+[sources=1600-1799]
+
 ### Subscription pricing - new model
 Swipey updated pricing to be user-based. Growth Plan minimum is 2 users. Monthly rate is MYR 25 per user (before SST). Quarterly billing no longer offered. 8% SST charge applies on all plans since Feb 2025.
 [sources=1200-1399]
+
+### Subscription pricing model
+User-based pricing. Growth plan: RM25/user/month (monthly) or RM19/user/month (yearly) + 8% SST. Plus plan: minimum 5 users, RM29/user/month (yearly) + 8% SST, includes accounting integrations. Freemium: 2 active users max. Yayasan Hasanah accounts have separate pricing agreements.
+[sources=2200-2422]
 
 ### Subscription Pricing Structure
 Growth Plan: RM25/user/month (before SST). Plus Plan: higher tier with additional features. All prices subject to 8% SST. Subscription fees are deducted directly from the Swipey master account. Plans are billed based on active users on the dashboard.
@@ -4547,6 +5545,14 @@ Growth Plan: RM25/user/month (before SST). Plus Plan: higher tier with additiona
 ### Subscription Proration
 When upgrading plans, remaining credits from the current subscription are prorated and applied to the new invoice.
 [sources=1000-1199]
+
+### Subscription Renewal and Negative Balance
+Subscription fees are auto-deducted from the Master Account. If insufficient funds, the account goes into negative balance. Users are notified to top up to avoid service disruption. SST of 8% applies to subscription fees.
+[sources=1400-1599,2200-2422]
+
+### Subscription renewal and SST
+SST of 8% applied on all plans effective 1 Feb 2025. Customers can renew before deadline to lock in current rates. Plan upgrades prorate remaining credits from current plan. Subscription can be deducted from Master Account.
+[sources=1800-1999]
 
 ### Subscription Renewal and User-Based Pricing
 Pricing is based on number of active users. Annual charges are applied based on active user count at renewal. Companies should deactivate unused users before renewal to avoid charges. SST of 8% applied from Feb 2025. User-based pricing migration required accounts with >2 users on Freemium to upgrade.
@@ -4560,6 +5566,10 @@ Monday to Friday 8am-7pm. Public holidays: 9am-6pm. After hours: auto-message di
 Supported currencies for international bill payments: AUD, GBP, CAD, EUR, HKD, JPY, NZD, SGD, CHF, USD. Countries like Kazakhstan (Tenge), Kyrgyzstan (Som), Uzbekistan (Som) are NOT supported.
 [sources=0000-0199]
 
+### Swipey Account Number Usage
+The Swipey account number on the web dashboard is ONLY for the customer to deposit their own company funds. It should NOT be given to vendors for refunds or to clients for payments. If a third party sends money there, Swipey holds it until proof of funds is received.
+[sources=1400-1599]
+
 ### Swipey AI confusion
 Some visitors contact Swipey (swipey.co, Malaysian fintech) thinking it is 'Swipey AI', which is an unaffiliated product. Agents clarify: 'We are swipey.co - a Malaysian fintech business and not affiliated with Swipey AI.'
 [sources=0000-0199]
@@ -4567,6 +5577,14 @@ Some visitors contact Swipey (swipey.co, Malaysian fintech) thinking it is 'Swip
 ### Swipey Bot (Sofia)
 Automated virtual assistant named Sofia. Available 24/7. Currently in testing phase. Handles initial queries and routes to human agents when needed.
 [sources=1200-1399]
+
+### Swipey card is prepaid VISA
+Swipey cards are prepaid VISA cards, not credit cards. Users must deposit/top-up funds before spending. International fee is 1%. Cards work at 130+ million merchants worldwide. Apple Pay is not available, but QR payment feature exists. Taobao (does not accept foreign prepaid cards), Google Subscription, LinkedIn (changed policies against prepaid cards), OpenAI, Xero. Swipey working on Virtual Charge Card Mastercard for these merchants.
+[sources=1800-1999]
+
+### Swipey Card Issuer
+Swipey cards are issued by Visa. When selecting bank for online payment, any bank works (or HSBC). 'Soft Space Sdn Bhd' appearing on some platforms is the card issuer/processor display name.
+[sources=2200-2422]
 
 ### Swipey Card Merchant Compatibility
 Swipey cards are Visa prepaid cards accepted where Visa is accepted. Exceptions: OpenAI does not accept prepaid cards, government/statutory payment portals (JPJ, EPF, SOCSO, PCB) do not accept prepaid cards, some merchants may require 3D Secure.
@@ -4576,29 +5594,77 @@ Swipey cards are Visa prepaid cards accepted where Visa is accepted. Exceptions:
 Samsung Pay and Apple Pay are not supported. Gmail (Google Workspace) may not accept prepaid cards. Microsoft Azure may have limitations. Reference: https://help.swipey.co/en/article/15-where-can-i-use-a-swipey-card
 [sources=1200-1399]
 
+### Swipey card types
+Swipey offers both virtual and physical prepaid VISA cards. Both are issued under the prepaid cards environment but work similarly like debit cards. Virtual cards are used for online purchases; physical cards are needed for in-store POS payments.
+[sources=1400-1599]
+
 ### Swipey Company Details
-Swipey Digital Services Sdn Bhd. TIN: C [redacted]. Address: Level 8, Vertical Corporate Tower B, 8, Jalan Kerinchi, Bangsar South, 59200, Kuala Lumpur. MSIC Code: 70201. Business Activity: Expense Management Solution Provider.
-[sources=0000-0199]
+Swipey Digital Services Sdn Bhd. Bank: HSBC Bank Malaysia Berhad. SWIFT: HBMBMYKL. Bank address: Floor 21, Menara IQ, Tun Razak Exchange, Lingkaran TRX, Kuala Lumpur. Office: Level 8, Vertical Corporate Tower B, Bangsar South, 59200 KL.
+[sources=0000-0199,2200-2422]
+
+### Swipey does not store full card numbers
+Swipey does not store the full 16-digit card number. Users must login to the mobile app to view full card details. Admins can only see last 4 digits. Never share card details, even with Swipey team.
+[sources=1400-1599]
+
+### Swipey is not a bank
+Swipey is an expense management platform, not a bank. Cannot do direct bank transfers between accounts. Can move funds to own bank account or pay vendors via Bill Payment/Payouts. Does not offer credit cards, loans, or pay-in services (receiving payments via QR). Swipey is only open to businesses. Sole proprietorships and enterprises can sign up. Main registration requirement is SSM documents (ideally Section 14 superform) showing business name and director details.
+[sources=1800-1999]
+
+### Swipey is not Swipey AI
+Swipey (fintech company) is different from Swipey AI (subscription service). Customers sometimes contact the wrong Swipey. Agent should clarify they are Swipey fintech and redirect the customer.
+[sources=2200-2422]
+
+### Swipey mobile app issues
+If app is not working or shows errors after update: delete and reinstall the app. Connection errors: switch network (WiFi to mobile data). If 'account does not exist' error: user needs to be assigned a card first. Web dashboard login OTP on mobile can be tricky due to non-optimized mobile web interface.
+[sources=2200-2422]
 
 ### Swipey Office Location
 Located in Bangsar South, Kuala Lumpur. Address: A 10 12A, Atria Sofo Suites, Jalan SS22/23, Petaling Jaya, 47400, Selangor, MY.
 [sources=0000-0199]
 
+### Swipey office location
+Level 8, Vertical Corporate Tower B, Swipey @ Komune, 8, Jalan Kerinchi, Bangsar South, 59200 Kuala Lumpur (moved from previous Common Ground location).
+[sources=1800-1999]
+
 ### Swipey operating hours
 Support: Mon-Fri 8am-7pm, Public Holidays 9am-6pm. Help Center 24/7: https://help.swipey.co
 [sources=0400-0599]
+
+### Swipey Plan Tiers
+Freemium: free, 2 users max, 1 virtual card per user, no physical cards. Growth: min 2 users, 1 physical + 3 virtual cards per user, no bookkeeper role, no MCC control, no accounting integrations. Plus: min 5 users, 2 physical + 5 virtual cards per user, includes bookkeeper role, MCC control, accounting integrations (Xero, QuickBooks). Trial: 1 month of Plus features without physical cards.
+[sources=2200-2422]
 
 ### Swipey Platforms
 Web dashboard: for admin/manager to manage spending, view transactions, manage users. Mobile app: for cardholders to view card details (16-digit number), check and upload receipts. Users need a card assigned before they can login to mobile app.
 [sources=1000-1199]
 
+### Swipey product identity
+Swipey is an expense management platform providing Visa corporate prepaid cards and accounts payable solutions for Malaysian businesses. It is NOT a payment gateway, NOT a credit card provider, and NOT for personal use. Swipey Digital Services is a separate entity from Swipey.ai.
+[sources=2200-2422]
+
 ### Swipey QR Feature Scope
 Swipey QR supports Scan to Pay only (paying others). It does not support Pay In (receiving payments via QR). QR must be DuitNow QR with 'Malaysia National QR' border.
 [sources=1000-1199]
 
+### Swipey registered entity
+All payments to Swipey are made to Swipey Digital Services Sdn Bhd, fully compliant under Malaysian regulations. Partner bank is HSBC. Funds protected by PIDM (Perbadanan Insurans Deposit Malaysia).
+[sources=1400-1599]
+
 ### Swipey Regulatory Status
 Swipey operates under BNM (Bank Negara Malaysia) regulation via Fasspay e-money license. Customer funds are protected via PIDM through an HSBC trustee account.
 [sources=1000-1199]
+
+### Swipey support email and hours
+Support email: support@swipey.co. WhatsApp support hours: Monday-Friday 8am-7pm, 9am-6pm (or 9am-1pm) on public holidays. After-hours messages get auto-reply directing to Help Center: https://help.swipey.co
+[sources=2200-2422]
+
+### Swipey support hours
+Monday to Friday, 8am to 7pm. Public holidays: 9am to 6pm. After hours messages get auto-response directing to Help Center. Help Center: https://help.swipey.co Monday to Friday, 8am to 7pm. Public Holidays: 9am to 6pm. WhatsApp is the primary support channel (replaced in-app live chat). Monday to Friday, 8am to 7pm (9am to 6pm on Public Holidays). WhatsApp number is not available for calls. Help Center: help.swipey.co
+[sources=0000-0199,1000-1199,1200-1399,1400-1599,1600-1799,1800-1999,2000-2199]
+
+### Swipey v1.0 to v2.0 transition
+Swipey migrated from v1.0 to v2.0, which caused some statement balance discrepancies for long-time users. Beta card top-ups from v1.0 took 24-48 hours to process.
+[sources=1600-1799]
 
 ### Swipey vs BigPay/Wise
 Swipey is built specifically for businesses (not personal use like BigPay). Offers expense management with actionable insights. Different from Wise in features tailored to business financial operations.
@@ -4608,9 +5674,9 @@ Swipey is built specifically for businesses (not personal use like BigPay). Offe
 Swipey (swipey.co) is a Malaysian fintech offering corporate cards. Swipey AI (swipey.ai) is a completely separate company. Agents must redirect Swipey AI customers to that company's own support.
 [sources=1000-1199]
 
-### Swipey Working Hours
-Monday to Friday: 8am to 7pm. Public Holidays: 9am to 6pm. Outside hours, an automated away message is sent directing users to the Help Center at help.swipey.co.
-[sources=0000-0199,1000-1199,1200-1399]
+### Swipey vs Swipey.ai
+Swipey Digital Services (Malaysian FinOps company) is not affiliated with Swipey.ai. Customers wishing to cancel Swipey.ai subscriptions must contact Swipey.ai directly.
+[sources=2200-2422]
 
 ### Swipey.ai Confusion
 Swipey Digital Services (Malaysia) is NOT affiliated with Swipey.ai (Nicosia).
@@ -4623,6 +5689,10 @@ Customers from Swipey.ai sometimes contact the wrong company.
 ### Swipey.ai Confusion
 Standard response: redirect customer to Swipey.ai website for their issues.
 [sources=0000-0199]
+
+### System-wide Payment Issues
+When system-wide payment issues occur, agents collect affected user details using a standardized template (name, email, transaction details) for batch investigation.
+[sources=1800-1999]
 
 ## T
 
@@ -4670,6 +5740,26 @@ Phone number changes: Phone number changes must be requested through Swipey supp
 Supported Phone Numbers for Users: Swipey currently only supports Malaysian phone numbers for user accounts. Foreign employees cannot receive OTPs on non-Malaysian numbers.
 [sources=0800-0999]
 
+### Terminated Card Behavior
+Terminated cards cannot be reactivated. Terminated cards still count towards package card limit. Balance on terminated card is automatically moved to master account. Admin must clawback balance before terminating.
+[sources=1800-1999]
+
+### Third-party fraud through Swipey merchant accounts
+Cases exist where non-Swipey users obtain merchant Swipey account credentials via channels like Telegram and make unauthorized transactions. Swipey cannot disclose merchant information and advises filing a police report. Transactions made under user consent (even if obtained fraudulently) are considered authorized from Swipey's perspective.
+[sources=1600-1799]
+
+### Token Invalid / Error 80000
+Common mobile app error resolved by deleting and reinstalling the app entirely (not just clearing cache). This hard resets the app.
+[sources=1400-1599]
+
+### Transaction Approved vs Settled
+Transactions first show as 'Approved' status. Merchants have 21 days to claim funds and change status to 'Settled'. If not claimed within 21 days, the transaction is voided. Disputes can only be raised for 'Settled' transactions.
+[sources=1400-1599]
+
+### Transaction Dispute Process
+Merchant has 21 days to claim or reject transactions with Visa. If voided, refund returned automatically. If settled, dispute form must be signed by cardholder and submitted. Investigation period up to 180 days. Sales Draft Retrieval Fee of RM15 applies per dispute. Dispute form prepared by Swipey team. Cardholder must review, sign with name and date. Investigation and outcome takes up to 180 days. If transaction status is 'Approved' (not settled), it may void within 21 days. If settled, formal VISA dispute is raised. Agent immediately clawbacks card balance and freezes card. Dispute filed with VISA. VISA dispute process takes up to 45 business days. Card statement can be requested for evidence.
+[sources=1800-1999]
+
 ### Transaction Disputes and Refunds
 Dispute process timeline is up to 180 days.
 Card must be terminated before Visa can start the dispute process.
@@ -4678,6 +5768,10 @@ Refunds from merchants go back to the Swipey card that was charged.
 If a transaction is voided, the amount is refunded automatically.
 For disputes involving merchant integration failures, the merchant needs to be contacted.
 [sources=1000-1199,1200-1399]
+
+### Transaction limits
+Per-transaction spending limit: RM10,000. Daily spending limit per user: RM50,000. These are regulatory limits set by Bank Negara and cannot be increased. Users must split larger payments into multiple transactions. Per-transaction limit is RM10,000, set by BNM regulation. Cannot be increased, not even temporarily. Daily spending limit is RM50,000.
+[sources=0000-0199,1000-1199,1800-1999]
 
 ### Transaction Limits
 Per transaction limit: RM10,000. Daily limit: RM50,000. Monthly limit: RM500,000. Card top-up maximum: RM10,000 per card.
@@ -4691,9 +5785,25 @@ Per-transaction limit: RM10,000 (set by BNM). Monthly spending limit: RM500,000 
 Per transaction limit is RM10,000 for all card types (virtual and physical). Daily limit per user is RM50,000. This is regulated by Bank Negara Malaysia.
 [sources=1200-1399]
 
+### Transaction Limits (BNM Regulated)
+Card: RM10,000/txn, RM50,000/daily, RM500,000/monthly. QR P2P: RM2,000/txn, RM2,000/daily, RM10,000/monthly. QR B2B: RM10,000/txn, RM50,000/daily, RM500,000/monthly. Bill payout: RM50,000/txn. No limit on payouts feature. Multiple cards same user share the RM10k per-txn limit.
+[sources=2000-2199]
+
+### Transaction States
+Transactions can be: Pre-authorized (hold), Settled (completed), Voided (cancelled — funds return within 21 days).
+[sources=1800-1999]
+
 ### Transaction status lifecycle
 Approved (floating, up to 21 days) -> Settled (merchant received funds) OR Voided (cancelled, funds returned). Refund appears as separate entry. Pre-authorized amounts may differ from final.
 [sources=0600-0799]
+
+### Transaction status lifecycle
+Transaction statuses: Approved (money is floating/held), Settled (merchant received payment), Voided (funds returned to card), Declined (transaction rejected). Merchants have up to 21 days to update Visa. Late settlements can happen over extended periods.
+[sources=2200-2422]
+
+### Transaction status types
+Approved: money in transit, not yet settled. Settled: transaction complete, funds transferred to merchant. Voided: transaction reversed, funds returned. Declined: transaction rejected.
+[sources=1400-1599]
 
 ### Transaction Statuses
 Approved: funds still floating, not yet at merchant. Settled: merchant received funds. Voided: transaction reversed, funds returned. Declined: transaction rejected. Settlement process: up to 21 days for merchant to settle with VISA.
@@ -4703,9 +5813,21 @@ Approved: funds still floating, not yet at merchant. Settled: merchant received 
 'Approved' = funds on hold/floating, authorised but not yet charged. 'Settled' = merchant charged the funds. 'Voided' = hold released, funds returned. 'Declined' = rejected by merchant. Approved transactions can float up to 21 days before changing to Settled or Voided.
 [sources=0400-0599]
 
+### Transaction statuses
+Settled = Transaction settled between merchant and VISA. Approved = Transaction made but not yet settled. Voided = Cancelled by user/merchant (can take up to 21 days). Declined = Rejected by merchant (happens on the spot). No push notifications for voided transactions currently.
+[sources=1800-1999]
+
+### Transaction Statuses
+Approved: authorized, funds not yet debited. Settled: merchant claimed funds, finalized. Voided: cancelled/reversed, no charge. Petrol pre-authorizations void within 21 days. Voided transactions can result from terminal timeout, cardholder cancellation, or merchant system failure.
+[sources=2000-2199]
+
 ### Transaction to personal account limit
 For international transactions to personal accounts, the maximum limit by bank is RM50k per day. For business accounts, larger amounts can be done in 1 transaction via Bill Payment.
 [sources=1200-1399]
+
+### Transfer Fees
+RM0 for local bank transfers (payouts). RM5 for cross-border transfers. 1% ISA fee for international card spend via Visa.
+[sources=2000-2199]
 
 ### Trial period
 New accounts get a trial period (25-45 days) with full premium access. After trial, user must choose between Freemium or a paid plan.
@@ -4715,9 +5837,17 @@ New accounts get a trial period (25-45 days) with full premium access. After tri
 30-day trial period with full features. After trial ends, account auto-transitions to Freemium plan. If more than 2 users exist, must upgrade before trial end to keep all users active.
 [sources=0600-0799]
 
+### Trial Plan
+30-day trial gives access to full features. After trial, account reverts to Freemium. Users who had trial cannot get another trial extension for statement features.
+[sources=2200-2422]
+
 ### Trial Plan Details
 Trial lasts 30 days from registration. Trial includes 10 virtual cards. After trial ends, account downgrades to Freemium with 2 virtual cards only. Freemium plan has no time limit.
 [sources=1000-1199]
+
+### Trial/Freemium plan details
+Trial lasts 30 days after account creation, then switches to Freemium plan. Freemium plan has limited features including RM1.50 FPX fee. Users can use trial plan first, then upgrade when needing physical cards or additional features. Freemium plan allows 2 virtual cards at no charge. Admin does not need to have a card. Physical cards are not included in Freemium. FPX deposit fee applies on Freemium.
+[sources=1800-1999]
 
 ## U
 
@@ -4725,9 +5855,21 @@ Trial lasts 30 days from registration. Trial includes 10 virtual cards. After tr
 Freeze card immediately to prevent further activity. Support can raise dispute case with VISA if transaction settled. Card replacement possible without affecting allocation.
 [sources=0600-0799]
 
+### Unique credentials per account
+Email and mobile number must be unique per company registration. One ID holder can only have a card assigned to one entity. Cannot reuse credentials across multiple company accounts.
+[sources=1400-1599]
+
 ### Unique Credentials Per User
 Each admin/user requires a unique email address and mobile phone number. A phone number already linked to another company account cannot be reused without being removed first.
 [sources=0000-0199]
+
+### Unsolicited OTP issue
+Some users receive OTPs without requesting them. Swipey team is aware of the issue with login OTP being triggered without request. Team is working on a fix.
+[sources=1400-1599]
+
+### User account constraints
+One NRIC/IC can only be linked to one Swipey card across all companies at a time. Each user must have unique mobile number and email. Phone numbers and emails cannot be reused across accounts. Swipey does not practice deleting users, only setting them to inactive. Each user must have unique email AND mobile number per entity. Same person across multiple entities needs alternate credentials. Card holder can only hold cards under one entity.
+[sources=1800-1999]
 
 ### User and Account Management
 Employees cannot be deleted — only set to inactive.
@@ -4740,6 +5882,22 @@ Only the cardholder and admins can view card balance.
 Cards show on mobile app for the assigned user only.
 [sources=1000-1199]
 
+### User deactivation vs deletion
+Users can be deactivated (made inactive) but not fully deleted from the system. Admin accounts can be deactivated but not removed entirely.
+[sources=1600-1799]
+
+### User Deactivation vs Removal
+Swipey does not support complete employee removal from organization (affects statements/records). Instead, terminate user's card first, then set user to inactive. User remains in employee list for record tracking but loses access to login.
+[sources=1400-1599]
+
+### User deactivation vs removal
+Users with past transactions cannot be fully removed (would make statements inaccurate). Users can be set to Inactive status. Phone numbers of deactivated users can be reassigned to new employees by Swipey team. Another admin must set a user as inactive (cannot self-deactivate).
+[sources=2200-2422]
+
+### User deletion policy
+Users cannot be deleted from Swipey as it would erase all past transactions affecting statements. Users can only be set to inactive. Inactive users do not count toward billing. Transaction history is preserved.
+[sources=1400-1599]
+
 ### User Management
 Users cannot be deleted from Swipey, only set to inactive. Admin manages users from dashboard. Each IC holder can only hold card under 1 entity (BNM regulation).
 [sources=1200-1399]
@@ -4748,17 +5906,29 @@ Users cannot be deleted from Swipey, only set to inactive. Admin manages users f
 Users cannot be terminated/deleted (causes statement inaccuracies). Users can be set as inactive (not charged). Users cannot exist in two company accounts simultaneously. Admin must terminate assigned cards before user transfer between companies.
 [sources=1000-1199]
 
+### User phone number reuse restriction
+If a phone number was previously associated with a different user/account, it cannot simply be reassigned. Reusing mobile numbers for login access can result in OTP issues. Support team needs to handle the account migration manually.
+[sources=1800-1999]
+
 ### User Role Permissions
 Admin: Full access to web dashboard, can manage users, cards, funds, bill payments. Employee: Mobile app access only, sees own card info. Bookkeeper (Plus plan): View-only access to all transactions for audit purposes.
 [sources=1000-1199]
 
-### User Roles
-Admin: full dashboard access, can move funds and make payments. Bookkeeper: read-only access to dashboard, cannot move funds. Employee: card user. Department and role changes possible via dashboard. Phone number changes require support.
-[sources=0000-0199]
+### User Roles and Access
+Admin role: full dashboard access, can manage deposits/top-ups, invite employees, manage cards. Employee role: mobile app access only. Bookkeeper role: cannot manage deposits. Users set to 'inactive' lose all access but cannot be fully deleted from the account.
+[sources=0000-0199,1400-1599]
 
 ### User Roles and Access
 Company Admin: full dashboard access including approving payments. Employee/Cardholder: mobile app access only for viewing card details and uploading receipts. Bookkeeper: dashboard access for viewing and downloading transactions only. Admin role cannot be a cardholder. Maker-checker role is still in development.
 [sources=0400-0599,1000-1199]
+
+### User roles and access
+Admin: Access web dashboard, can make deposits, topups, manage cards. Employee: Only access Swipey mobile app, can view card details and transactions. Bookkeeper: Cannot process deposits or topups, needs admin for these. Users must be assigned a card to access mobile app.
+[sources=1800-1999]
+
+### User roles and access
+Admin: full web dashboard access, bill payments, fund management. Employee: mobile app only, card details, transaction history, QR Pay. Bookkeeper: view-only access for downloading statements and viewing transactions. Employee role users cannot access web dashboard or make bill payments.
+[sources=2000-2199,2200-2422]
 
 ### User Transfer Between Companies
 User must clawback all card funds and terminate card before transfer.
@@ -4788,6 +5958,14 @@ If user has pending dispute, refund goes to original company's master account.
 Each Swipey user must have a unique email and unique phone number. Same credentials cannot be used across different companies or different user profiles.
 [sources=0400-0599,1200-1399]
 
+### User Uniqueness Constraint
+Each email and mobile number can only be linked to one Swipey account. Cannot share across multiple company accounts. To free up credentials, agent must change them on the existing account first.
+[sources=2200-2422]
+
+### User-based pricing migration
+Swipey moved to user-based pricing. Users with more than 2 active users on Freemium received reminders to upgrade or reduce users before a deadline (12 September 2025). Charges are based on active users only.
+[sources=1400-1599]
+
 ## V
 
 ### VCC (Virtual Charge Card)
@@ -4798,6 +5976,10 @@ Mastercard Virtual Charge Card recommended for high-frequency international merc
 Virtual charge card (not prepaid) for online/international merchants, particularly ad platforms like Facebook/Meta Ads. No OTP required. No spending limit per transaction during beta. Top-ups take 24-48 hours. Clawback not available during beta. One card per user per company.
 [sources=0400-0599]
 
+### VCC Mastercard (Beta) Limitations
+Transactions not real-time (updated manually). Finalization takes up to 14 days. Clawback not available. May not work with all merchants. Google Ads payments supported with specific setup guide.
+[sources=2200-2422]
+
 ### VCC Mastercard Beta
 Virtual charged card with no BNM transaction limit. Only for international merchants. Top-ups take 24-48 hours. No clawback. One card per user/company. Supports non-OTP transactions only.
 [sources=1200-1399]
@@ -4806,9 +5988,17 @@ Virtual charged card with no BNM transaction limit. Only for international merch
 Some vendor banks (e.g., Maybank) may request the purpose of payment before clearing funds. Invoice may need to be provided.
 [sources=1200-1399]
 
+### Vendor deletion not supported
+Vendors cannot be deleted from the vendor list in the dashboard. This has been noted as a feature request for future development.
+[sources=1800-1999]
+
 ### Vendor management
 Vendor details can be updated but not deleted. To mark unused, edit name to include 'Do not use' or add X prefix. Bulk upload of vendor details not yet available — manual entry required.
 [sources=0400-0599]
+
+### Vendor Management
+Vendors can be added and edited via dashboard Settings > Vendors. No delete feature yet (archive/delete in development). Vendor details should be updated to avoid rejected payments. Auto-extracted invoice details may contain errors that need manual correction.
+[sources=2200-2422]
 
 ### Vendor Management Limitation
 Currently no option to delete vendors from the dashboard. Workaround: rename vendor to 'Do not use' or add 'X' prefix. Delete feature is under development.
@@ -4818,27 +6008,63 @@ Currently no option to delete vendors from the dashboard. Workaround: rename ven
 Vendors cannot be deleted from the system at this time. Duplicate vendors are renamed with 'Duplicate' prefix. Vendor name field is not available for edit after creation (known bug reported).
 [sources=1000-1199,1200-1399]
 
-### Virtual card vs physical card
-Virtual cards for online transactions (subscriptions, online ads, e-commerce). Physical cards for in-store POS, ATM withdrawals, international travel. Neither has NFC — cannot be linked to Apple Pay, Samsung Pay, or Google Wallet. Full card details (number, expiry, CVV) only accessible to cardholder via mobile app after eKYC.
-[sources=0000-0199,0400-0599]
+### Vendor name special character bug
+The '&' character in vendor names converts to '&amps;' on the platform. This is a known bug acknowledged by Swipey with plans for a future fix.
+[sources=1600-1799]
+
+### Vendor refund to Swipey
+Vendors can only refund to the company's declared bank account, not directly to Swipey master account. Swipey only accepts deposits from the company's own declared bank account.
+[sources=1400-1599]
+
+### Virtual Charge Card (VCC) beta limitations
+Top-ups take 24-48 hours to reflect (not instant). No clawback feature during beta. One card per user, one per company. Only for international merchants not requiring OTP. Cardholder name should be 'Swipey'. Works with Facebook, Google, etc. Cannot transfer funds out during beta.
+[sources=2200-2422]
 
 ### Virtual vs Physical Card PINs
 Virtual and physical cards have separate PINs. They are two completely different cards, not a physical version of the virtual card.
 [sources=1200-1399]
 
+### Virtual vs Physical Cards
+Virtual cards: instant, for online payments only. Physical cards: 7-10 days delivery, for in-store and online. Card conversion from virtual to physical is not possible; must add a new card. Freemium gets 2 virtual cards. Paid plans get physical + virtual cards per user.
+[sources=1400-1599]
+
+### VISA card fraud flagging
+Using one card across many merchant accounts (e.g., multiple Facebook ad accounts) can trigger VISA fraud detection. Repeated declined transactions or multiple transactions with same merchant in short time can also cause card to be blocked.
+[sources=1400-1599]
+
+### VISA Connectivity Downtime
+Occasionally VISA connectivity goes down affecting card transactions. Support advises waiting and retrying, or using alternative payment methods.
+[sources=2200-2422]
+
+### VISA flagging for fraud prevention
+VISA may flag transactions for confirmation. When flagged, Swipey reaches out to confirm if transactions were authorized. Repeated transactions to the same merchant at close timing intervals may trigger fraud flags. Transactions may be blocked as a security precaution.
+[sources=1800-1999]
+
 ### VISA Fraud Monitoring
 VISA may temporarily block cards after detecting rapid or suspicious transactions.
 [sources=0200-0399]
 
+### Visa network issues
+Visa network can experience occasional issues affecting online transactions requiring OTPs. When identified, the team works with Visa to resolve. Transaction declines should be checked via mobile app. Incognito mode can help when merchant portals retain old payment information.
+[sources=2200-2422]
+
 ### Voided Transactions
 A voided transaction is one not processed or accepted on the merchant's end. Funds return to the card. Different from a declined transaction (insufficient balance).
 [sources=0000-0199]
+
+### Voided vs Settled transactions
+Merchants have 21 days to update VISA. A transaction may change from Approved to Voided (funds returned) or Settled (funds permanently deducted). Double charges caused by server timeouts may void within 21 days.
+[sources=1400-1599]
 
 ## W
 
 ### Withdrawal Method
 To withdraw funds from Swipey, use bill payment to transfer to your own company bank account. No direct withdrawal feature.
 [sources=1200-1399]
+
+### Withdrawal process
+Standard withdrawal takes 5 business days to process. Bill payment is a faster alternative for getting funds out. Funds must be available in the Master Account.
+[sources=1800-1999]
 
 ### Working Hours
 Swipey customer support hours: Monday to Friday, 8am to 7pm. Public holidays: 9am to 6pm (some references say 9am-1pm). Outside hours, automated away message directs to Help Center.
@@ -4849,6 +6075,14 @@ Swipey customer support hours: Monday to Friday, 8am to 7pm. Public holidays: 9a
 ### Xero accounting integration
 Xero integration on Swipey is in Beta stage. After Beta phase concludes, accounting integration will be accessible to customers subscribed to the Plus Plan.
 [sources=1200-1399]
+
+### Xero integration
+Xero integration available on Plus plan only. Growth plan users cannot access Xero sync. Transactions sync from Swipey to Xero with attachments. QR payment attachments may not pass through to Xero. Reintegration guide available at swipey.co/blogs.
+[sources=1400-1599]
+
+### Xero integration account type requirement
+When setting up Xero integration, the Swipey Visa Card account type must be set to 'bank' in Xero (not 'other current assets'). This is done directly in Xero, not in Swipey.
+[sources=1400-1599]
 
 ### Xero integration limitations
 Xero does not accept prepaid VISA cards for direct card linking. Swipey-Xero integration (Plus plan only) does not include auto-reconciliation — bank statements must be uploaded manually. Xero integration is available in beta.
