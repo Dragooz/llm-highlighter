@@ -71,10 +71,9 @@ async function buildSystemPrompt() {
         ? `\n\n---\n\n# FAQ (curated Q&A from support team)\n\n${faqContent}`
         : "";
 
-    const digestSection =
-        digestLog
-            ? `\n\n---\n\n# Accumulated Knowledge (from conversation digests)\n\n${digestLog}`
-            : "";
+    const digestSection = digestLog
+        ? `\n\n---\n\n# Accumulated Knowledge (from conversation digests)\n\n${digestLog}`
+        : "";
 
     return `${tone}\n\n---\n\n# Knowledge Base\n\n${knowledgeBase}${faqSection}${digestSection}`;
 }
@@ -96,14 +95,16 @@ app.post("/generate", checkSecret, async (req, res) => {
     // Support both old {text} and new {messages} format
     let chatMessages;
     if (userMessages && Array.isArray(userMessages)) {
-        chatMessages = userMessages.filter(m => m.role && m.content);
+        chatMessages = userMessages.filter((m) => m.role && m.content);
     } else if (text && typeof text === "string") {
         chatMessages = [{ role: "user", content: text }];
     } else {
-        return res.status(400).json({ error: 'Missing "messages" array or "text" field' });
+        return res
+            .status(400)
+            .json({ error: 'Missing "messages" array or "text" field' });
     }
 
-    const selectedModel = model || "deepseek/deepseek-v3.2";
+    const selectedModel = model || "deepseek/deepseek-v4-flash";
     const systemPrompt = await buildSystemPrompt();
 
     try {
@@ -133,7 +134,9 @@ app.post("/generate", checkSecret, async (req, res) => {
         if (!upstream.ok) {
             const errText = await upstream.text();
             console.error(`OpenRouter error ${upstream.status}:`, errText);
-            return res.status(502).json({ error: `OpenRouter error: ${upstream.status}` });
+            return res
+                .status(502)
+                .json({ error: `OpenRouter error: ${upstream.status}` });
         }
 
         res.setHeader("Content-Type", "text/event-stream");
@@ -166,7 +169,9 @@ app.post("/generate", checkSecret, async (req, res) => {
                     if (delta) {
                         res.write(`data: ${JSON.stringify({ delta })}\n\n`);
                     }
-                } catch (_) { /* skip malformed */ }
+                } catch (_) {
+                    /* skip malformed */
+                }
             }
         }
 
@@ -186,7 +191,9 @@ app.post("/faq", checkSecret, async (req, res) => {
     const { question, answer } = req.body;
 
     if (!question || !answer) {
-        return res.status(400).json({ error: "question and answer are required" });
+        return res
+            .status(400)
+            .json({ error: "question and answer are required" });
     }
 
     const entry = `\n\n---\nQ: ${question.trim()}\nA: ${answer.trim()}`;
@@ -207,7 +214,9 @@ app.post("/conversations", checkSecret, async (req, res) => {
     const { userId, messages } = req.body;
 
     if (!userId || !messages || !Array.isArray(messages) || !messages.length) {
-        return res.status(400).json({ error: "userId and non-empty messages array required" });
+        return res
+            .status(400)
+            .json({ error: "userId and non-empty messages array required" });
     }
 
     const date = new Date().toISOString().slice(0, 10);
@@ -228,7 +237,10 @@ app.get("/conversations/:date", checkSecret, async (req, res) => {
     let cursor = 0;
     const allKeys = [];
     do {
-        const [nextCursor, keys] = await redis.scan(cursor, { match: pattern, count: 100 });
+        const [nextCursor, keys] = await redis.scan(cursor, {
+            match: pattern,
+            count: 100,
+        });
         cursor = Number(nextCursor);
         allKeys.push(...keys);
     } while (cursor !== 0);
@@ -236,7 +248,9 @@ app.get("/conversations/:date", checkSecret, async (req, res) => {
     const results = {};
     for (const key of allKeys) {
         const entries = await redis.lrange(key, 0, -1);
-        results[key] = entries.map((e) => typeof e === "string" ? JSON.parse(e) : e);
+        results[key] = entries.map((e) =>
+            typeof e === "string" ? JSON.parse(e) : e,
+        );
     }
 
     res.json({ date, conversations: results });
@@ -244,67 +258,94 @@ app.get("/conversations/:date", checkSecret, async (req, res) => {
 
 // ── Daily digest ─────────────────────────────────────────────────────────────
 
-const DIGEST_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, "digest_prompt.txt"), "utf8").trim();
+const DIGEST_PROMPT = fs
+    .readFileSync(path.join(PROMPTS_DIR, "digest_prompt.txt"), "utf8")
+    .trim();
 
 app.post("/digest", checkSecret, async (req, res) => {
-    const date = req.body.date || new Date(Date.now() - 86400000).toISOString().slice(0, 10); // default: yesterday
+    const date =
+        req.body.date ||
+        new Date(Date.now() - 86400000).toISOString().slice(0, 10); // default: yesterday
 
     // Collect all conversations for the date
     const pattern = `conv:*:${date}`;
     let cursor = 0;
     const allKeys = [];
     do {
-        const [nextCursor, keys] = await redis.scan(cursor, { match: pattern, count: 100 });
+        const [nextCursor, keys] = await redis.scan(cursor, {
+            match: pattern,
+            count: 100,
+        });
         cursor = Number(nextCursor);
         allKeys.push(...keys);
     } while (cursor !== 0);
 
     if (!allKeys.length) {
-        return res.json({ date, digest: "No conversations found for this date." });
+        return res.json({
+            date,
+            digest: "No conversations found for this date.",
+        });
     }
 
     const allConversations = [];
     for (const key of allKeys) {
         const entries = await redis.lrange(key, 0, -1);
         for (const entry of entries) {
-            const parsed = typeof entry === "string" ? JSON.parse(entry) : entry;
+            const parsed =
+                typeof entry === "string" ? JSON.parse(entry) : entry;
             allConversations.push({ key, ...parsed });
         }
     }
 
     // Format conversations for LLM
-    const conversationText = allConversations.map((conv, i) => {
-        const msgs = conv.messages.map(m => `${m.role}: ${m.content}`).join("\n");
-        return `--- Conversation ${i + 1} (${conv.key}) ---\n${msgs}`;
-    }).join("\n\n");
+    const conversationText = allConversations
+        .map((conv, i) => {
+            const msgs = conv.messages
+                .map((m) => `${m.role}: ${m.content}`)
+                .join("\n");
+            return `--- Conversation ${i + 1} (${conv.key}) ---\n${msgs}`;
+        })
+        .join("\n\n");
 
     try {
-        const llmRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-            method: "POST",
-            headers: {
-                Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-                "Content-Type": "application/json",
-                "HTTP-Referer": "https://llm-highlighter.local",
-                "X-Title": "LLM Highlighter Digest",
+        const llmRes = await fetch(
+            "https://openrouter.ai/api/v1/chat/completions",
+            {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+                    "Content-Type": "application/json",
+                    "HTTP-Referer": "https://llm-highlighter.local",
+                    "X-Title": "LLM Highlighter Digest",
+                },
+                body: JSON.stringify({
+                    model: "deepseek/deepseek-v3.2",
+                    messages: [
+                        { role: "system", content: DIGEST_PROMPT },
+                        {
+                            role: "user",
+                            content: `Date: ${date}\n\n${conversationText}`,
+                        },
+                    ],
+                    max_tokens: 1024,
+                    temperature: 0.3,
+                }),
             },
-            body: JSON.stringify({
-                model: "deepseek/deepseek-v3.2",
-                messages: [
-                    { role: "system", content: DIGEST_PROMPT },
-                    { role: "user", content: `Date: ${date}\n\n${conversationText}` },
-                ],
-                max_tokens: 1024,
-                temperature: 0.3,
-            }),
-        });
+        );
 
         if (!llmRes.ok) {
             const errText = await llmRes.text();
-            return res.status(502).json({ error: `OpenRouter error: ${llmRes.status}`, details: errText });
+            return res
+                .status(502)
+                .json({
+                    error: `OpenRouter error: ${llmRes.status}`,
+                    details: errText,
+                });
         }
 
         const llmData = await llmRes.json();
-        const digest = llmData.choices?.[0]?.message?.content || "No digest generated.";
+        const digest =
+            llmData.choices?.[0]?.message?.content || "No digest generated.";
 
         // Append to knowledge_digest (append-only log)
         const existingDigest = (await redis.get(DIGEST_KEY)) || "";
@@ -313,7 +354,9 @@ app.post("/digest", checkSecret, async (req, res) => {
             : `--- ${date} ---\n${digest}`;
         await redis.set(DIGEST_KEY, newDigest);
 
-        console.log(`Digest generated for ${date} (${allConversations.length} conversations)`);
+        console.log(
+            `Digest generated for ${date} (${allConversations.length} conversations)`,
+        );
         res.json({ date, conversationCount: allConversations.length, digest });
     } catch (err) {
         console.error("Digest error:", err);
@@ -326,7 +369,9 @@ app.get("/health", (_req, res) => res.json({ status: "ok" }));
 init()
     .then(() => {
         app.listen(PORT, () => {
-            console.log(`LLM Highlighter backend running on http://localhost:${PORT}`);
+            console.log(
+                `LLM Highlighter backend running on http://localhost:${PORT}`,
+            );
         });
     })
     .catch((err) => {

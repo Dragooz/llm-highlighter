@@ -1,10 +1,227 @@
-// ─── Swipey Chat Widget ─────────────────────────────────────────────────────
+// ─── Shared defaults & helpers ───────────────────────────────────────────────
 const DEFAULTS = {
     backendUrl: "https://llm-highlighter-production.up.railway.app",
     secret: "",
-    model: "deepseek/deepseek-v3.2",
+    model: "deepseek/deepseek-v4-flash",
+    fallbackModel: "deepseek/deepseek-v3.2",
 };
 
+function _getSettings() {
+    return new Promise((resolve) => chrome.storage.sync.get(DEFAULTS, resolve));
+}
+
+function _escapeHtml(str) {
+    return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
+// ─── Text Highlighter (select → ✨ → AI reply) ─────────────────────────────
+(() => {
+    let floatingBtn   = null;
+    let responsePanel = null;
+    let lastRange     = null;
+    let lastQuestion  = "";
+    let hlAccumulated = "";
+    let hlStreaming    = false;
+    let hlRect        = null;
+
+    // ── cleanup helpers ──────────────────────────────────────────────────────
+
+    function removeBtn() {
+        if (floatingBtn) { floatingBtn.remove(); floatingBtn = null; }
+    }
+    function removeResponse() {
+        if (responsePanel) { responsePanel.remove(); responsePanel = null; }
+    }
+
+    // ── floating button ──────────────────────────────────────────────────────
+
+    function createBtn(x, y) {
+        removeBtn();
+        floatingBtn = document.createElement("div");
+        floatingBtn.id = "llm-highlighter-btn-group";
+        floatingBtn.style.left = `${Math.min(x, window.innerWidth - 220)}px`;
+        floatingBtn.style.top  = `${y + window.scrollY - 70}px`;
+
+        floatingBtn.innerHTML = `
+            <button id="llm-highlighter-btn" title="Generate reply">
+                <span class="spinner"></span>
+                <span class="btn-icon">✨</span>
+                <span class="btn-label">Generate Reply</span>
+            </button>
+        `;
+
+        floatingBtn.querySelector("#llm-highlighter-btn").addEventListener("click", (e) => {
+            e.stopPropagation();
+            handleGenerate();
+        });
+
+        document.body.appendChild(floatingBtn);
+    }
+
+    // ── response panel ───────────────────────────────────────────────────────
+
+    function showResponse(x, y, text, isError) {
+        removeResponse();
+        responsePanel = document.createElement("div");
+        responsePanel.id = "llm-highlighter-response";
+        responsePanel.style.left = `${Math.min(x, window.innerWidth - 440)}px`;
+        responsePanel.style.top  = `${y + window.scrollY - 10}px`;
+
+        responsePanel.innerHTML = `
+            <div class="response-header">
+                <span>AI Reply</span>
+                <button class="response-close" title="Close">&times;</button>
+            </div>
+            <div class="response-text ${isError ? "response-error" : ""}">${_escapeHtml(text)}</div>
+            ${!isError ? `
+                <div class="response-actions">
+                    <button class="response-copy-btn">Copy</button>
+                </div>
+            ` : ""}
+        `;
+
+        responsePanel.querySelector(".response-close").addEventListener("click", () => {
+            removeResponse();
+        });
+
+        if (!isError) {
+            const copyBtn = responsePanel.querySelector(".response-copy-btn");
+            copyBtn.addEventListener("click", () => {
+                navigator.clipboard.writeText(text).then(() => {
+                    copyBtn.textContent = "Copied!";
+                    copyBtn.classList.add("copied");
+                    setTimeout(() => {
+                        copyBtn.textContent = "Copy";
+                        copyBtn.classList.remove("copied");
+                    }, 2000);
+                });
+            });
+
+        }
+
+        document.body.appendChild(responsePanel);
+    }
+
+    // ── generate (streaming) ─────────────────────────────────────────────────
+
+    function showStreamingResponse(x, y) {
+        removeResponse();
+        responsePanel = document.createElement("div");
+        responsePanel.id = "llm-highlighter-response";
+        responsePanel.style.left = `${Math.min(x, window.innerWidth - 440)}px`;
+        responsePanel.style.top  = `${y + window.scrollY - 10}px`;
+
+        responsePanel.innerHTML = `
+            <div class="response-header">
+                <span>AI Reply</span>
+                <button class="response-close" title="Close">&times;</button>
+            </div>
+            <div class="response-text"><span class="response-streaming">Generating...</span></div>
+        `;
+
+        responsePanel.querySelector(".response-close").addEventListener("click", () => {
+            removeResponse();
+        });
+
+        document.body.appendChild(responsePanel);
+    }
+
+    function finalizeResponse(x, y, text) {
+        removeResponse();
+        showResponse(x, y, text, false);
+    }
+
+    async function handleGenerate() {
+        const selection = window.getSelection();
+        const selectedText = selection.toString().trim();
+        if (!selectedText || hlStreaming) return;
+
+        lastQuestion = selectedText;
+        hlAccumulated = "";
+        hlStreaming = true;
+
+        const rect = lastRange
+            ? lastRange.getBoundingClientRect()
+            : { left: 100, bottom: 100 };
+        hlRect = { left: rect.left, bottom: rect.bottom };
+
+        removeBtn();
+        showStreamingResponse(hlRect.left, hlRect.bottom);
+
+        const settings = await _getSettings();
+
+        chrome.runtime.sendMessage({
+            type: "GENERATE_HIGHLIGHT",
+            payload: {
+                selectedText,
+                backendUrl: settings.backendUrl,
+                secret: settings.secret,
+                model: settings.model,
+                fallbackModel: settings.fallbackModel,
+            },
+        });
+    }
+
+    // ── stream listener for highlighter ──────────────────────────────────────
+
+    chrome.runtime.onMessage.addListener((message) => {
+        if (message.type === "HIGHLIGHT_CHUNK") {
+            hlAccumulated += message.delta;
+            if (responsePanel) {
+                const textEl = responsePanel.querySelector(".response-text");
+                if (textEl) textEl.textContent = hlAccumulated;
+            }
+        } else if (message.type === "HIGHLIGHT_DONE") {
+            hlStreaming = false;
+            if (hlRect) {
+                finalizeResponse(hlRect.left, hlRect.bottom, hlAccumulated);
+            }
+        } else if (message.type === "HIGHLIGHT_ERROR") {
+            hlStreaming = false;
+            removeResponse();
+            if (hlRect) {
+                showResponse(hlRect.left, hlRect.bottom, `Error: ${message.error}`, true);
+            }
+        }
+    });
+
+    // ── event listeners ──────────────────────────────────────────────────────
+
+    document.addEventListener("mouseup", (e) => {
+        setTimeout(() => {
+            const selection = window.getSelection();
+            const text = selection.toString().trim();
+
+            if (!text || text.length < 2) { removeBtn(); return; }
+
+            if (
+                (floatingBtn   && floatingBtn.contains(e.target))   ||
+                (responsePanel && responsePanel.contains(e.target))
+            ) return;
+
+            try {
+                lastRange = selection.getRangeAt(0);
+                const rect = lastRange.getBoundingClientRect();
+                createBtn(rect.left, rect.bottom);
+            } catch (_) { /* ignore */ }
+        }, 10);
+    });
+
+    document.addEventListener("mousedown", (e) => {
+        if (floatingBtn && !floatingBtn.contains(e.target)) removeBtn();
+        if (responsePanel && !responsePanel.contains(e.target)) {
+            removeResponse();
+        }
+    });
+
+    window.addEventListener("scroll", () => { removeBtn(); }, { passive: true });
+})();
+
+// ─── Swipey Chat Widget ─────────────────────────────────────────────────────
 (() => {
     let chatOpen = false;
     let messages = []; // {role: "user"|"assistant", content: string}
@@ -50,21 +267,10 @@ const DEFAULTS = {
         return arr[Math.floor(Math.random() * arr.length)];
     }
 
-    // ── settings helpers ──────────────────────────────────────────────────────
+    // ── settings helpers (use shared) ──────────────────────────────────────────
 
-    function getSettings() {
-        return new Promise((resolve) =>
-            chrome.storage.sync.get(DEFAULTS, resolve),
-        );
-    }
-
-    function escapeHtml(str) {
-        return str
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;");
-    }
+    const getSettings = _getSettings;
+    const escapeHtml = _escapeHtml;
 
     // ── conversation storage ────────────────────────────────────────────────
 
@@ -356,6 +562,7 @@ const DEFAULTS = {
                 backendUrl: settings.backendUrl,
                 secret: settings.secret,
                 model: settings.model,
+                fallbackModel: settings.fallbackModel,
             },
         });
     }

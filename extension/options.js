@@ -5,12 +5,14 @@ function loadSettings() {
         {
             backendUrl: DEFAULT_BACKEND_URL,
             secret: "",
-            model: "deepseek/deepseek-v3.2",
+            model: "deepseek/deepseek-v4-flash",
+            fallbackModel: "deepseek/deepseek-v3.2",
         },
         (settings) => {
             document.getElementById("backend-url").value = settings.backendUrl;
             document.getElementById("secret").value = settings.secret;
             document.getElementById("model").value = settings.model;
+            document.getElementById("fallback-model").value = settings.fallbackModel;
         },
     );
 }
@@ -22,6 +24,7 @@ function saveSettings() {
             DEFAULT_BACKEND_URL,
         secret: document.getElementById("secret").value.trim(),
         model: document.getElementById("model").value,
+        fallbackModel: document.getElementById("fallback-model").value,
     };
 
     chrome.storage.sync.set(settings, () => {
